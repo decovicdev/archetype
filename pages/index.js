@@ -5,6 +5,8 @@ import Features from '@components/Features'
 import Steps from '@components/Steps'
 import Hero from '@components/Hero'
 import FAQS from '@components/FAQs'
+import FooterCTA from '@components/FooterCTA'
+
 
 export default function Home() {
   return (
@@ -26,6 +28,7 @@ export default function Home() {
       </main>
       
       <FAQS/>
+      <FooterCTA/>
       <Footer />
     </div>
   )
