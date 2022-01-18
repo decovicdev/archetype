@@ -33,7 +33,7 @@ export default function Steps() {
     <div className="py-12 bg-white">
       <div className="max-w-xl mx-auto px-4 sm:px-6 lg:max-w-7xl lg:px-8">
         <h2 className="sr-only">A better way to send money.</h2>
-        <dl className="space-y-10 lg:space-y-0 lg:grid lg:grid-cols-3 lg:gap-8">
+        <dl className="space-y-10 lg:space-y-0 lg:grid lg:grid-cols-4 lg:gap-8">
           {features.map((feature) => (
             <div key={feature.name}>
               <dt>
