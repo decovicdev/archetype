@@ -163,8 +163,8 @@ export default function Hero() {
                 <div className="mx-auto max-w-md px-4 sm:max-w-2xl sm:px-6 lg:max-w-none lg:px-0">
                   {/* Illustration taken from Lucid Illustrations: https://lucid.pixsellz.io/ */}
                   <img
-                    className="w-full lg:absolute lg:inset-y-0 lg:left-0 lg:h-full lg:w-auto lg:max-w-none"
-                    src="https://res.cloudinary.com/getarchetype/image/upload/v1642630164/hero-img_iggdus.png"
+                    className="object-scale-down"
+                    src="hero-img.webp"
                     alt=""
                   />
                 </div>
