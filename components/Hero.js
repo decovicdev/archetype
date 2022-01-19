@@ -41,7 +41,7 @@ export default function Hero() {
                   <span className="sr-only">Workflow</span>
                   <img
                     className="h-8 w-auto sm:h-10 rounded-md"
-                    src="archetype.png"
+                    src="https://res.cloudinary.com/getarchetype/image/upload/v1642630163/archetype_umafae.png"
                     alt=""
                   />
                 </a>
@@ -127,7 +127,7 @@ export default function Hero() {
       </Popover>
 
       <main>
-        <div style={{backgroundImage: 'hero-background.png'}} className="pt-10 sm:pt-16 lg:pt-8 lg:pb-14 lg:overflow-hidden">
+        <div className="pt-10 sm:pt-16 lg:pt-8 lg:pb-14 lg:overflow-hidden">
           <div className="mx-auto max-w-7xl lg:px-8">
             <div className="lg:grid lg:grid-cols-2 lg:gap-8">
               <div className="mx-auto max-w-md px-4 sm:max-w-2xl sm:px-6 sm:text-center lg:px-0 lg:text-left lg:flex lg:items-center">
@@ -164,7 +164,7 @@ export default function Hero() {
                   {/* Illustration taken from Lucid Illustrations: https://lucid.pixsellz.io/ */}
                   <img
                     className="w-full lg:absolute lg:inset-y-0 lg:left-0 lg:h-full lg:w-auto lg:max-w-none"
-                    src="hero-img.png"
+                    src="https://res.cloudinary.com/getarchetype/image/upload/v1642630164/hero-img_iggdus.png"
                     alt=""
                   />
                 </div>
