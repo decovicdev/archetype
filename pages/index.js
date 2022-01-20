@@ -12,7 +12,7 @@ import WaitlistModal from '@components/Modals/WaitlistModal'
 export default function Home() {
 
   return (
-    <div style={{backgroundColor: '#181A82'}}>
+    <div /*style={{backgroundColor: '#181A82'}}*/>
       <Head>
         <title>Archetype</title>
         <link rel="icon" href="/favicon.ico" />
