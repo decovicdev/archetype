@@ -14,11 +14,13 @@
   }
   ```
 */
-import { Fragment } from 'react'
+import React, { Fragment, useState , useEffect} from 'react'
 import { Popover, Transition } from '@headlessui/react'
 import { MenuIcon, XIcon } from '@heroicons/react/outline'
 import { ChevronRightIcon } from '@heroicons/react/solid'
 import JoinWaitlistButton from './Buttons/JoinWaitlistButton'
+import WaitlistModal from '@components/Modals/WaitlistModal'
+
 
 const navigation = [
   { name: 'Documentation', href: 'https://docs.archetype.dev' },
@@ -27,8 +29,19 @@ const navigation = [
 ]
 
 export default function Hero() {
+  const [addModalOpen, setAddModalOpen] = React.useState(false);
+
+  const handleAddClick = () => {
+    setAddModalOpen(true);
+  };
+  const handleClose = ()=>{
+    setAddModalOpen(false)
+  }
+
   return (
     <div className="relative overflow-hidden">
+      <WaitlistModal open={open} isOpen={addModalOpen} handleClose={handleClose}/>
+
       <Popover as="header" className="relative">
         <div className="pt-6">
           <nav
@@ -61,7 +74,7 @@ export default function Hero() {
               </div>
             </div>
             <div className="hidden md:flex md:items-center md:space-x-6">
-                    <JoinWaitlistButton/>
+                    <JoinWaitlistButton onClick={handleAddClick}/>
             </div>
           </nav>
         </div>

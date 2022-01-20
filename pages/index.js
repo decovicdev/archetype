@@ -7,9 +7,10 @@ import Hero from '@components/Hero'
 import FAQS from '@components/FAQs'
 import FooterCTA from '@components/FooterCTA'
 import WeirdFeatureGrid from '@components/WeirdFeatureGrid'
-import WaitlistModal from '@components/Modals/WaitlistModal'
+
 
 export default function Home() {
+  
 
   return (
     <div className="bg-hero-background bg-cover"/*style={{backgroundColor: '#181A82'}}*/>
@@ -22,7 +23,6 @@ export default function Home() {
         <Hero/>
         <Features/>
         <WeirdFeatureGrid/>
-        <WaitlistModal/>
         <Steps/>
         <FAQS/>
         <FooterCTA/>

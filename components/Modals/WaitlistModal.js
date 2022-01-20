@@ -1,13 +1,14 @@
-import { Fragment, useState } from 'react'
+/* This example requires Tailwind CSS v2.0+ */
+import { Fragment, useState, useEffect} from 'react'
 import { Dialog, Transition } from '@headlessui/react'
 import { CheckIcon } from '@heroicons/react/outline'
 
-export default function WaitlistModal() {
-  const [open, setOpen] = useState(false)
-
+export default function WaitlistModal(props) {
+ 
+    
   return (
-    <Transition.Root show={open} as={Fragment}>
-      <Dialog as="div" className="fixed z-10 inset-0 overflow-y-auto" onClose={setOpen}>
+    <Transition.Root show={props.isOpen} as={Fragment}>
+      <Dialog as="div" className="fixed z-10 inset-0 overflow-y-auto" onClose={props.handleClose}>
         <div className="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
           <Transition.Child
             as={Fragment}
@@ -54,7 +55,7 @@ export default function WaitlistModal() {
                 <button
                   type="button"
                   className="inline-flex justify-center w-full rounded-md border border-transparent shadow-sm px-4 py-2 bg-indigo-600 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:text-sm"
-                  onClick={() => setOpen(false)}
+                  onClick={props.handleClose}
                 >
                   Go back to dashboard
                 </button>
