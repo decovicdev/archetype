@@ -8,6 +8,11 @@ const faqs = [
     answer:
       "I don't know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.",
   },
+  {
+    question: "What's the best thing about Switzerland?",
+    answer:
+      "I don't know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.",
+  },
   // More questions...
 ]
 
@@ -17,19 +22,19 @@ function classNames(...classes) {
 
 export default function FAQS() {
   return (
-    <div className="bg-gray-50">
+    <div>
       <div className="max-w-7xl mx-auto py-12 px-4 sm:py-16 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto divide-y-2 divide-gray-200">
           <h2 className="text-center text-3xl font-extrabold text-gray-900 sm:text-4xl">Frequently asked questions</h2>
-          <dl className="mt-6 space-y-6 divide-y divide-gray-200">
+          <dl className="mt-6 space-y-10 divide-y divide-gray-200">
             {faqs.map((faq) => (
-              <Disclosure as="div" key={faq.question} className="pt-6">
+              <Disclosure as="div" key={faq.question} className="pt-6 bg-indigo-500">
                 {({ open }) => (
                   <>
                     <dt className="text-lg">
                       <Disclosure.Button className="text-left w-full flex justify-between items-start text-gray-400">
                         <span className="font-medium text-gray-900">{faq.question}</span>
-                        <span className="ml-6 h-7 flex items-center">
+                        <span className="ml-6 h-7 flex items-center rounded-full outline outline-offset-2 outline-1">
                           <ChevronDownIcon
                             className={classNames(open ? '-rotate-180' : 'rotate-0', 'h-6 w-6 transform')}
                             aria-hidden="true"
