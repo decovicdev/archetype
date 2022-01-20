@@ -40,7 +40,7 @@ export default function Hero() {
 
   return (
     <div className="relative overflow-hidden">
-      <WaitlistModal open={open} isOpen={addModalOpen} handleClose={handleClose}/>
+      <WaitlistModal isOpen={addModalOpen} handleClose={handleClose}/>
 
       <Popover as="header" className="relative">
         <div className="pt-6">
@@ -89,12 +89,12 @@ export default function Hero() {
           leaveTo="opacity-0 scale-95"
         >
           <Popover.Panel focus className="absolute z-10 top-0 inset-x-0 p-2 transition transform origin-top md:hidden">
-            <div className="rounded-lg shadow-md ring-1 ring-black ring-opacity-5 overflow-hidden">
+            <div className="bg-white rounded-lg shadow-md ring-1 ring-black ring-opacity-5 overflow-hidden">
               <div className="px-5 pt-4 flex items-center justify-between">
                 <div>
                   <img
                     className="h-8 w-auto"
-                    src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
+                    src="archetype.png"
                     alt=""
                   />
                 </div>
