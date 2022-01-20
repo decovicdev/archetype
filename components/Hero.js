@@ -28,7 +28,7 @@ const navigation = [
 
 export default function Hero() {
   return (
-    <div className="relative overflow-hidden bg-[url('../public/hero-background.png')]">
+    <div className="relative overflow-hidden">
       <Popover as="header" className="relative">
         <div className="pt-6">
           <nav
@@ -76,7 +76,7 @@ export default function Hero() {
           leaveTo="opacity-0 scale-95"
         >
           <Popover.Panel focus className="absolute z-10 top-0 inset-x-0 p-2 transition transform origin-top md:hidden">
-            <div className="rounded-lg shadow-md bg-white ring-1 ring-black ring-opacity-5 overflow-hidden">
+            <div className="rounded-lg shadow-md ring-1 ring-black ring-opacity-5 overflow-hidden">
               <div className="px-5 pt-4 flex items-center justify-between">
                 <div>
                   <img

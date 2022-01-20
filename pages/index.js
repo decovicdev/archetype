@@ -12,28 +12,24 @@ import WaitlistModal from '@components/Modals/WaitlistModal'
 export default function Home() {
 
   return (
-    <div /*style={{backgroundColor: '#181A82'}}*/>
+    <div className="bg-hero-background bg-cover"/*style={{backgroundColor: '#181A82'}}*/>
       <Head>
         <title>Archetype</title>
         <link rel="icon" href="/favicon.ico" />
         <link href="/dist/output.css" rel="stylesheet"></link>
       </Head>
-      <Hero/>
-      <Features/>
-      <WeirdFeatureGrid/>
-      <WaitlistModal/>
-      <Steps/>
-      {/*
       <main>
-        <Header title="Welcome to my app!" />
-        <p className="description">
-          Get started by editing <code>pages/index.js</code>
-        </p>
+        <Hero/>
+        <Features/>
+        <WeirdFeatureGrid/>
+        <WaitlistModal/>
+        <Steps/>
+        <FAQS/>
+        <FooterCTA/>
+        <Footer />
       </main>
-      */}
-      <FAQS/>
-      <FooterCTA/>
-      <Footer />
+      
+      
     </div>
   )
 }

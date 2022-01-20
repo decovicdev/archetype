@@ -30,7 +30,7 @@ const features = [
 
 export default function Steps() {
   return (
-    <div className="py-12 bg-white">
+    <div className="py-12">
       <div className="max-w-xl mx-auto px-4 sm:px-6 lg:max-w-7xl lg:px-8">
         <dl className="space-y-10 lg:space-y-0 lg:grid lg:grid-cols-4 lg:gap-8">
           {features.map((feature) => (
