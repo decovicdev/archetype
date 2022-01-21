@@ -7,28 +7,27 @@ import Hero from '@components/Hero'
 import FAQS from '@components/FAQs'
 import FooterCTA from '@components/FooterCTA'
 import WeirdFeatureGrid from '@components/WeirdFeatureGrid'
-
+import Divider from '@components/Layout/Divider'
 
 export default function Home() {
   
 
   return (
-    <div className="bg-hero-background bg-cover"/*style={{backgroundColor: '#181A82'}}*/>
+    <div className="bg-fullscreencover bg-cover">
       <Head>
         <title>Archetype</title>
         <link rel="icon" href="/favicon.ico" />
         <link href="/dist/output.css" rel="stylesheet"></link>
       </Head>
+      <Hero/>
       <main>
-        <Hero/>
-        <Features/>
-        <WeirdFeatureGrid/>
-        <Steps/>
-        <FAQS/>
-        <FooterCTA/>
-        <Footer />
+        
       </main>
       
+      <Features/>
+      <WeirdFeatureGrid/>
+      <Steps/>
+      <FAQS/>
       
     </div>
   )
