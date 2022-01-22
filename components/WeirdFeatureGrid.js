@@ -28,7 +28,7 @@ export default function WeirdFeatureGrid() {
       <div className="max-w-xl mx-auto px-4 sm:px-6 lg:max-w-7xl lg:px-8">
         <h2 className="sr-only">A better way to send money.</h2>
         <dl className="space-y-10 lg:space-y-0 lg:grid lg:grid-cols-2 lg:gap-8">
-            <div className="row-span-2 bg-gradient-to-r from-indigo-500" key="Yo">
+            <div className="row-span-2 bg-indigo-500 px-8 py-3 rounded-lg" key="Yo">
               <dt>
                 <div className="flex items-center justify-center rounded-md text-white">
                   <LightningBoltIcon className="h-6 w-6" aria-hidden="true" />

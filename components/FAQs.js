@@ -4,9 +4,9 @@ import { ChevronDownIcon } from '@heroicons/react/outline'
 
 const faqs = [
   {
-    question: "What's the best thing about Switzerland?",
+    question: "What is Archetype?",
     answer:
-      "I don't know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.",
+      "Archetype provides automated framework for API  merchants. With Archetype you can set up and deploy your API commerce in minutes. You can pay with a credit card or via net banking (if you’re in United States). We will renew your subscription automatically at the end of every billing cycle.",
   },
   {
     question: "What's the best thing about Switzerland?",
@@ -39,15 +39,15 @@ export default function FAQS() {
   return (
     <div>
       <div className="max-w-7xl mx-auto py-12 px-4 sm:py-16 sm:px-6 lg:px-8">
-        <div className="max-w-3xl mx-auto divide-y-2 divide-gray-200">
-          <h2 className="text-center text-3xl font-extrabold text-gray-900 sm:text-4xl">Frequently asked questions</h2>
-          <dl className="mt-6 space-y-10 divide-y divide-gray-200">
+        <div className="max-w-3xl mx-auto ">
+          <h2 className="text-center text-3xl font-extrabold text-white sm:text-4xl">Frequently asked questions</h2>
+          <dl className="mt-6 space-y-10 ">
             {faqs.map((faq) => (
-              <Disclosure as="div" key={faq.question} className="pt-6 bg-indigo-500">
+              <Disclosure as="div" key={faq.question} className="bg-white rounded-lg">
                 {({ open }) => (
                   <>
                     <dt className="text-lg">
-                      <Disclosure.Button className="text-left w-full flex justify-between items-start text-gray-400">
+                      <Disclosure.Button className="py-4 px-3 text-left w-full flex justify-between items-start text-gray-400">
                         <span className="font-medium text-gray-900">{faq.question}</span>
                         <span className="ml-6 h-7 flex items-center rounded-full outline outline-offset-2 outline-1">
                           <ChevronDownIcon
@@ -57,7 +57,7 @@ export default function FAQS() {
                         </span>
                       </Disclosure.Button>
                     </dt>
-                    <Disclosure.Panel as="dd" className="mt-2 pr-12">
+                    <Disclosure.Panel as="dd" className="mt-2 pr-12 py-4 px-3">
                       <p className="text-base text-gray-500">{faq.answer}</p>
                     </Disclosure.Panel>
                   </>

@@ -1,10 +1,10 @@
 export default function FooterCTA() {
   return (
     <div>
-      <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 md:py-16 lg:px-8 lg:py-20">
+      <div className=" rounded-lg mb-8 max-w-7xl mx-auto py-12 px-4 sm:px-6 md:py-16 lg:px-8 lg:py-20">
         <h2 className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-          <span className="block">Ready to dive in?</span>
-          <span className="block text-indigo-600">Start your free trial today.</span>
+          <span className="block text-white">Ready to dive in?</span>
+          <span className="block text-gray-500">Set up and deploy your API in minutes.</span>
         </h2>
         <div className="mt-8 flex">
           <div className="inline-flex rounded-md shadow">

@@ -194,7 +194,7 @@ export default function Hero() {
             <div className="lg:self-center">
               <h2 className="text-3xl font-extrabold text-white sm:text-4xl">
                 <span className="block">Ready to dive in?</span>
-                <span className="block">Start your free trial today.</span>
+                <span className="block">Join our waitlist.</span>
               </h2>
               <p className="mt-4 text-lg leading-6 text-indigo-200">
                 Ac euismod vel sit maecenas id pellentesque eu sed consectetur. Malesuada adipiscing sagittis vel nulla

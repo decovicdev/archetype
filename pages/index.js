@@ -13,21 +13,20 @@ export default function Home() {
   
 
   return (
-    <div className="bg-fullscreencover bg-cover">
+    <div className="bg-fullscreencover bg-cover ">
       <Head>
         <title>Archetype</title>
         <link rel="icon" href="/favicon.ico" />
         <link href="/dist/output.css" rel="stylesheet"></link>
       </Head>
       <Hero/>
-      <main>
-        
-      </main>
-      
       <Features/>
       <WeirdFeatureGrid/>
       <Steps/>
       <FAQS/>
+      <FooterCTA/>
+      <Footer/>
+      
       
     </div>
   )

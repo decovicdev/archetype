@@ -3,25 +3,25 @@ import { GlobeAltIcon, LightningBoltIcon, ScaleIcon } from '@heroicons/react/out
 
 const features = [
   {
-    name: 'Competitive exchange rates',
+    name: 'Sign up at Archetype',
     description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
-    icon: GlobeAltIcon,
+      'Link Stripe Account',
+    icon: LightningBoltIcon,
   },
   {
-    name: 'No hidden fees',
-    description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
-    icon: ScaleIcon,
-  },
-  {
-    name: 'Transfers are instant',
+    name: 'Add a product',
     description:
       'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
     icon: LightningBoltIcon,
   },
   {
-    name: 'Transfers are instant',
+    name: 'Anchor backend',
+    description:
+      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+    icon: LightningBoltIcon,
+  },
+  {
+    name: 'Collect Payments',
     description:
       'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
     icon: LightningBoltIcon,
@@ -30,8 +30,15 @@ const features = [
 
 export default function Steps() {
   return (
-    <div className="py-12">
+    <div className="py-12 mx-auto max-w-md px-4 text-center sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-7xl">
+      <p className="mt-2 text-left text-white text-3xl font-extrabold tracking-tight sm:text-4xl">
+            How it works
+          </p>
+          <p className="mt-3 text-left pb-10 text-base text-gray-300 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
+            Set up and deploy your API in minutes.
+          </p>
       <div className="max-w-xl mx-auto px-4 sm:px-6 lg:max-w-7xl lg:px-8">
+        
         <dl className="space-y-10 lg:space-y-0 lg:grid lg:grid-cols-4 lg:gap-8">
           {features.map((feature) => (
             <div key={feature.name}>
@@ -41,8 +48,8 @@ export default function Steps() {
                 </div>
                 
               </dt>
-              <p className="flex items-center justify-center mt-5 text-lg leading-6 font-medium text-gray-900">{feature.name}</p>
-              <dd className=" text-center mt-2 text-base text-gray-500">{feature.description}</dd>
+              <p className="flex items-center justify-center mt-5 text-lg leading-6 font-medium text-gray-200">{feature.name}</p>
+              <dd className=" text-center mt-2 text-base text-gray-400">{feature.description}</dd>
             </div>
           ))}
         </dl>
