@@ -21,9 +21,9 @@ export default function Home() {
       </Head>
       <Hero/>
       <Features/>
-      <WeirdFeatureGrid/>
+      {/*<WeirdFeatureGrid/>*/}
       <Steps/>
-      <FAQS/>
+      {/*<FAQS/>*/}
       <FooterCTA/>
       <Footer/>
       

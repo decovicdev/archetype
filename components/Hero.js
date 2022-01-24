@@ -32,7 +32,7 @@ export default function Hero() {
   const [addModalOpen, setAddModalOpen] = React.useState(false);
 
   const handleAddClick = () => {
-    setAddModalOpen(true);
+    //setAddModalOpen(true);
   };
   const handleClose = ()=>{
     setAddModalOpen(false)
@@ -40,8 +40,7 @@ export default function Hero() {
 
   return (
     <div className="relative overflow-hidden">
-      <WaitlistModal isOpen={addModalOpen} handleClose={handleClose}/>
-
+    <WaitlistModal isOpen={addModalOpen} handleClose={handleClose} />
       <Popover as="header" className="relative">
         <div className="pt-6">
           <nav
@@ -65,16 +64,19 @@ export default function Hero() {
                   </Popover.Button>
                 </div>
               </div>
-              <div className="hidden space-x-8 md:flex md:ml-10">
+              {/*<div className="hidden space-x-8 md:flex md:ml-10">
                 {navigation.map((item) => (
                   <a key={item.name} href={item.href} className="text-base font-medium text-white hover:text-gray-300">
                     {item.name}
                   </a>
                 ))}
               </div>
+                */}
             </div>
             <div className="hidden md:flex md:items-center md:space-x-6">
-                    <JoinWaitlistButton onClick={handleAddClick}/>
+            <a href="https://airtable.com/shrjDMR7xCaC4iP22">
+              <JoinWaitlistButton onClick={handleAddClick}/>
+            </a>
             </div>
           </nav>
         </div>
@@ -147,28 +149,25 @@ export default function Hero() {
                 <div className="lg:py-24">
                   <h1 className="mt-4 text-4xl tracking-tight font-extrabold text-white sm:mt-5 sm:text-6xl lg:mt-6 xl:text-6xl">
                     <span className="block">Merchandise</span>
-                    <span className="block text-indigo-400">your APIs today</span>
+                    <span className="block text-[#09E4A8]">your APIs today</span>
                   </h1>
                   <p className="mt-3 text-base text-gray-300 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
                   One-step API commerce launch and management through Archetype.
                   </p>
                   <div className="mt-10 sm:flex sm:justify-center lg:justify-start">
-                    <div className="rounded-md shadow">
-                        <a
-                        href="#"
-                        className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10"
-                        >
-                        Get started
-                        </a>
+                    <div className="rounded-md text-lg shadow">
+                    <a href="https://airtable.com/shrjDMR7xCaC4iP22">
+                      <JoinWaitlistButton onClick={handleAddClick}/>
+                    </a>
                     </div>
-                    <div className="mt-3 rounded-md shadow sm:mt-0 sm:ml-3">
+                    {/*<div className="mt-3 rounded-md shadow sm:mt-0 sm:ml-3">
                         <a
                         href="#"
                         className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-indigo-600 bg-white hover:bg-gray-50 md:py-4 md:text-lg md:px-10"
                         >
                         Live demo
                         </a>
-                    </div>
+                    </div> */}
                 </div>
                 </div>
               </div>
@@ -200,12 +199,6 @@ export default function Hero() {
                 Ac euismod vel sit maecenas id pellentesque eu sed consectetur. Malesuada adipiscing sagittis vel nulla
                 nec.
               </p>
-              <a
-                href="#"
-                className="mt-8 bg-white border border-transparent rounded-md shadow px-5 py-3 inline-flex items-center text-base font-medium text-indigo-600 hover:bg-indigo-50"
-              >
-                Sign up for free
-              </a>
             </div>
           </div>
           <div className="-mt-6 aspect-w-5 aspect-h-3 md:aspect-w-2 md:aspect-h-1">

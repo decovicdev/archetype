@@ -9,13 +9,12 @@ module.exports = {
         },  
         backgroundImage: {
             'hero-background': "url('../public/hero-background.png')",
-            'unusual-card-lg': "url('../public/block-left.svg')",
-            'unusual-card-sm': "url('../public/blocks_right.svg')",
+            'unusual-card-lg': "url('../public/blockleft.svg')",
+            'unusual-card-sm': "url('../public/blockright.svg')",
             'fullscreencover': "url('../public/fullpagecover.png')"
-          },      
+        }
     },  
     
     plugins: [
-
     ],
 }

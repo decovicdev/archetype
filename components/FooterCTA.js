@@ -1,28 +1,39 @@
+import React, { Fragment, useState , useEffect} from 'react'
+import JoinWaitlistButton from './Buttons/JoinWaitlistButton'
+import WaitlistModal from './Modals/WaitlistModal';
 export default function FooterCTA() {
+  const [addModalOpen, setAddModalOpen] = React.useState(false);
+
+  const handleAddClick = () => {
+    //setAddModalOpen(true);
+  };
+  const handleClose = ()=>{
+    setAddModalOpen(false)
+  }
+
   return (
     <div>
       <div className=" rounded-lg mb-8 max-w-7xl mx-auto py-12 px-4 sm:px-6 md:py-16 lg:px-8 lg:py-20">
         <h2 className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
           <span className="block text-white">Ready to dive in?</span>
-          <span className="block text-gray-500">Set up and deploy your API in minutes.</span>
+          <span className="block text-lg pt-2 text-gray-500">Set up and deploy your API in minutes.</span>
         </h2>
         <div className="mt-8 flex">
-          <div className="inline-flex rounded-md shadow">
-            <a
-              href="#"
-              className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700"
-            >
-              Get started
-            </a>
+          <div className="rounded-md shadow">
+          <a href="https://airtable.com/shrjDMR7xCaC4iP22">
+            <JoinWaitlistButton onClick={handleAddClick}/>
+          </a>
+          
+          <WaitlistModal isOpen={addModalOpen} handleClose={handleClose}/>
           </div>
-          <div className="ml-3 inline-flex">
-            <a
-              href="#"
-              className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-indigo-700 bg-indigo-100 hover:bg-indigo-200"
-            >
-              Learn more
-            </a>
-          </div>
+            {/*<div className="mt-3 rounded-md shadow sm:mt-0 sm:ml-3">
+                <a
+                href="#"
+                className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-indigo-600 bg-white hover:bg-gray-50 md:py-4 md:text-lg md:px-10"
+                >
+                Live demo
+                </a>
+            </div> */}
         </div>
       </div>
     </div>

@@ -34,7 +34,7 @@ export default function Steps() {
       <p className="mt-2 text-left text-white text-3xl font-extrabold tracking-tight sm:text-4xl">
             How it works
           </p>
-          <p className="mt-3 text-left pb-10 text-base text-gray-300 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
+          <p className="mt-2 text-left pb-10 text-base text-gray-100 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
             Set up and deploy your API in minutes.
           </p>
       <div className="max-w-xl mx-auto px-4 sm:px-6 lg:max-w-7xl lg:px-8">
