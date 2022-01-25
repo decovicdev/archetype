@@ -11,7 +11,7 @@ const features = [
   {
     name: 'Create a Plan',
     description:
-      'Create a subscription plan and customize features and quota limits.',
+      'Create subscriptions, customize features and set quotas.',
     icon: LightningBoltIcon,
   },
   {
