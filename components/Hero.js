@@ -23,9 +23,10 @@ import WaitlistModal from '@components/Modals/WaitlistModal'
 
 
 const navigation = [
-  { name: 'Documentation', href: 'https://docs.archetype.dev' },
+  /*{ name: 'Documentation', href: 'https://docs.archetype.dev' },
   { name: 'Pricing', href: '#' },
   { name: 'Blog', href: '#' }
+  */
 ]
 
 export default function Hero() {
@@ -120,21 +121,11 @@ export default function Hero() {
                   ))}
                 </div>
                 <div className="mt-6 px-5">
-                  <a
-                    href="#"
-                    className="block text-center w-full py-3 px-4 rounded-md shadow bg-indigo-600 text-white font-medium hover:bg-indigo-700"
-                  >
-                    Start free trial
+                  <a href="https://airtable.com/shrjDMR7xCaC4iP22">
+                    <JoinWaitlistButton onClick={handleAddClick}/>
                   </a>
                 </div>
-                <div className="mt-6 px-5">
-                  <p className="text-center text-base font-medium text-gray-500">
-                    Existing customer?{' '}
-                    <a href="#" className="text-gray-900 hover:underline">
-                      Login
-                    </a>
-                  </p>
-                </div>
+                
               </div>
             </div>
           </Popover.Panel>
@@ -148,11 +139,11 @@ export default function Hero() {
               <div className="mx-auto max-w-md px-4 sm:max-w-2xl sm:px-6 sm:text-center lg:px-0 lg:text-left lg:flex lg:items-center">
                 <div className="lg:py-24">
                   <h1 className="mt-4 text-4xl tracking-tight font-extrabold text-white sm:mt-5 sm:text-6xl lg:mt-6 xl:text-6xl">
-                    <span className="block">Merchandise</span>
-                    <span className="block text-[#09E4A8]">your APIs today</span>
+                    <span className="block">Archetype</span>
+                    <span className="block text-[#09E4A8]">Launch your API today.</span>
                   </h1>
                   <p className="mt-3 text-base text-gray-300 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
-                  One-step API commerce launch and management through Archetype.
+                  Create subscriptions and tiered access to your API in minutes with our SDKs.
                   </p>
                   <div className="mt-10 sm:flex sm:justify-center lg:justify-start">
                     <div className="rounded-md text-lg shadow">
@@ -193,10 +184,9 @@ export default function Hero() {
             <div className="lg:self-center">
               <h2 className="text-3xl font-extrabold text-white sm:text-4xl">
                 <span className="block">Ready to dive in?</span>
-                <span className="block">Join our waitlist.</span>
               </h2>
               <p className="mt-4 text-lg leading-6 text-indigo-200">
-                Archetype handles infrastructure for creating plans, managing quotas, editing permissions and dynamic pricing for APIs.
+                Archetype handles infrastructure for creating plans, managing quotas, editing permissions and dynamic pricing for APIs with just a few lines of code.
               </p>
             </div>
           </div>
