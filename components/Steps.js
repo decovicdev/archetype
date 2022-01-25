@@ -5,25 +5,25 @@ const features = [
   {
     name: 'Sign up at Archetype',
     description:
-      'Link Stripe Account',
+      'Link Stripe Account and register an account.',
     icon: LightningBoltIcon,
   },
   {
-    name: 'Add a product',
+    name: 'Create a Plan',
     description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+      'Create a subscription plan and customize features and quota limits.',
     icon: LightningBoltIcon,
   },
   {
-    name: 'Anchor backend',
+    name: 'Integrate our SDKs',
     description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+      'Quickly set up our SDKs in your codebase.',
     icon: LightningBoltIcon,
   },
   {
     name: 'Collect Payments',
     description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+      'Immediately accept payments and never worry about invoicing your users again.',
     icon: LightningBoltIcon,
   },
 ]

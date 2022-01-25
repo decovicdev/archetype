@@ -9,12 +9,9 @@ import {
   } from '@heroicons/react/outline'
   
   const features = [
-    { name: 'Push to Deploy', icon: CloudUploadIcon, text: " Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis." },
-    { name: 'SSL Certificates', icon: LockClosedIcon, text: " Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis." },
-    { name: 'Simple Queues', icon: RefreshIcon, text: " Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis."},
-    { name: 'Advanced Security', icon: ShieldCheckIcon, text: " Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis." },
-    { name: 'Powerful API', icon: CogIcon, text: " Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis." },
-    { name: 'Database Backups', icon: ServerIcon, text: " Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis." },
+    { name: 'Simple Integration', icon: CloudUploadIcon, text: "Our low-code SDKS make integrating to your services a piece of cake. Set up once in minutes." },
+    { name: 'Minimal Engineering', icon: LockClosedIcon, text: "Use the dashboard to create subscriptions, adjust prices and gate access to premium endpoints. No redeployments required." },
+    { name: 'Powerful Insights', icon: RefreshIcon, text: "Analytics into usage, conversion, and cohort segmentation. Experiment with pricing models with our dynamic pricing system."},
   ]
   
   export default function Features() {

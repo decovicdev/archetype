@@ -176,7 +176,7 @@ export default function Hero() {
                   {/* Illustration taken from Lucid Illustrations: https://lucid.pixsellz.io/ */}
                   <img
                     className="w-full lg:absolute lg:inset-y-0 lg:left-0 lg:h-full lg:w-auto lg:max-w-none animate-fade-in-down"
-                    src="hero-img.webp"
+                    src="hero graphic (11).svg"
                     alt=""
                   />
                 </div>
@@ -196,8 +196,7 @@ export default function Hero() {
                 <span className="block">Join our waitlist.</span>
               </h2>
               <p className="mt-4 text-lg leading-6 text-indigo-200">
-                Ac euismod vel sit maecenas id pellentesque eu sed consectetur. Malesuada adipiscing sagittis vel nulla
-                nec.
+                Archetype handles infrastructure for creating plans, managing quotas, editing permissions and dynamic pricing for APIs.
               </p>
             </div>
           </div>
