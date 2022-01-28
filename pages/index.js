@@ -19,6 +19,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
         <link href="/dist/output.css" rel="stylesheet"></link>
       </Head>
+     
       <Hero/>
       <Features/>
       {/*<WeirdFeatureGrid/>*/}
@@ -26,7 +27,11 @@ export default function Home() {
       {/*<FAQS/>*/}
       <FooterCTA/>
       <Footer/>
-      
+      <body>
+        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=G-8PE8JSX9VB"
+          height="0" width="0"></iframe>
+        </noscript>
+      </body>
       
     </div>
   )
