@@ -8,8 +8,11 @@ import FAQS from '@components/FAQs'
 import FooterCTA from '@components/FooterCTA'
 import WeirdFeatureGrid from '@components/WeirdFeatureGrid'
 import Divider from '@components/Layout/Divider'
+import PlanComponent from '@components/PlanComponent'
 
-export default function Home() {
+
+
+export default function Pricing() {
   
 
   return (
@@ -18,32 +21,9 @@ export default function Home() {
         <title>Archetype</title>
         <link rel="icon" href="/favicon.ico" />
         <link href="/dist/output.css" rel="stylesheet"></link>
-        <script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=G-8PE8JSX9VB"
-        />
-
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', '[Tracking ID]', { page_path: window.location.pathname });
-            `,
-          }}
-        />
       </Head>
-     
-      <Hero/>
-      <Features/>
-      {/*<WeirdFeatureGrid/>*/}
-      <Steps/>
-      {/*<FAQS/>*/}
-      <FooterCTA/>
-      <Footer/>
-      <body>
-      </body>
+      <PlanComponent/>
+
       
     </div>
   )
