@@ -29,7 +29,7 @@ export default function Home() {
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
-              gtag('config', '[Tracking ID]', { page_path: window.location.pathname });
+              gtag('config', 'G-8PE8JSX9VB', { page_path: window.location.pathname });
             `,
           }}
         />
