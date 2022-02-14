@@ -36,9 +36,15 @@ export default function Footer() {
           ))}
         </div>
         <div className="mt-8 md:mt-0 md:order-1">
-          <p className="text-center text-base text-gray-400">&copy; 2022 Archetype Connect, Inc. All rights reserved.</p>
+        <a
+                href="https://twitter.com/getarchetype"
+                className="inline-flex items-center justify-center border border-transparent text-base font-medium rounded-md text-white hover:text-gray-400"
+              >
+                Follow <span className="text-green-500">&nbsp; @GetArchetype &nbsp;</span>  <span> for updates.</span>
+              </a>
+          <p className="text-center text-base text-white">&copy; 2022 Archetype Connect, Inc. All rights reserved.</p>
         </div>
-      </div>
+        </div>
     </footer>
   )
 }

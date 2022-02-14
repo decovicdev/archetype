@@ -22,10 +22,9 @@ module.exports = {
             }
         },  
         backgroundImage: {
-            'hero-background': "url('../public/hero-background.png')",
             'unusual-card-lg': "url('../public/blockleft.svg')",
             'unusual-card-sm': "url('../public/blockright.svg')",
-            'fullscreencover': "url('../public/fullpagecover.png')",
+            'fullscreencover': "url('../public/fullpagecover copy.png')",
             'heroimg': "url('../public/hero graphic (11).svg')"
         }
     },  

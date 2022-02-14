@@ -1,19 +1,16 @@
 import Head from 'next/head'
-import Header from '@components/Header'
 import Footer from '@components/Footer'
 import Features from '@components/Features'
 import Steps from '@components/Steps'
 import Hero from '@components/Hero'
-import FAQS from '@components/FAQs'
 import FooterCTA from '@components/FooterCTA'
-import WeirdFeatureGrid from '@components/WeirdFeatureGrid'
-import Divider from '@components/Layout/Divider'
-
+import SideBySideFeatures from '@components/LandingPage/SideBySideFeatures'
+import BottomCTA from '@components/LandingPage/BottomCTA'
 export default function Home() {
   
 
   return (
-    <div className="bg-fullscreencover bg-cover ">
+    <div className="">
       <Head>
         <title>Archetype</title>
         <link rel="icon" href="/favicon.ico" />
@@ -34,17 +31,14 @@ export default function Home() {
           }}
         />
       </Head>
-     
       <Hero/>
-      <Features/>
-      {/*<WeirdFeatureGrid/>*/}
-      <Steps/>
-      {/*<FAQS/>*/}
-      <FooterCTA/>
+      <div className="bg-fullscreencover bg-cover">
+        <Features/>
+        <Steps/>
+      </div>
+     
+      <BottomCTA/>
       <Footer/>
-      <body>
-      </body>
-      
     </div>
   )
 }
