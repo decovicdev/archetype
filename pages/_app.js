@@ -14,7 +14,7 @@ function Application({ Component, pageProps }) {
 
   useEffect(() => {
     router.events.on('routeChangeComplete', handleRouteChange);
-    hotjar.initialize(2839791, 1)
+    hotjar.initialize(2839791, 6)
     return () => {
       router.events.off('routeChangeComplete', handleRouteChange);
     };
