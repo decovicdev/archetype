@@ -1,7 +1,7 @@
 import '@styles/globals.css'
 import { useRouter } from 'next/router';
 import { useEffect } from "react";
-
+import { hotjar } from 'react-hotjar'
 
 function Application({ Component, pageProps }) {
   const router = useRouter();
@@ -14,6 +14,7 @@ function Application({ Component, pageProps }) {
 
   useEffect(() => {
     router.events.on('routeChangeComplete', handleRouteChange);
+    hotjar.initialize(2839791, 6)
     return () => {
       router.events.off('routeChangeComplete', handleRouteChange);
     };
