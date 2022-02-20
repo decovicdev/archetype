@@ -42,12 +42,11 @@ export default function Home() {
       </Head>
       <Hero/>
       <div className="bg-fullscreencover bg-cover">
-       
-        <Steps/>
-      </div>
-     
       <BottomCTA/>
       <Footer/>
+      </div>
+     
+      
     </div>
   )
 }
