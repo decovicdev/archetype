@@ -42,7 +42,7 @@ export default function Home() {
       </Head>
       <Hero/>
       <div className="bg-fullscreencover bg-cover">
-        <Features/>
+       
         <Steps/>
       </div>
      
