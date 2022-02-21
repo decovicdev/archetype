@@ -30,8 +30,10 @@ export default function SideBySideFeatures() {
                   Integrate In Minutes
                 </h2>
                 <p className="mt-4 text-lg text-gray-500">
-                  Archetype frees engineering resources with fast deployment and low-effort maintenance. We integrate painlessly with your existing tech stack, and enable no-code adjustments to pricing, bundles, and packaging. Never worry about managing API keys, quotas, or permissions and focus on building products.
+                  Archetype integrates painlessly with your existing tech stack and enables no-code adjustments to pricing, bundles, and packaging.
                 </p>
+                <p className="mt-4 text-lg text-gray-500">Never worry about managing billing, invoicing, API keys, quotas, or permissions.</p>
+                <p className="mt-4 text-lg text-gray-500">Save your engineers months of setup and maintennace so they can focus on delivering amazing products.</p>
                 <div className="mt-6">
                   <a
                     href="/contact"
@@ -68,9 +70,10 @@ export default function SideBySideFeatures() {
                   Easily Create Complex Billing Models
                 </h2>
                 <p className="mt-4 text-lg text-gray-500">
-                  Use the dashboard to create subscriptions, adjust prices and gate access to premium endpoints. No redeployments required.
-                  Rapidly iterate on your evolving business model without rearchitecting billing or rewriting code. Experiment with subscription or usage-based models with adjustible quotas, metered limits and more.
+                  Use the dashboard to create subscriptions, adjust prices and gate access to premium endpoints. No redeployments required. 
                 </p>
+                <p className="mt-4 text-lg text-gray-500"> Adjust quotas, metered limits and more without rearchitecting billing or rewriting code.</p>
+                  <p className="mt-4 text-lg text-gray-500"> Switch between subscription or usage-based models in seconds. </p>
                 <div className="mt-6">
                   <a
                     href="/contact"
@@ -107,8 +110,9 @@ export default function SideBySideFeatures() {
                 Automatically Optimize Pricing Models
                 </h2>
                 <p className="mt-4 text-lg text-gray-500">
-                Get insights into usage, conversion, retention and cohort segmentation. Experiment with pricing models with our dynamic pricing system and get the best bang for your buck.
+                Leverage our insights into usage, conversion, retention and cohort segmentation to improve your product and pricing.
                 </p>
+                <p className="mt-4 text-lg text-gray-500"> Experiment with pricing models with our dynamic pricing system.</p>
                 <div className="mt-6">
                   <a
                     href="/contact"
