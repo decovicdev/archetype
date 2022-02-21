@@ -8,7 +8,7 @@ export default function SideBySideFeatures() {
 
         <div className="relative">
           <h2 className="text-center text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-            A better way to monetize your API.
+            A better way to monetize your API
           </h2>
           <p className="mt-4 max-w-3xl mx-auto text-center text-xl text-gray-500">
             
