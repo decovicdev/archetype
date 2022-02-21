@@ -23,7 +23,7 @@ export default function Navbar() {
 
   return (
     <div className="relative overflow-hidden">
-            <Popover as="header" className="relative">
+      <Popover as="header" className="relative">
         <div className="pt-6">
           <nav
             className="relative max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6"
@@ -31,7 +31,7 @@ export default function Navbar() {
           >
             <div className="flex items-center flex-1">
               <div className="flex items-center justify-between w-full md:w-auto">
-                <a href="/">
+                <a href="#">
                   <span className="sr-only"></span>
                   <img
                     className="h-8 w-auto sm:h-10 rounded-md"

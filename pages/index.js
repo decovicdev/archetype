@@ -42,8 +42,8 @@ export default function Home() {
       </Head>
       <Hero/>
       <div className="bg-fullscreencover bg-cover">
-      <BottomCTA/>
-      <Footer/>
+        <BottomCTA/>
+        <Footer/>
       </div>
      
       

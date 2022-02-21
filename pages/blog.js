@@ -18,9 +18,9 @@ export default function Blog({ posts, initialDisplayPosts, pagination }) {
   return (
     <div className="bg-fullscreencover">
       <Navbar/>
-      <BlogsGrid/>
+      
       <main>
-
+      <BlogsGrid/>
       </main>
       
     </div>
