@@ -19,11 +19,11 @@ export default function Home() {
         <meta property="og:url" content="https://archetype.dev" key="ogurl" />
         <meta property="og:site_name" content="Archetype" key="ogsitename" />
         <meta property="og:title" content="Archetype - API Monetization"key="ogtitle" />
-        <meta property="og:description" content="Helping APIs launch monetization in minutes. Quickly create subscriptions, gate endpoint access, manage users' quotas and set up usage based pricing and optimize your pricing models with our end-to-end API analytics and logs." key="ogdesc" />
+        <meta property="og:description" content="Helping companies publish monetized APIs and create subscriptions, and manage users' quotas and access in minutes. Optimize your pricing models with dynamic pricing." key="ogdesc" />
 
         <link rel="icon" href="/favicon.ico" />
         <link href="/dist/output.css" rel="stylesheet"></link>
-        <meta name="description" content="Helping APIs launch monetization in minutes. Quickly create subscriptions, gate endpoint access, manage users' quotas and set up usage based pricing and optimize your pricing models with our end-to-end API analytics and logs." />
+        <meta name="description" content="Helping companies publish monetized APIs and create subscriptions, and manage users' quotas and access in minutes. Optimize your pricing models with dynamic pricing." />
         <script
           async
           src="https://www.googletagmanager.com/gtag/js?id=G-8PE8JSX9VB"
