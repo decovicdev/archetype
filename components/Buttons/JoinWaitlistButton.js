@@ -2,6 +2,9 @@
 export default function JoinWaitlistButton(props) {
     
     return (
+        <a 
+        href="https://airtable.com/shrjDMR7xCaC4iP22"
+        >
         <button
             type="button"
             onClick={props.onClick}
@@ -9,5 +12,6 @@ export default function JoinWaitlistButton(props) {
         >
             Request Beta Access
         </button>
+        </a>
     )
 }

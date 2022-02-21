@@ -86,9 +86,7 @@ export default function Hero() {
                 */}
             </div>
             <div className="hidden md:flex md:items-center md:space-x-6">
-            <a href="/contact">
               <JoinWaitlistButton onClick={handleAddClick}/>
-            </a>
             <a key="twitter" href="https://twitter.com/getarchetype" className="text-white hover:text-gray-500">
               <span className="sr-only">twitter</span>
               <svg fill="currentColor" viewBox="0 0 24 24" className="h-6 w-6" aria-hidden="true">
@@ -138,11 +136,7 @@ export default function Hero() {
                   ))}
                 </div>
                 <div className="mt-6 px-5">
-                  <a href="/contact">
                     <JoinWaitlistButton onClick={handleAddClick}/>
-                    
-                  </a>
-                  
                 </div>
                 
               </div>
@@ -165,9 +159,7 @@ export default function Hero() {
                   </p>
                   <div className="mt-10 sm:flex sm:justify-center lg:justify-start">
                     <div className="rounded-md text-lg shadow">
-                    <a href="/contact">
                       <JoinWaitlistButton onClick={handleAddClick}/>
-                    </a>
                     </div>
                     {/*<div className="mt-3 rounded-md shadow sm:mt-0 sm:ml-3">
                         <a
@@ -197,7 +189,6 @@ export default function Hero() {
         <SideBySideFeatures/>
         {/* More main page content here... */}
 
-     
     </div>
   )
 }

@@ -36,7 +36,7 @@ export default function SideBySideFeatures() {
                 <p className="mt-4 text-lg text-gray-500">Save your engineers months of setup and maintennace so they can focus on delivering amazing products.</p>
                 <div className="mt-6">
                   <a
-                    href="/contact"
+                    href="https://airtable.com/shrjDMR7xCaC4iP22"
                     className="inline-flex px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-regal-blue hover:bg-indigo-700"
                   >
                     Get Started
@@ -76,7 +76,7 @@ export default function SideBySideFeatures() {
                   <p className="mt-4 text-lg text-gray-500"> Switch between subscription or usage-based models in seconds. </p>
                 <div className="mt-6">
                   <a
-                    href="/contact"
+                    href="https://airtable.com/shrjDMR7xCaC4iP22"
                     className="inline-flex px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-regal-blue hover:bg-indigo-700"
                   >
                     Get Started
@@ -115,7 +115,7 @@ export default function SideBySideFeatures() {
                 <p className="mt-4 text-lg text-gray-500"> Experiment with pricing models with our dynamic pricing system.</p>
                 <div className="mt-6">
                   <a
-                    href="/contact"
+                    href="https://airtable.com/shrjDMR7xCaC4iP22"
                     className="inline-flex px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-regal-blue hover:bg-indigo-700"
                   >
                     Get Started

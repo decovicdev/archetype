@@ -22,9 +22,7 @@ export default function BottomCTA() {
           </h2>
           <div className="mt-8 flex justify-center">
             <div className="inline-flex rounded-md shadow">
-                <a href="/contact">
                 <JoinWaitlistButton onClick={handleAddClick}/>
-                </a>
             </div>
             <div className="ml-3 inline-flex">
             </div>

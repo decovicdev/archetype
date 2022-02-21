@@ -20,9 +20,7 @@ export default function FooterCTA() {
         </h2>
         <div className="mt-8 flex">
           <div className="rounded-md shadow">
-          <a href="/contact">
-            <JoinWaitlistButton onClick={handleAddClick}/>
-          </a>
+          <JoinWaitlistButton onClick={handleAddClick}/>
           
           <WaitlistModal isOpen={addModalOpen} handleClose={handleClose}/>
           </div>
