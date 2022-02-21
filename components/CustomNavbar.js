@@ -61,7 +61,7 @@ export default function Navbar() {
                 */}
             </div>
             <div className="hidden md:flex md:items-center md:space-x-6">
-            <a href="https://airtable.com/shrjDMR7xCaC4iP22">
+            <a href="/contact">
               <JoinWaitlistButton onClick={handleAddClick}/>
             </a>
             <a key="twitter" href="https://twitter.com/getarchetype" className="text-white hover:text-gray-500">
@@ -113,7 +113,7 @@ export default function Navbar() {
                   ))}
                 </div>
                 <div className="mt-6 px-5">
-                  <a href="https://airtable.com/shrjDMR7xCaC4iP22">
+                  <a href="/contact">
                     <JoinWaitlistButton onClick={handleAddClick}/>
                   </a>
                 </div>

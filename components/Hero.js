@@ -57,7 +57,7 @@ export default function Hero() {
                   </p>
                   <div className="mt-10 sm:flex sm:justify-center lg:justify-start">
                     <div className="rounded-md text-lg shadow">
-                    <a href="https://airtable.com/shrjDMR7xCaC4iP22">
+                    <a href="/contact">
                       <JoinWaitlistButton onClick={handleAddClick}/>
                     </a>
                     </div>

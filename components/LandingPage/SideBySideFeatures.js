@@ -46,8 +46,8 @@ export default function SideBySideFeatures() {
           <div className="mt-12 sm:mt-16 lg:mt-0">
             <div className="pl-4 -mr-48 sm:pl-6 md:-mr-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
               <img
-                className="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:left-0 lg:h-full lg:w-auto lg:max-w-none"
-                src="https://tailwindui.com/img/component-images/inbox-app-screenshot-1.jpg"
+                className="w-full rounded-xl lg:absolute lg:left-0 lg:h-full lg:w-auto lg:max-w-none"
+                src="abstract1.png"
                 alt="Inbox user interface"
               />
             </div>
@@ -85,8 +85,8 @@ export default function SideBySideFeatures() {
           <div className="mt-12 sm:mt-16 lg:mt-0 lg:col-start-1">
             <div className="pr-4 -ml-48 sm:pr-6 md:-ml-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
               <img
-                className="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:right-0 lg:h-full lg:w-auto lg:max-w-none"
-                src="https://tailwindui.com/img/component-images/inbox-app-screenshot-2.jpg"
+                className="w-full lg:absolute lg:right-0 lg:h-full lg:w-auto lg:max-w-none"
+                src="abstract2.png"
                 alt="Customer profile user interface"
               />
             </div>
@@ -123,8 +123,8 @@ export default function SideBySideFeatures() {
           <div className="mt-12 sm:mt-16 lg:mt-0">
             <div className="pl-4 -mr-48 sm:pl-6 md:-mr-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
               <img
-                className="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:left-0 lg:h-full lg:w-auto lg:max-w-none"
-                src="https://tailwindui.com/img/component-images/inbox-app-screenshot-1.jpg"
+                className="w-full lg:absolute lg:left-0 lg:h-full lg:w-auto lg:max-w-none"
+                src="abstract3.png"
                 alt="Inbox user interface"
               />
             </div>
