@@ -7,10 +7,7 @@ import JoinWaitlistButton from './Buttons/JoinWaitlistButton'
 import WaitlistModal from '@components/Modals/WaitlistModal'
 
 const navigation = [
-  { name: 'Product', href: '#' },
-  { name: 'Features', href: '#' },
-  { name: 'Marketplace', href: '#' },
-  { name: 'Company', href: '#' },
+  { name: 'Blog', href: '/blog' },
 ]
   
 
@@ -51,14 +48,14 @@ export default function Navbar() {
                   </Popover.Button>
                 </div>
               </div>
-              {/*<div className="hidden space-x-8 md:flex md:ml-10">
+              <div className="hidden space-x-8 md:flex md:ml-10">
                 {navigation.map((item) => (
                   <a key={item.name} href={item.href} className="text-base font-medium text-white hover:text-gray-300">
                     {item.name}
                   </a>
                 ))}
               </div>
-                */}
+                
             </div>
             <div className="hidden md:flex md:items-center md:space-x-6">
             <a href="/contact">
