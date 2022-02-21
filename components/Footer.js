@@ -1,3 +1,4 @@
+
 const navigation = [
   {
     name: 'Twitter',
@@ -25,7 +26,7 @@ const navigation = [
 
 export default function Footer() {
   return (
-    <footer className="bg-[#181A82]">
+    <footer>
       <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 md:flex md:items-center md:justify-between lg:px-8">
         <div className="flex justify-center space-x-6 md:order-2">
           {navigation.map((item) => (
@@ -36,9 +37,15 @@ export default function Footer() {
           ))}
         </div>
         <div className="mt-8 md:mt-0 md:order-1">
-          <p className="text-center text-base text-gray-400">&copy; 2022 Archetype Connect, Inc. All rights reserved.</p>
+          <a
+            href="https://twitter.com/getarchetype"
+            className="text-left text-base text-white hover:text-gray-400"
+          >
+            Follow<span className="text-green-500">&nbsp;@GetArchetype&nbsp;</span><span>for updates.</span>
+          </a>
+          <p className="text-left text-base text-white">&copy; 2022 Archetype Connect, Inc. All rights reserved.</p>
         </div>
-      </div>
+        </div>
     </footer>
   )
 }
