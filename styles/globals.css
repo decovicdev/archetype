@@ -26,15 +26,20 @@ code {
   padding: 0.75rem;
   font-family: Menlo, Monaco, Lucida Console, Courier New, monospace;
 }
-
-.container {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.form-control {
+  @apply mt-4 placeholder:font-sans placeholder:text-gray-400 block bg-white w-full border border-black py-3 pl-3 pr-3 shadow-sm focus:outline-none focus:border-black focus:ring-black focus:ring-1 sm:text-sm;
+}
+.form-control-invalid {
+  @apply mt-4 block bg-white w-full border border-red-500 py-3 pl-3 pr-3 shadow-sm focus:outline-none focus:border-red-500 focus:ring-red-500 focus:ring-1 sm:text-sm;
+}
+.form-control-textarea {
+  @apply mt-4 placeholder:font-sans placeholder:text-gray-400 block bg-white w-full border border-black py-3 pl-3 pr-3 shadow-sm focus:outline-none focus:border-black focus:ring-0 sm:text-sm;
+}
+.textarea-invalid{
+  @apply mt-4 block bg-white w-full border border-red-500 py-3 pl-3 pr-3 shadow-sm focus:outline-none focus:border-black focus:ring-0 sm:text-sm;
+}
