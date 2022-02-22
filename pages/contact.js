@@ -21,8 +21,6 @@ const Contact = () => {
   const [error, setError] = useState({
     firstName: "",
     lastName: "",
-    companyName: "",
-    website: "",
     email: "",
     message: "",
   });
@@ -86,30 +84,31 @@ const Contact = () => {
     const url = "https://api.archetype.dev/v1";
 
     // const listOption = list.filter((el) => el.isActive === true);
-
+    console.log(firstName);
+    console.log(lastName);
+    console.log(email);
+    console.log(message);
     setError({
       firstName: firstName.length === 0 ? "Invalid First Name" : "",
       lastName: lastName.length === 0 ? "Invalid Last Name" : "",
       email: email.length === 0 ? "Invalid Email Name" : "",
       message: message.length === 0 ? "Invalid Message Name" : "",
     });
+    console.log(selectOption);
 
     const dataInput = {
       name: firstName + lastName,
       email: email,
-      company: companyName,
-      website: website,
+      company: companyName.length === 0 ? " " : companyName,
+      website: website.length === 0 ? " " : website,
       stack: message,
     };
-    let isNotError = false;
-    for (const key in error) {
-      if (error[key].length === 0) {
-        isNotError = false;
-      } else {
-        isNotError = true;
-      }
-    }
-    if (isNotError === true) {
+    if (
+      firstName.length > 0 &&
+      lastName.length > 0 &&
+      email.length > 0 &&
+      message.length > 0
+    ) {
       fetch(`${url}/contact`, {
         method: "POST",
         headers: {
@@ -121,6 +120,19 @@ const Contact = () => {
           const { status, statusText } = res;
           setAlert({ status, statusText });
           setIsLoading(false);
+          setError({
+            firstName: "",
+            lastName: "",
+            email: "",
+            message: "",
+          });
+          setFirstName("");
+          setLastName("");
+          setCompanyName("");
+          setWebsite("");
+          setEmail("");
+          setMessage("");
+          setSelectOption("");
         })
         .catch((err) => {
           console.log(err);
@@ -131,6 +143,7 @@ const Contact = () => {
         status: 0,
         statusText: "",
       });
+      console.log("error");
     }
     setTimeout(() => {
       setAlert({
@@ -218,7 +231,9 @@ const Contact = () => {
                   className="flex flex-row justify-between py-3 px-3 items-center"
                   onClick={() => setIsOption(!isOption)}
                 >
-                  <div>label</div>
+                  <div>
+                    {selectOption.length > 0 ? selectOption : "Pick an option"}
+                  </div>
                   <div
                     className={
                       isOption === true
@@ -286,6 +301,7 @@ const Contact = () => {
                   }
                   placeholder="First Name"
                   onChange={(e) => setFirstName(e.target.value)}
+                  value={firstName}
                 />
                 <span
                   className={
@@ -307,6 +323,7 @@ const Contact = () => {
                   }
                   placeholder="Last Name"
                   onChange={(e) => setLastName(e.target.value)}
+                  value={lastName}
                 />
                 <span
                   className={
@@ -325,6 +342,7 @@ const Contact = () => {
               className="mt-4 form-control"
               placeholder="Company (Optional)"
               onChange={(e) => setCompanyName(e.target.value)}
+              value={companyName}
             />
 
             <input
@@ -332,6 +350,7 @@ const Contact = () => {
               className="mt-4 form-control"
               placeholder="Website (Optional)"
               onChange={(e) => setWebsite(e.target.value)}
+              value={website}
             />
 
             <input
@@ -343,6 +362,7 @@ const Contact = () => {
               }
               placeholder="Email"
               onChange={(e) => setEmail(e.target.value)}
+              value={email}
             />
             <span
               className={
@@ -361,6 +381,7 @@ const Contact = () => {
               }
               placeholder="Message"
               onChange={(e) => setMessage(e.target.value)}
+              value={message}
             />
 
             <div className="flex flex-col w-full justify-end items-end">
