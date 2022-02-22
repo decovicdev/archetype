@@ -49,7 +49,7 @@ export default function SideBySideFeatures() {
             <div className=" lg:px-0 lg:m-0 lg:relative lg:h-full">
               <img
                 className="w-full rounded-xl lg:absolute lg:left-0 lg:h-full lg:w-auto lg:max-w-none"
-                src="abstract1.png"
+                src="abstract1.webp"
                 alt="Inbox user interface"
               />
             </div>
@@ -89,7 +89,7 @@ export default function SideBySideFeatures() {
             <div className=" md:-ml-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
               <img
                 className="w-full lg:absolute lg:right-0 lg:h-full lg:w-auto lg:max-w-none"
-                src="abstract2.png"
+                src="abstract2.webp"
                 alt="Customer profile user interface"
               />
             </div>
@@ -128,7 +128,7 @@ export default function SideBySideFeatures() {
             <div className=" md:-mr-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
               <img
                 className="w-full lg:absolute lg:left-0 lg:h-full lg:w-auto lg:max-w-none"
-                src="abstract3.png"
+                src="abstract3.webp"
                 alt="Inbox user interface"
               />
             </div>

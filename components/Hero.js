@@ -144,7 +144,7 @@ export default function Hero() {
           </Popover.Panel>
         </Transition>
       </Popover>
-      <main className="relative overflow-hidden">
+      
         <div className="pt-10 sm:pt-16 lg:pt-8 lg:pb-14 lg:overflow-hidden">
           <div className="mx-auto max-w-7xl lg:px-8">
             <div className="lg:grid lg:grid-cols-2 lg:gap-8">
@@ -173,11 +173,11 @@ export default function Hero() {
                 </div>
               </div>
               <div className="mt-12 -mb-16 sm:-mb-48 lg:m-0 lg:relative">
-                <div className="mx-auto max-w-md px-4 sm:max-w-2xl sm:px-6 lg:max-w-none lg:px-0">
+                <div className="mx-auto max-w-md px-4 sm:max-w-2xl sm:px-6 ">
                   {/* Illustration taken from Lucid Illustrations: https://lucid.pixsellz.io/ */}
                   <img
                     className="w-full lg:absolute lg:inset-y-0 lg:left-0 lg:h-full lg:w-auto lg:max-w-none animate-fade-in-down"
-                    src="hero graphic (11).svg"
+                    src="hero-image.webp"
                     alt=""
                   />
                 </div>
@@ -185,7 +185,6 @@ export default function Hero() {
             </div>
           </div>
         </div>
-        </main>
         <SideBySideFeatures/>
         {/* More main page content here... */}
 

@@ -26,10 +26,7 @@ module.exports = {
             }
         },  
         backgroundImage: {
-            'unusual-card-lg': "url('../public/blockleft.svg')",
-            'unusual-card-sm': "url('../public/blockright.svg')",
-            'fullscreencover': "url('../public/fullpagecover copy.png')",
-            'heroimg': "url('../public/hero graphic (11).svg')"
+            'fullscreencover': "url('../public/fullpagecover copy.webp')"
         }
     },  
     
