@@ -33,7 +33,7 @@ export default function SideBySideFeatures() {
                   Archetype integrates painlessly with your existing tech stack and enables no-code adjustments to pricing, bundles, and packaging.
                 </p>
                 <p className="mt-4 text-lg text-gray-500">Never worry about managing billing, invoicing, API keys, quotas, or permissions.</p>
-                <p className="mt-4 text-lg text-gray-500">Save your engineers months of setup and maintennace so they can focus on delivering amazing products.</p>
+                <p className="mt-4 text-lg text-gray-500">Save your engineers months of setup and maintenance so they can focus on delivering amazing products.</p>
                 <div className="mt-6">
                   <a
                     href="https://airtable.com/shrjDMR7xCaC4iP22"
@@ -62,7 +62,7 @@ export default function SideBySideFeatures() {
             <div>
               <div>
                 <span className="h-12 w-12 rounded-md flex items-center justify-center bg-regal-blue">
-                  <SparklesIcon className="h-6 w-6 text-white" aria-hidden="true" />
+                  <CodeIcon className="h-6 w-6 text-white" aria-hidden="true" />
                 </span>
               </div>
               <div className="mt-6">
