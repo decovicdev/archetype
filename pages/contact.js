@@ -4,16 +4,29 @@ import { useState } from "react";
 const Contact = () => {
   // element select Option
   const [isLoading, setIsLoading] = useState(false);
-  const [isAlert, setIsAlert] = useState("");
+  const [alert, setAlert] = useState({
+    status: 0,
+    statusText: "",
+  });
   const [isOption, setIsOption] = useState(false);
   const [selectOption, setSelectOption] = useState("");
   // detail input
-  const [firstName, setFirstName] = useState("First Name");
-  const [lastName, setLastName] = useState("Last Name");
-  const [companyName, setCompanyName] = useState("Company Name");
-  const [website, setWebsite] = useState("Website");
-  const [email, setEmail] = useState("Email");
-  const [message, setMessage] = useState("Message");
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [companyName, setCompanyName] = useState("");
+  const [website, setWebsite] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  //errors
+  const [error, setError] = useState({
+    firstName: "",
+    lastName: "",
+    companyName: "",
+    website: "",
+    email: "",
+    message: "",
+  });
+
   // list checkbox
   const [list, setList] = useState([
     {
@@ -67,9 +80,19 @@ const Contact = () => {
   //action submit form
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    setIsLoading(true);
+
     const url = "https://api.archetype.dev/v1";
 
-    const listOption = list.filter((el) => el.isActive === true);
+    // const listOption = list.filter((el) => el.isActive === true);
+
+    setError({
+      firstName: firstName.length === 0 ? "Invalid First Name" : "",
+      lastName: lastName.length === 0 ? "Invalid Last Name" : "",
+      email: email.length === 0 ? "Invalid Email Name" : "",
+      message: message.length === 0 ? "Invalid Message Name" : "",
+    });
 
     const dataInput = {
       name: firstName + lastName,
@@ -78,20 +101,43 @@ const Contact = () => {
       website: website,
       stack: message,
     };
-    fetch(`${url}/contact`, {
-      method: "POST",
-      body: dataInput,
-      headers: {
-        "Access-Control-Request-Method": "*",
-        "Content-Type": "application/json;charset=utf-8",
-      },
-    })
-      .then((res) => {
-        console.log(res);
+    let isNotError = false;
+    for (const key in error) {
+      if (error[key].length === 0) {
+        isNotError = false;
+      } else {
+        isNotError = true;
+      }
+    }
+    if (isNotError === true) {
+      fetch(`${url}/contact`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(dataInput),
       })
-      .catch((err) => {
-        console.log(err);
+        .then((res) => {
+          const { status, statusText } = res;
+          setAlert({ status, statusText });
+          setIsLoading(false);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    } else {
+      setIsLoading(false);
+      setAlert({
+        status: 0,
+        statusText: "",
       });
+    }
+    setTimeout(() => {
+      setAlert({
+        status: 0,
+        statusText: "",
+      });
+    }, 5000);
   };
   //action selected option
   const handleSelectOption = (name) => {
@@ -104,15 +150,17 @@ const Contact = () => {
         <title>Contact</title>
       </Head>
       <div className="container flex flex-col w-full mx-auto py-6">
-        <h1 className="text-6xl font-bold font-sans">Let's get in touch</h1>
+        <h1 className="text-6xl font-bold font-sans mb-10">
+          Let's get in touch
+        </h1>
         <form
           className="flex sm:flex-col sm:justify-start md:flex-row md:justify-between gap-10"
           onSubmit={handleSubmit}
         >
           <div className="flex flex-col sm:w-full md:w-2/4">
             {/* Checkbox */}
-            <h3 className="text-xl font-bold font-sans mt-8 mb-2">
-              Hey! I’d like to get started with {selectOption}
+            <h3 className="text-xl font-bold font-sans mb-2">
+              Hey! I’d like to get started with
             </h3>
             <div className="grid grid-cols-3 gap-2 w-full h-30 grid-flow-row ">
               {list.map((el, idx) => {
@@ -216,82 +264,113 @@ const Contact = () => {
             </div>
           </div>
           <div className="flex flex-col sm:w-full md:w-2/4">
-            <h3 className="text-xl font-bold font-sans mb-3">
-              Here are my details
-            </h3>
-            <div className="grid grid-cols-2 gap-4">
-              <input
-                type="text"
-                className={
-                  firstName.length === 0
-                    ? "form-control-invalid"
-                    : "form-control"
-                }
-                placeholder={firstName.length === 0 ? "First Name" : firstName}
-                onChange={(e) => setFirstName(e.target.value)}
-              />
-              <input
-                type="text"
-                className={
-                  lastName.length === 0
-                    ? "form-control-invalid"
-                    : "form-control"
-                }
-                placeholder={lastName.length === 0 ? "Last Name" : lastName}
-                onChange={(e) => setLastName(e.target.value)}
-              />
+            <h3 className="text-xl font-bold font-sans">Here are my details</h3>
+            <div
+              className={
+                alert.status === 200
+                  ? "block bg-green-100 rounded-lg py-5 px-6 text-base text-green-700 mt-2 mb-3"
+                  : "hidden"
+              }
+              role="alert"
+            >
+              {alert.statusText.length > 0 ? alert.statusText : "Success"}
             </div>
+            <div className="grid grid-cols-2 gap-4 mt-2">
+              <div>
+                <input
+                  type="text"
+                  className={
+                    error.firstName.length > 0 && firstName.length === 0
+                      ? "form-control-invalid"
+                      : "form-control"
+                  }
+                  placeholder="First Name"
+                  onChange={(e) => setFirstName(e.target.value)}
+                />
+                <span
+                  className={
+                    error.firstName.length > 0 && firstName.length === 0
+                      ? "block text-red-500 text-sm"
+                      : "hidden"
+                  }
+                >
+                  {error.firstName}
+                </span>
+              </div>
+              <div>
+                <input
+                  type="text"
+                  className={
+                    error.lastName.length > 0 && lastName.length === 0
+                      ? "form-control-invalid"
+                      : "form-control"
+                  }
+                  placeholder="Last Name"
+                  onChange={(e) => setLastName(e.target.value)}
+                />
+                <span
+                  className={
+                    error.lastName.length > 0 && lastName.length === 0
+                      ? "block text-red-500 text-sm"
+                      : "hidden"
+                  }
+                >
+                  {error.lastName}
+                </span>
+              </div>
+            </div>
+
             <input
               type="text"
-              className={
-                companyName.length === 0
-                  ? "form-control-invalid"
-                  : "form-control"
-              }
-              placeholder={
-                companyName.length === 0 ? "Company Name" : companyName
-              }
+              className="mt-4 form-control"
+              placeholder="Company (Optional)"
               onChange={(e) => setCompanyName(e.target.value)}
             />
+
             <input
               type="text"
-              className={
-                website.length === 0 ? "form-control-invalid" : "form-control"
-              }
-              placeholder={website.length === 0 ? "Website" : website}
+              className="mt-4 form-control"
+              placeholder="Website (Optional)"
               onChange={(e) => setWebsite(e.target.value)}
             />
+
             <input
               type="email"
               className={
-                email.length === 0 ? "form-control-invalid" : "form-control"
+                error.email.length > 0 && email.length === 0
+                  ? "mt-4 form-control-invalid"
+                  : "mt-4 form-control"
               }
-              placeholder={email.length === 0 ? "Email" : email}
+              placeholder="Email"
               onChange={(e) => setEmail(e.target.value)}
             />
+            <span
+              className={
+                error.email.length > 0 && email.length === 0
+                  ? "block text-red-500 text-sm"
+                  : "hidden"
+              }
+            >
+              {error.email}
+            </span>
             <textarea
               className={
-                message.length === 0
-                  ? "mt-4 h-52 textarea-invalid"
-                  : "mt-4 h-52 form-control-textarea"
+                error.message.length > 0 && message.length === 0
+                  ? "h-32 textarea-invalid mt-4"
+                  : "h-32 form-control-textarea mt-4"
               }
-              placeholder={message.length === 0 ? "Message" : message}
+              placeholder="Message"
               onChange={(e) => setMessage(e.target.value)}
             />
+
             <div className="flex flex-col w-full justify-end items-end">
-              <div
-                className={
-                  message.length === 0
-                    ? "w-28 h-16 relative bottom-16 border-t border-l border-r border-red-500"
-                    : "w-28 h-16 relative bottom-16 border-t border-l border-r border-black"
-                }
-              ></div>
+              <div className="w-28 h-16 relative bottom-16 border-t border-l border-r border-black"></div>
               <div className="w-28 h-16 relative bottom-32 border-b border-r z-50 border-white"></div>
               <button
                 type="submit"
-                className="relative bottom-44 right-1  text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 z-50 cursor-pointer"
+                className="relative bottom-44 right-1 btn-primary z-50 cursor-pointer"
               >
-                Submit
+                {isLoading === true ? "Loading" : "Submit"}
               </button>
             </div>
           </div>
