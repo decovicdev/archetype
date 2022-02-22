@@ -15,13 +15,23 @@
   ```
 */
 import React, { Fragment, useState , useEffect} from 'react'
-import { Popover, Transition } from '@headlessui/react'
-import { MenuIcon, XIcon } from '@heroicons/react/outline'
-import { ChevronRightIcon } from '@heroicons/react/solid'
-import JoinWaitlistButton from './Buttons/JoinWaitlistButton'
+
 import WaitlistModal from '@components/Modals/WaitlistModal'
-
-
+import { Popover, Transition } from '@headlessui/react'
+import SideBySideFeatures from './LandingPage/SideBySideFeatures'
+import {
+  ChartBarIcon,
+  CursorClickIcon,
+  DocumentReportIcon,
+  MenuIcon,
+  RefreshIcon,
+  ShieldCheckIcon,
+  ViewGridIcon,
+  XIcon,
+} from '@heroicons/react/outline'
+import Navbar from './CustomNavbar'
+import JoinWaitlistButton from './Buttons/JoinWaitlistButton'
+import TestNavBar from './TestNavBar'
 const navigation = [
   /*{ name: 'Documentation', href: 'https://docs.archetype.dev' },
   { name: 'Pricing', href: '#' },
@@ -40,8 +50,8 @@ export default function Hero() {
   }
 
   return (
-    <div className="relative overflow-hidden">
-    <WaitlistModal isOpen={addModalOpen} handleClose={handleClose} />
+    <div className="relative overflow-hidden bg-fullscreencover bg-cover">
+      <WaitlistModal isOpen={addModalOpen} handleClose={handleClose} />
       <Popover as="header" className="relative">
         <div className="pt-6">
           <nav
@@ -50,14 +60,15 @@ export default function Hero() {
           >
             <div className="flex items-center flex-1">
               <div className="flex items-center justify-between w-full md:w-auto">
-                <a href="#">
-                  <span className="sr-only">Workflow</span>
+                <a href="/">
+                  <span className="sr-only"></span>
                   <img
                     className="h-8 w-auto sm:h-10 rounded-md"
                     src="https://res.cloudinary.com/getarchetype/image/upload/v1642630163/archetype_umafae.png"
                     alt=""
                   />
                 </a>
+                <span className="pl-3 text-white font-extrabold font-extrabold text-white sm:text-3xl lg:mt- xl:text-6">Archetype </span>
                 <div className="-mr-2 flex items-center md:hidden">
                   <Popover.Button className="rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:bg-gray-800 focus:outline-none focus:ring-2 focus-ring-inset focus:ring-white">
                     <span className="sr-only">Open main menu</span>
@@ -75,9 +86,7 @@ export default function Hero() {
                 */}
             </div>
             <div className="hidden md:flex md:items-center md:space-x-6">
-            <a href="https://airtable.com/shrjDMR7xCaC4iP22">
               <JoinWaitlistButton onClick={handleAddClick}/>
-            </a>
             <a key="twitter" href="https://twitter.com/getarchetype" className="text-white hover:text-gray-500">
               <span className="sr-only">twitter</span>
               <svg fill="currentColor" viewBox="0 0 24 24" className="h-6 w-6" aria-hidden="true">
@@ -127,9 +136,7 @@ export default function Hero() {
                   ))}
                 </div>
                 <div className="mt-6 px-5">
-                  <a href="https://airtable.com/shrjDMR7xCaC4iP22">
                     <JoinWaitlistButton onClick={handleAddClick}/>
-                  </a>
                 </div>
                 
               </div>
@@ -137,25 +144,22 @@ export default function Hero() {
           </Popover.Panel>
         </Transition>
       </Popover>
-
-      <main>
+      <main className="relative overflow-hidden">
         <div className="pt-10 sm:pt-16 lg:pt-8 lg:pb-14 lg:overflow-hidden">
           <div className="mx-auto max-w-7xl lg:px-8">
             <div className="lg:grid lg:grid-cols-2 lg:gap-8">
               <div className="mx-auto max-w-md px-4 sm:max-w-2xl sm:px-6 sm:text-center lg:px-0 lg:text-left lg:flex lg:items-center">
                 <div className="lg:py-24">
                   <h1 className="mt-4 text-4xl tracking-tight font-extrabold text-white sm:mt-5 sm:text-6xl lg:mt-6 xl:text-6xl">
-                    <span className="block">Archetype</span>
-                    <span className="block text-[#09E4A8]">Launch your API today.</span>
+                    <span className="block">Generate revenue from APIs in minutes.</span>
+                    <span className="block text-[#09E4A8]"></span>
                   </h1>
                   <p className="mt-3 text-base text-gray-300 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
-                  Create subscriptions and tiered access to your API in minutes with our SDKs.
+                  Archetype helps APIs launch, iterate, and scale paid business models, with billing infrastructure that works at any size and stage.
                   </p>
                   <div className="mt-10 sm:flex sm:justify-center lg:justify-start">
                     <div className="rounded-md text-lg shadow">
-                    <a href="https://airtable.com/shrjDMR7xCaC4iP22">
                       <JoinWaitlistButton onClick={handleAddClick}/>
-                    </a>
                     </div>
                     {/*<div className="mt-3 rounded-md shadow sm:mt-0 sm:ml-3">
                         <a
@@ -181,31 +185,10 @@ export default function Hero() {
             </div>
           </div>
         </div>
-
+        </main>
+        <SideBySideFeatures/>
         {/* More main page content here... */}
 
-      <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
-        <div className=" rounded-lg shadow-xl overflow-hidden lg:grid lg:grid-cols-2 lg:gap-4">
-          <div className="pt-10 pb-12 px-6 sm:pt-16 sm:px-16 lg:py-16 lg:pr-0 xl:py-20 xl:px-20">
-            <div className="lg:self-center">
-              <h2 className="text-3xl font-extrabold text-white sm:text-4xl">
-                <span className="block">Ready to dive in?</span>
-              </h2>
-              <p className="mt-4 text-lg leading-6 text-indigo-200">
-                Archetype handles infrastructure for creating plans, managing quotas, editing permissions and dynamic pricing for APIs with just a few lines of code.
-              </p>
-            </div>
-          </div>
-          <div className="-mt-6 aspect-w-5 aspect-h-3 md:aspect-w-2 md:aspect-h-1">
-            <img
-              className=" rounded-md object-cover object-left-top"
-              src="feature-display.png"
-              alt="App screenshot"
-            />
-          </div>
-        </div>
-      </div>
-      </main>
     </div>
   )
 }

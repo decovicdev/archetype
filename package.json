@@ -11,11 +11,13 @@
     "@headlessui/react": "^1.4.3",
     "@heroicons/react": "^1.0.5",
     "archetype-pricing": "0.0.16",
+    "mdx-bundler": "^8.0.1",
     "next": "^12.0.7",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-hotjar": "^5.0.0",
-    "react-router-dom": "^6.2.1"
+    "react-router-dom": "^6.2.1",
+    "simple-react-form": "^3.0.7"
   },
   "devDependencies": {
     "@netlify/plugin-nextjs": "^4.0.0",
