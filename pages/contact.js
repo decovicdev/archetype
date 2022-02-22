@@ -22,7 +22,7 @@ const Contact = () => {
     firstName: "",
     lastName: "",
     email: "",
-    message: "",
+    website: "",
   });
 
   // list checkbox
@@ -84,18 +84,28 @@ const Contact = () => {
     const url = "https://api.archetype.dev/v1";
 
     // const listOption = list.filter((el) => el.isActive === true);
-    console.log(firstName);
-    console.log(lastName);
-    console.log(email);
-    console.log(message);
+    let isWebsite = false;
+
+    if (website.length > 0) {
+      const re =
+        /(http|https):\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?/;
+      if (re.test(website) === true) {
+        isWebsite = true;
+      } else {
+        isWebsite = false;
+      }
+    }
     setError({
       firstName: firstName.length === 0 ? "Invalid First Name" : "",
       lastName: lastName.length === 0 ? "Invalid Last Name" : "",
       email: email.length === 0 ? "Invalid Email Name" : "",
-      message: message.length === 0 ? "Invalid Message Name" : "",
+      website:
+        website.length > 0
+          ? isWebsite === false
+            ? "Invalid Website (ex: http://google.com)"
+            : ""
+          : "",
     });
-    console.log(selectOption);
-
     const dataInput = {
       name: firstName + lastName,
       email: email,
@@ -103,40 +113,44 @@ const Contact = () => {
       website: website.length === 0 ? " " : website,
       stack: message,
     };
-    if (
-      firstName.length > 0 &&
-      lastName.length > 0 &&
-      email.length > 0 &&
-      message.length > 0
-    ) {
-      fetch(`${url}/contact`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(dataInput),
-      })
-        .then((res) => {
-          const { status, statusText } = res;
-          setAlert({ status, statusText });
-          setIsLoading(false);
-          setError({
-            firstName: "",
-            lastName: "",
-            email: "",
-            message: "",
-          });
-          setFirstName("");
-          setLastName("");
-          setCompanyName("");
-          setWebsite("");
-          setEmail("");
-          setMessage("");
-          setSelectOption("");
+    if (firstName.length > 0 && lastName.length > 0 && email.length > 0) {
+      let send = false;
+      if (website.length > 0) {
+        send = isWebsite === true ? true : false;
+      } else {
+        send = true;
+      }
+
+      if (send === true) {
+        fetch(`${url}/contact`, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(dataInput),
         })
-        .catch((err) => {
-          console.log(err);
-        });
+          .then((res) => {
+            const { status, statusText } = res;
+            setAlert({ status, statusText });
+            setIsLoading(false);
+            setError({
+              firstName: "",
+              lastName: "",
+              email: "",
+              website: "",
+            });
+            setFirstName("");
+            setLastName("");
+            setCompanyName("");
+            setWebsite("");
+            setEmail("");
+            setMessage("");
+            setSelectOption("");
+          })
+          .catch((err) => {
+            console.log(err);
+          });
+      }
     } else {
       setIsLoading(false);
       setAlert({
@@ -352,7 +366,15 @@ const Contact = () => {
               onChange={(e) => setWebsite(e.target.value)}
               value={website}
             />
-
+            <span
+              className={
+                error.website.length > 0
+                  ? "block text-red-500 text-sm"
+                  : "hidden"
+              }
+            >
+              {error.website}
+            </span>
             <input
               type="email"
               className={
@@ -374,11 +396,7 @@ const Contact = () => {
               {error.email}
             </span>
             <textarea
-              className={
-                error.message.length > 0 && message.length === 0
-                  ? "h-32 textarea-invalid mt-4"
-                  : "h-32 form-control-textarea mt-4"
-              }
+              className="h-32 form-control-textarea mt-4"
               placeholder="Message"
               onChange={(e) => setMessage(e.target.value)}
               value={message}
