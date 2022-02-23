@@ -53,14 +53,13 @@ module.exports = {
         up: "up 0.5s",
         down: "down 0.5s",
       },
+      colors: {
+        'regal-blue': '#0021c5'
+        }
     },
     backgroundImage: {
-      "hero-background": "url('../public/hero-background.png')",
-      "unusual-card-lg": "url('../public/blockleft.svg')",
-      "unusual-card-sm": "url('../public/blockright.svg')",
-      fullscreencover: "url('../public/fullpagecover.png')",
-      heroimg: "url('../public/hero graphic (11).svg')",
       "icon-arrow-down": "url('../public/icon-arrow-down.png')",
+      'fullscreencover': "url('../public/fullpagecover copy.webp')"
     },
   },
 

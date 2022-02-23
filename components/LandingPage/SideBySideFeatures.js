@@ -33,7 +33,7 @@ export default function SideBySideFeatures() {
                   Archetype integrates painlessly with your existing tech stack and enables no-code adjustments to pricing, bundles, and packaging.
                 </p>
                 <p className="mt-4 text-lg text-gray-500">Never worry about managing billing, invoicing, API keys, quotas, or permissions.</p>
-                <p className="mt-4 text-lg text-gray-500">Save your engineers months of setup and maintennace so they can focus on delivering amazing products.</p>
+                <p className="mt-4 text-lg text-gray-500">Save your engineers months of setup and maintenance so they can focus on delivering amazing products.</p>
                 <div className="mt-6">
                   <a
                     href="https://airtable.com/shrjDMR7xCaC4iP22"
@@ -49,7 +49,7 @@ export default function SideBySideFeatures() {
             <div className=" lg:px-0 lg:m-0 lg:relative lg:h-full">
               <img
                 className="w-full rounded-xl lg:absolute lg:left-0 lg:h-full lg:w-auto lg:max-w-none"
-                src="abstract1.png"
+                src="abstract1.webp"
                 alt="Inbox user interface"
               />
             </div>
@@ -62,7 +62,7 @@ export default function SideBySideFeatures() {
             <div>
               <div>
                 <span className="h-12 w-12 rounded-md flex items-center justify-center bg-regal-blue">
-                  <SparklesIcon className="h-6 w-6 text-white" aria-hidden="true" />
+                  <CodeIcon className="h-6 w-6 text-white" aria-hidden="true" />
                 </span>
               </div>
               <div className="mt-6">
@@ -89,7 +89,7 @@ export default function SideBySideFeatures() {
             <div className=" md:-ml-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
               <img
                 className="w-full lg:absolute lg:right-0 lg:h-full lg:w-auto lg:max-w-none"
-                src="abstract2.png"
+                src="abstract2.webp"
                 alt="Customer profile user interface"
               />
             </div>
@@ -128,7 +128,7 @@ export default function SideBySideFeatures() {
             <div className=" md:-mr-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
               <img
                 className="w-full lg:absolute lg:left-0 lg:h-full lg:w-auto lg:max-w-none"
-                src="abstract3.png"
+                src="abstract3.webp"
                 alt="Inbox user interface"
               />
             </div>
