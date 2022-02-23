@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Footer from '@components/Footer'
 import Hero from '@components/Hero'
 import BottomCTA from '@components/LandingPage/BottomCTA'
+
 export default function Home() {
   
 
@@ -23,6 +24,19 @@ export default function Home() {
         <script
           async
           src="https://www.googletagmanager.com/gtag/js?id=G-8PE8JSX9VB"
+        />
+         <script
+          dangerouslySetInnerHTML={{
+            __html: `
+            (function (d, u, h, s) {
+              h = d.getElementsByTagName('head')[0];
+              s = d.createElement('script');
+              s.async = 1;
+              s.src = u + new Date().getTime();
+              h.appendChild(s);
+            })(document, 'https://grow.clearbitjs.com/api/pixel.js?k=pk_07b44a2a83c0b1b5bfdaba9623a8756c&v=');
+            `,
+          }}
         />
 
         <script
