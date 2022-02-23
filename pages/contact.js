@@ -106,12 +106,20 @@ const Contact = () => {
             : ""
           : "",
     });
+    let interest = [];
+    list.filter((el) => {
+      if (el.isActive === true) {
+        interest.push(el.value);
+      }
+    });
     const dataInput = {
       name: firstName + lastName,
       email: email,
       company: companyName.length === 0 ? " " : companyName,
       website: website.length === 0 ? " " : website,
-      stack: message,
+      message: message,
+      stack: selectOption.length === 0 ? "" : selectOption,
+      interests: interest,
     };
     if (firstName.length > 0 && lastName.length > 0 && email.length > 0) {
       let send = false;
@@ -131,14 +139,24 @@ const Contact = () => {
         })
           .then((res) => {
             const { status, statusText } = res;
+
             setAlert({ status, statusText });
+
             setIsLoading(false);
+            // reset error
             setError({
               firstName: "",
               lastName: "",
               email: "",
               website: "",
             });
+            //reset list
+            list.filter((el) => {
+              if (el.isActive === true) {
+                el.isActive = false;
+              }
+            });
+            // reset detail
             setFirstName("");
             setLastName("");
             setCompanyName("");
