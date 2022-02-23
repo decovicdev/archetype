@@ -62,10 +62,16 @@ export default function Hero() {
                 </a>
                 <span className="pl-3 text-white font-extrabold font-extrabold text-white sm:text-3xl lg:mt- xl:text-6">Archetype </span>
                 <div className="-mr-2 flex items-center md:hidden">
-                  <Popover.Button className="rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:bg-gray-800 focus:outline-none focus:ring-2 focus-ring-inset focus:ring-white">
+                <a key="twitter" href="https://twitter.com/getarchetype" className="text-white hover:text-gray-500">
+                      <span className="sr-only">twitter</span>
+                      <svg fill="currentColor" viewBox="0 0 24 24" className="h-6 w-6" aria-hidden="true">
+                        <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
+                      </svg>
+                    </a>
+                  {/*<Popover.Button className="rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:bg-gray-800 focus:outline-none focus:ring-2 focus-ring-inset focus:ring-white">
                     <span className="sr-only">Open main menu</span>
                     <MenuIcon className="h-6 w-6" aria-hidden="true" />
-                  </Popover.Button>
+                  </Popover.Button>*/}
                 </div>
               </div>
               {/*<div className="hidden space-x-8 md:flex md:ml-10">
@@ -128,7 +134,13 @@ export default function Hero() {
                   ))}
                 </div>
                 <div className="mt-6 px-5">
-                    <JoinWaitlistButton onClick={handleAddClick}/>
+                    {/*<JoinWaitlistButton onClick={handleAddClick}/>*/}
+                    <a key="twitter" href="https://twitter.com/getarchetype" className="text-white hover:text-gray-500">
+                      <span className="sr-only">twitter</span>
+                      <svg fill="currentColor" viewBox="0 0 24 24" className="h-6 w-6" aria-hidden="true">
+                        <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
+                      </svg>
+                    </a>
                 </div>
                 
               </div>
@@ -150,7 +162,7 @@ export default function Hero() {
                   Archetype helps APIs launch, iterate, and scale paid business models, with billing infrastructure that works at any size and stage.
                   </p>
                   <div className="mt-10 sm:flex sm:justify-center lg:justify-start">
-                    <div className="rounded-md text-lg shadow">
+                    <div className="rounded-md text-lg">
                       <JoinWaitlistButton onClick={handleAddClick}/>
                     </div>
                     {/*<div className="mt-3 rounded-md shadow sm:mt-0 sm:ml-3">
