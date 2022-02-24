@@ -54,12 +54,12 @@ module.exports = {
         down: "down 0.5s",
       },
       colors: {
-        'regal-blue': '#0021c5'
-        }
+        "regal-blue": "#0021c5",
+      },
     },
     backgroundImage: {
       "icon-arrow-down": "url('../public/icon-arrow-down.png')",
-      'fullscreencover': "url('../public/fullpagecover copy.webp')"
+      fullscreencover: "url('../public/fullpagecover copy.webp')",
     },
   },
 
