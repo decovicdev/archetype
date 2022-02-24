@@ -60,15 +60,21 @@ const Contact = () => {
       isActive: false,
     },
     {
+      label: "Payment Processors",
+      description: "",
+      value: "paymentprocessors",
+      isActive: false,
+    },
+    {
       label: "Dynamic Pricing / Analytics",
       description: "",
       value: "dynamic-analytics",
       isActive: false,
     },
     {
-      label: "SDK",
+      label: "SDKs",
       description: "",
-      value: "something else",
+      value: "sdks",
       isActive: false,
     },
     {
@@ -491,7 +497,8 @@ const Contact = () => {
                     }
                     role="alert"
                   >
-                    {alert.statusText.length > 0 ? alert.statusText : "Success"}
+                    {alert.statusText.length > 0 ? "Amazing! Follow us on Twitter for updates." : "Success"}
+                    
                   </div>
                   <div className="">
                     <div>
@@ -516,6 +523,26 @@ const Contact = () => {
                         {error.firstName}
                       </span>
                     </div>
+                    <input
+                    type="email"
+                    className={
+                      error.email.length > 0 && email.length === 0
+                        ? "mt-4 form-control-invalid"
+                        : "mt-4 form-control"
+                    }
+                    placeholder="Email"
+                    onChange={(e) => setEmail(e.target.value)}
+                    value={email}
+                  />
+                  <span
+                    className={
+                      error.email.length > 0 && email.length === 0
+                        ? "block text-red-500 text-sm"
+                        : "hidden"
+                    }
+                  >
+                    {error.email}
+                  </span>
                     {/* <div>
                       <input
                         type="text"
@@ -564,26 +591,7 @@ const Contact = () => {
                   >
                     {error.website}
                   </span>
-                  <input
-                    type="email"
-                    className={
-                      error.email.length > 0 && email.length === 0
-                        ? "mt-4 form-control-invalid"
-                        : "mt-4 form-control"
-                    }
-                    placeholder="Email"
-                    onChange={(e) => setEmail(e.target.value)}
-                    value={email}
-                  />
-                  <span
-                    className={
-                      error.email.length > 0 && email.length === 0
-                        ? "block text-red-500 text-sm"
-                        : "hidden"
-                    }
-                  >
-                    {error.email}
-                  </span>
+
                   {/* <textarea
                     className="h-32 form-control-textarea mt-4"
                     placeholder="Message"
