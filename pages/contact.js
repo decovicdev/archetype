@@ -419,7 +419,6 @@ const Contact = () => {
                       <ul>
                         <li>
                           <a
-                            href="#"
                             onClick={() => handleSelectOption("Python")}
                           >
                             Python
@@ -427,20 +426,18 @@ const Contact = () => {
                         </li>
                         <li>
                           <a
-                            href="#"
                             onClick={() => handleSelectOption("Node.js")}
                           >
                             Node.js
                           </a>
                         </li>
                         <li>
-                          <a href="#" onClick={() => handleSelectOption("Go")}>
+                          <a onClick={() => handleSelectOption("Go")}>
                             Go
                           </a>
                         </li>
                         <li>
                           <a
-                            href="#"
                             onClick={() => handleSelectOption("AWS Lambda")}
                           >
                             AWS Lambda
@@ -448,7 +445,6 @@ const Contact = () => {
                         </li>
                         <li>
                           <a
-                            href="#"
                             onClick={() =>
                               handleSelectOption("Cloud Endpoints")
                             }
@@ -458,7 +454,6 @@ const Contact = () => {
                         </li>
                         <li>
                           <a
-                            href="#"
                             onClick={() => handleSelectOption("Something else")}
                           >
                             Something else
@@ -466,7 +461,6 @@ const Contact = () => {
                         </li>
                         <li>
                           <a
-                            href="#"
                             onClick={() => handleSelectOption("I don't know")}
                           >
                             I don't know
