@@ -497,7 +497,7 @@ const Contact = () => {
                     }
                     role="alert"
                   >
-                    {alert.statusText.length > 0 ? "Amazing! Follow us on Twitter for updates." : "Success"}
+                    {alert.statusText.length > 0 ? "Awesome! We'll get in touch soon." : "Success"}
                     
                   </div>
                   <div className="">

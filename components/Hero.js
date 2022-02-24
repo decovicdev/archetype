@@ -62,6 +62,7 @@ export default function Hero() {
                 <span className="pl-3 font-extrabold text-white sm:text-3xl lg:mt- xl:text-6">
                   Archetype{" "}
                 </span>
+                
                 <div className="-mr-2 flex items-center md:hidden">
                   <a
                     key="twitter"
