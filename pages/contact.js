@@ -491,7 +491,7 @@ const Contact = () => {
                     }
                     role="alert"
                   >
-                    {alert.statusText.length > 0 ? "Awesome! We'll get in touch soon." : "Success"}
+                    {alert.statusText.length > 0 ? "Awesome! We'll get in touch soon." : "Awesome! We'll get in touch soon."}
                     
                   </div>
                   <div className="">
