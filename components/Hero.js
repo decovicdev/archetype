@@ -20,10 +20,18 @@ import WaitlistModal from '@components/Modals/WaitlistModal'
 import { Popover, Transition } from '@headlessui/react'
 import SideBySideFeatures from './LandingPage/SideBySideFeatures'
 import {
+  ChartBarIcon,
+  CursorClickIcon,
+  DocumentReportIcon,
   MenuIcon,
+  RefreshIcon,
+  ShieldCheckIcon,
+  ViewGridIcon,
   XIcon,
 } from '@heroicons/react/outline'
+import Navbar from './CustomNavbar'
 import JoinWaitlistButton from './Buttons/JoinWaitlistButton'
+import TestNavBar from './TestNavBar'
 const navigation = [
   /*{ name: 'Documentation', href: 'https://docs.archetype.dev' },
   { name: 'Pricing', href: '#' },
@@ -162,7 +170,7 @@ export default function Hero() {
                   Archetype helps APIs launch, iterate, and scale paid business models, with billing infrastructure that works at any size and stage.
                   </p>
                   <div className="mt-10 sm:flex sm:justify-center lg:justify-start">
-                    <div className="rounded-md text-lg">
+                    <div className="rounded-md text-lg ">
                       <JoinWaitlistButton onClick={handleAddClick}/>
                     </div>
                     {/*<div className="mt-3 rounded-md shadow sm:mt-0 sm:ml-3">
