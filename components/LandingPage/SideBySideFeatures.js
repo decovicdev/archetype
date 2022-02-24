@@ -50,7 +50,7 @@ export default function SideBySideFeatures() {
                     </p>
                     <div className="mt-6">
                       <a
-                        href="https://airtable.com/shrjDMR7xCaC4iP22"
+                        href="/contact"
                         className="inline-flex px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-regal-blue hover:bg-indigo-700"
                       >
                         Get Started
@@ -103,7 +103,7 @@ export default function SideBySideFeatures() {
                     </p>
                     <div className="mt-6">
                       <a
-                        href="https://airtable.com/shrjDMR7xCaC4iP22"
+                        href="/contact"
                         className="inline-flex px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-regal-blue hover:bg-indigo-700"
                       >
                         Get Started
@@ -151,7 +151,7 @@ export default function SideBySideFeatures() {
                     </p>
                     <div className="mt-6">
                       <a
-                        href="https://airtable.com/shrjDMR7xCaC4iP22"
+                        href="/contact"
                         className="inline-flex px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-regal-blue hover:bg-indigo-700"
                       >
                         Get Started
