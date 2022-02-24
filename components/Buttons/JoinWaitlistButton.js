@@ -3,7 +3,7 @@ export default function JoinWaitlistButton(props) {
     
     return (
         <a 
-        href="https://airtable.com/shrjDMR7xCaC4iP22"
+        href="/contact"
         >
         <button
             type="button"
