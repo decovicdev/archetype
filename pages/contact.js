@@ -48,38 +48,32 @@ const Contact = () => {
   // list checkbox
   const [list, setList] = useState([
     {
-      label: "Ecommerce",
-      description: "Tap for Ecommerce",
-      value: "ecommerce",
+      label: "Subscriptions",
+      description: "",
+      value: "subscriptions",
       isActive: false,
     },
     {
-      label: "Tips",
-      description: "Tap for creators",
-      value: "tips",
+      label: "Usage-based billing",
+      description: "",
+      value: "usage",
       isActive: false,
     },
     {
-      label: "Digital Assets",
-      description: "Tap for creators",
-      value: "digital assets",
-      isActive: false,
-    },
-    {
-      label: "Wallet",
-      description: "Business wallet",
-      value: "walet",
+      label: "Dynamic Pricing / Analytics",
+      description: "",
+      value: "dynamic-analytics",
       isActive: false,
     },
     {
       label: "SDK",
-      description: "For Developers",
-      value: "sdk",
+      description: "",
+      value: "something else",
       isActive: false,
     },
     {
       label: "Something Else",
-      description: "YA FEEL",
+      description: "",
       value: "something else",
       isActive: false,
     },
@@ -117,7 +111,7 @@ const Contact = () => {
     }
     setError({
       firstName: firstName.length === 0 ? "Invalid First Name" : "",
-      lastName: lastName.length === 0 ? "Invalid Last Name" : "",
+      // lastName: lastName.length === 0 ? "Invalid Last Name" : "",
       email: email.length === 0 ? "Invalid Email Name" : "",
       website:
         website.length > 0
@@ -142,12 +136,7 @@ const Contact = () => {
       stack: selectOption.length === 0 ? "Business" : selectOption,
       interests: interest,
     };
-    if (
-      firstName.length > 0 &&
-      lastName.length > 0 &&
-      email.length > 0 &&
-      selectOption.length > 0
-    ) {
+    if (firstName.length > 0 && email.length > 0 && selectOption.length > 0) {
       let send = false;
       if (website.length > 0) {
         send = isWebsite === true ? true : false;
@@ -384,7 +373,7 @@ const Contact = () => {
                   {/* Select */}
                   <div className="flex flex-col w-full h-auto mt-10">
                     <h3 className="text-xl font-bold font-sans">
-                      I’d describe myself as a
+                      My backend stack:
                     </h3>
                     <div
                       className={
@@ -425,33 +414,56 @@ const Contact = () => {
                         <li>
                           <a
                             href="#"
-                            onClick={() => handleSelectOption("creator")}
+                            onClick={() => handleSelectOption("Python")}
                           >
-                            Creator
+                            Python
                           </a>
                         </li>
                         <li>
                           <a
                             href="#"
-                            onClick={() => handleSelectOption("business")}
+                            onClick={() => handleSelectOption("Node.js")}
                           >
-                            Business (founder/owner/employee)
+                            Node.js
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" onClick={() => handleSelectOption("Go")}>
+                            Go
                           </a>
                         </li>
                         <li>
                           <a
                             href="#"
-                            onClick={() => handleSelectOption("developer")}
+                            onClick={() => handleSelectOption("AWS Lambda")}
                           >
-                            Developer
+                            AWS Lambda
                           </a>
                         </li>
                         <li>
                           <a
                             href="#"
-                            onClick={() => handleSelectOption("something else")}
+                            onClick={() =>
+                              handleSelectOption("Cloud Endpoints")
+                            }
                           >
-                            something else
+                            Cloud Endpoints
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            onClick={() => handleSelectOption("Something else")}
+                          >
+                            Something else
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            onClick={() => handleSelectOption("I don't know")}
+                          >
+                            I don't know
                           </a>
                         </li>
                       </ul>
@@ -481,7 +493,7 @@ const Contact = () => {
                   >
                     {alert.statusText.length > 0 ? alert.statusText : "Success"}
                   </div>
-                  <div className="grid grid-cols-2 gap-4 mt-2">
+                  <div className="">
                     <div>
                       <input
                         type="text"
@@ -490,7 +502,7 @@ const Contact = () => {
                             ? "form-control-invalid"
                             : "form-control"
                         }
-                        placeholder="First Name"
+                        placeholder="Name"
                         onChange={(e) => setFirstName(e.target.value)}
                         value={firstName}
                       />
@@ -504,7 +516,7 @@ const Contact = () => {
                         {error.firstName}
                       </span>
                     </div>
-                    <div>
+                    {/* <div>
                       <input
                         type="text"
                         className={
@@ -525,7 +537,7 @@ const Contact = () => {
                       >
                         {error.lastName}
                       </span>
-                    </div>
+                    </div> */}
                   </div>
 
                   <input
@@ -572,19 +584,27 @@ const Contact = () => {
                   >
                     {error.email}
                   </span>
-                  <textarea
+                  {/* <textarea
                     className="h-32 form-control-textarea mt-4"
                     placeholder="Message"
                     onChange={(e) => setMessage(e.target.value)}
                     value={message}
-                  />
+                  /> */}
 
-                  <div className="flex flex-col w-full justify-end items-end">
+                  {/* <div className="flex flex-col w-full justify-end items-end">
                     <div className="w-28 h-16 relative bottom-16 border-t border-l border-r border-black"></div>
                     <div className="w-28 h-16 relative bottom-32 border-b border-r z-50 border-white"></div>
                     <button
                       type="submit"
-                      className="relative bottom-44 right-1 btn-primary z-50 cursor-pointer"
+                      className="mt-4 form-submit-btn cursor-pointer"
+                    >
+                      {isLoading === true ? "Loading" : "Submit"}
+                    </button>
+                  </div> */}
+                  <div className="h-40">
+                    <button
+                      type="submit"
+                      className=" mt-4 form-submit-btn cursor-pointer"
                     >
                       {isLoading === true ? "Loading" : "Submit"}
                     </button>

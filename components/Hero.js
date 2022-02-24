@@ -43,7 +43,7 @@ export default function Hero() {
   return (
     <div className="relative overflow-hidden bg-fullscreencover bg-cover">
       <WaitlistModal isOpen={addModalOpen} handleClose={handleClose} />
-      <Popover as="header" className="relative">
+      <Popover as="header" className="relative pb-5">
         <div className="pt-6">
           <nav
             className="relative max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6"
@@ -59,7 +59,7 @@ export default function Hero() {
                     alt=""
                   />
                 </a>
-                <span className="pl-3 text-white font-extrabold font-extrabold text-white sm:text-3xl lg:mt- xl:text-6">
+                <span className="pl-3 font-extrabold text-white sm:text-3xl lg:mt- xl:text-6">
                   Archetype{" "}
                 </span>
                 <div className="-mr-2 flex items-center md:hidden">
@@ -94,7 +94,7 @@ export default function Hero() {
                 */}
             </div>
             <div className="hidden md:flex md:items-center md:space-x-6">
-              <JoinWaitlistButton onClick={handleAddClick} />
+              {/* <JoinWaitlistButton onClick={handleAddClick} /> */}
               <a
                 key="twitter"
                 href="https://twitter.com/getarchetype"
@@ -175,10 +175,10 @@ export default function Hero() {
         </Transition>
       </Popover>
 
-      <div className="pt-10 sm:pt-16 lg:pt-8 lg:pb-14 lg:overflow-hidden">
+      <div className="pt-10 sm:pt-8 lg:pt-8 lg:pb-14 lg:overflow-hidden">
         <div className="mx-auto max-w-7xl lg:px-8">
           <div className="lg:grid lg:grid-cols-2 lg:gap-8">
-            <div className="mx-auto max-w-md px-4 sm:max-w-2xl sm:px-6 sm:text-center lg:px-0 lg:text-left lg:flex lg:items-center">
+            <div className="mx-auto max-w-md px-4 sm:max-w-2xl sm:px-6 sm:text-left lg:px-0 lg:text-left lg:flex lg:items-center">
               <div className="lg:py-24">
                 <h1 className="mt-4 text-4xl tracking-tight font-extrabold text-white sm:mt-5 sm:text-6xl lg:mt-6 xl:text-6xl">
                   <span className="block">
@@ -191,7 +191,7 @@ export default function Hero() {
                   models, with billing infrastructure that works at any size and
                   stage.
                 </p>
-                <div className="mt-10 sm:flex sm:justify-center lg:justify-start">
+                <div className="mt-10 sm:flex lg:justify-center sm:justify-start">
                   <div className="rounded-md text-lg">
                     <JoinWaitlistButton onClick={handleAddClick} />
                   </div>
@@ -206,8 +206,8 @@ export default function Hero() {
                 </div>
               </div>
             </div>
-            <div className="mt-12 -mb-16 sm:-mb-48 lg:m-0 lg:relative">
-              <div className="mx-auto max-w-md px-4 sm:max-w-2xl sm:px-6 ">
+            <div className="mt-12 sm:-mb-16 xl:-mb-0 lg:m-0 lg:relative">
+              <div className="mx-auto max-w-md px-4 sm:max-w-2xl sm:px-6">
                 {/* Illustration taken from Lucid Illustrations: https://lucid.pixsellz.io/ */}
                 <img
                   className="w-full lg:absolute lg:inset-y-0 lg:left-0 lg:h-full lg:w-auto lg:max-w-none animate-fade-in-down"
