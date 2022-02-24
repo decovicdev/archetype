@@ -19,16 +19,7 @@ import React, { Fragment, useState, useEffect } from "react";
 import WaitlistModal from "@components/Modals/WaitlistModal";
 import { Popover, Transition } from "@headlessui/react";
 import SideBySideFeatures from "./LandingPage/SideBySideFeatures";
-import {
-  ChartBarIcon,
-  CursorClickIcon,
-  DocumentReportIcon,
-  MenuIcon,
-  RefreshIcon,
-  ShieldCheckIcon,
-  ViewGridIcon,
-  XIcon,
-} from "@heroicons/react/outline";
+import { MenuIcon, XIcon } from "@heroicons/react/outline";
 import Navbar from "./CustomNavbar";
 import JoinWaitlistButton from "./Buttons/JoinWaitlistButton";
 import TestNavBar from "./TestNavBar";
