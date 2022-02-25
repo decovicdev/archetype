@@ -23,6 +23,7 @@ import { MenuIcon, XIcon } from "@heroicons/react/outline";
 import Navbar from "./CustomNavbar";
 import JoinWaitlistButton from "./Buttons/JoinWaitlistButton";
 import TestNavBar from "./TestNavBar";
+import FAQS from "./FAQs";
 const navigation = [
   /*{ name: 'Documentation', href: 'https://docs.archetype.dev' },
   { name: 'Pricing', href: '#' },

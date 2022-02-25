@@ -37,13 +37,13 @@ function classNames(...classes) {
 
 export default function FAQS() {
   return (
-    <div>
+    <div className="bg-regal-blue">
       <div className="max-w-7xl mx-auto py-12 px-4 sm:py-16 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto ">
           <h2 className="text-center text-3xl font-extrabold text-white sm:text-4xl">Frequently asked questions</h2>
           <dl className="mt-6 space-y-10 ">
             {faqs.map((faq) => (
-              <Disclosure as="div" key={faq.question} className="bg-white rounded-lg">
+              <Disclosure as="div" key={faq.question} className="bg-white rounded-sm">
                 {({ open }) => (
                   <>
                     <dt className="text-lg">
