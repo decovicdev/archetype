@@ -13,7 +13,7 @@ export default function SideBySideFeatures() {
       <div className="relative max-w-xl mx-auto px-4 md:px-6 lg:px-8 lg:max-w-7xl">
         <div className="relative">
           <h2 className="text-center text-3xl leading-8 font-extrabold tracking-tight text-gray-900 md:text-4xl">
-            A better way to monetize your API
+          Generate revenue from APIs in minutes.
           </h2>
           <p className="mt-4 max-w-3xl mx-auto text-center text-xl text-gray-500"></p>
         </div>
@@ -33,7 +33,7 @@ export default function SideBySideFeatures() {
                   </div>
                   <div className="mt-6">
                     <h2 className="text-3xl font-extrabold tracking-tight text-gray-900">
-                      Integrate In Minutes
+                      Integrate with our SDKs
                     </h2>
                     <p className="mt-4 text-lg text-gray-500">
                       Archetype integrates painlessly with your existing tech

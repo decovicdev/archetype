@@ -183,14 +183,12 @@ export default function Hero() {
               <div className="lg:py-24">
                 <h1 className="mt-4 text-4xl tracking-tight font-extrabold text-white sm:mt-5 sm:text-6xl lg:mt-6 xl:text-6xl">
                   <span className="block">
-                    Generate revenue from APIs in minutes.
+                  A better way to monetize your API
                   </span>
                   <span className="block text-[#09E4A8]"></span>
                 </h1>
                 <p className="mt-3 text-base text-gray-300 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
-                  Archetype helps APIs launch, iterate, and scale paid business
-                  models, with billing infrastructure that works at any size and
-                  stage.
+                With a one-time integration, we save your engineers months of having to build billing infrastructure or quota and access management for APIs.
                 </p>
                 <div className="mt-10 sm:flex lg:justify-center sm:justify-start">
                   <div className="rounded-md text-lg">
