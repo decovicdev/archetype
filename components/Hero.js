@@ -95,7 +95,7 @@ export default function Hero() {
                 */}
             </div>
             <div className="hidden md:flex md:items-center md:space-x-6">
-              {/* <JoinWaitlistButton onClick={handleAddClick} /> */}
+               <JoinWaitlistButton onClick={handleAddClick} /> 
               <a
                 key="twitter"
                 href="https://twitter.com/getarchetype"
