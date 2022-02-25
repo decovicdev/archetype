@@ -54,6 +54,7 @@ const posts = [
           'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
       },
     },
+    
   ]
   
   export default function BlogsGrid() {
@@ -78,9 +79,9 @@ const posts = [
                 <div className="flex-1 bg-white p-6 flex flex-col justify-between">
                   <div className="flex-1">
                     <p className="text-sm font-medium text-indigo-600">
-                      <a href={post.category.href} className="hover:underline">
+                      {/*<a href={post.category.href} className="hover:underline">
                         {post.category.name}
-                      </a>
+                      </a>*/}
                     </p>
                     <a href={post.href} className="block mt-2">
                       <p className="text-xl font-semibold text-gray-900">{post.title}</p>
@@ -91,12 +92,11 @@ const posts = [
                     <div className="flex-shrink-0">
                       <a href={post.author.href}>
                         <span className="sr-only">{post.author.name}</span>
-                        <img className="h-10 w-10 rounded-full" src={post.author.imageUrl} alt="" />
                       </a>
                     </div>
                     <div className="ml-3">
                       <p className="text-sm font-medium text-gray-900">
-                        <a href={post.author.href} className="hover:underline">
+                        <a /*href={post.author.href}*/ className="hover:underline">
                           {post.author.name}
                         </a>
                       </p>

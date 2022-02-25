@@ -1,6 +1,7 @@
 
 import Navbar from '@components/CustomNavbar'
 import BlogsGrid from '@components/BlogsGrid'
+import Footer from '@components/Footer'
 export const POSTS_PER_PAGE = 10
 
 export async function getStaticProps() {
@@ -18,11 +19,10 @@ export default function Blog({ posts, initialDisplayPosts, pagination }) {
   return (
     <div className="bg-fullscreencover">
       <Navbar/>
-      
-      <main>
-      <BlogsGrid/>
-      </main>
-      
+      <div className="bg-white">
+        <BlogsGrid/>
+      </div>
+      <Footer/>
     </div>
   )
 }
