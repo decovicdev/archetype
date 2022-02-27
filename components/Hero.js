@@ -189,7 +189,7 @@ export default function Hero() {
                   <span className="block text-[#09E4A8]"></span>
                 </h1>
                 <p className="mt-3 text-base text-gray-300 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
-                With a one-time integration, we save your engineers months of having to build billing infrastructure or quota and access management for APIs.
+                With a one-time integration, we save your engineers <strong>months</strong> of having to build billing infrastructure or quota and access management for APIs.
                 </p>
                 <div className="mt-10 sm:flex lg:justify-center sm:justify-start">
                   <div className="rounded-md text-lg">
