@@ -2,7 +2,7 @@ import Head from 'next/head'
 import Footer from '@components/Footer'
 import Hero from '@components/Hero'
 import BottomCTA from '@components/LandingPage/BottomCTA'
-
+import FAQS from '@components/FAQs'
 export default function Home() {
   
 
