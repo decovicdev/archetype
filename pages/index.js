@@ -76,8 +76,6 @@ export default function Home() {
         <BottomCTA/>
         <Footer/>
       </div>
-     
-      
     </div>
   )
 }
