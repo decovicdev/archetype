@@ -1,8 +1,9 @@
 import React, { useContext, useState, useCallback, useEffect } from "react";
-import { GetProducts, CreateCheckoutSession } from "archetype-pricing"
+import { CreateCheckoutSession } from "archetype-pricing"
 import { useNavigate } from "react-router-dom";
+const axios = require("axios");
 const PlanComponent = () => {
-    const PUBLICKEY = "937fa66daa224239a94a4516b3f72edc"
+    const PUBLICKEY = "archetype_pk_test_779b893db34848939e87ff74e4b75968"
 
     const [tiers, setTiers] = useState([]);
 
@@ -12,12 +13,32 @@ const PlanComponent = () => {
         await CreateCheckoutSession(
             PUBLICKEY, 
             tierId, 
-            "behailukt@gmail.com"
+            "uLHmYF0Gp7ZANqOJtKrQ"
         ).then(function(response) {
             result = response
         })
         return result;
     };
+    async function GetProducts(publicKey) {
+      var result = null
+      await axios // Making a GET request using axios and requesting information from the API
+      .get(
+        "https://test.archetype.dev/public/v1/api/" + publicKey + "/tiers"
+      )
+      .then((response) => { // If the GET request is successful, this block is executed
+        if (response.status === 200){
+          result = response.data
+          return response.data; // The response of the API call is passed on to the next block
+        }
+        console.log("Error parsing request")
+        return []
+      })
+      .catch((err) => {
+        console.log(err); // Error handler
+      });
+    
+      return result; // The contest data is returned
+    }
 
     async function LoadProducts() {
         var result = []
@@ -37,7 +58,7 @@ const PlanComponent = () => {
         });
         
         return result;
-    
+
     }
 
     useEffect(() => {
@@ -77,12 +98,7 @@ const PlanComponent = () => {
                 <h3 className="text-xs font-medium text-gray-900 tracking-wide uppercase">{tier.quota} API calls</h3>
                 }
                 <ul role="list" className="mt-6 space-y-4">
-                  {tier.users.map((feature) => (
-                    <li key={feature} className="flex space-x-3">
-                      {/*<CheckIcon className="flex-shrink-0 h-5 w-5 text-green-500" aria-hidden="true" />*/}
-                      <span className="text-sm text-gray-500">{feature}</span>
-                    </li>
-                  ))}
+                  
                 </ul>
               </div>
             </div>
