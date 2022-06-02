@@ -65,6 +65,7 @@ export default function Home() {
               `
         }}
         />
+        <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/21918475.js"></script>
         <noscript>
         <img height="1" width="1" 
         src="https://www.facebook.com/tr?id=517709336394629&ev=PageView
