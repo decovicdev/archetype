@@ -54,12 +54,18 @@ module.exports = {
         down: "down 0.5s",
       },
       colors: {
-        "regal-blue": "#0021c5",
+        primary: "#7500CF",
+        secondary: "#FFA759",
+        dark: {
+          100: "#151515",
+        },
       },
     },
     backgroundImage: {
-      "icon-arrow-down": "url('../public/icon-arrow-down.png')",
-      fullscreencover: "url('../public/fullpagecover copy.webp')",
+      noisy: 'url("../public/images/noisy-bg.png")',
+      cta: "url('/images/cta-bg.png')",
+      "faded-line":
+        "radial-gradient(50.1% 8025.76% at 50.1% 0%, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0) 100%)",
     },
   },
 
