@@ -1,16 +1,19 @@
+
+/*
 import Head from "next/head";
 import React, { Fragment, useState, useEffect } from "react";
 import { Popover, Transition } from "@headlessui/react";
 import { MenuIcon, XIcon } from "@heroicons/react/outline";
 import JoinWaitlistButton from "@components/Buttons/JoinWaitlistButton";
 import Footer from "@components/Footer";
+*/
 const navigation = [
   /*{ name: 'Documentation', href: 'https://docs.archetype.dev' },
   { name: 'Pricing', href: '#' },
   { name: 'Blog', href: '#' }
   */
 ];
-
+/*
 const Contact = () => {
   // element select Option
   const [isLoading, setIsLoading] = useState(false);
@@ -246,14 +249,14 @@ const Contact = () => {
                     </Popover.Button>
                   </div>
                 </div>
-                {/*<div className="hidden space-x-8 md:flex md:ml-10">
+                <div className="hidden space-x-8 md:flex md:ml-10">
                 {navigation.map((item) => (
                   <a key={item.name} href={item.href} className="text-base font-medium text-white hover:text-gray-300">
                     {item.name}
                   </a>
                 ))}
               </div>
-                */}
+              
               </div>
               <div className="hidden md:flex md:items-center md:space-x-6">
                 <JoinWaitlistButton onClick={handleAddClick} />
@@ -332,7 +335,6 @@ const Contact = () => {
                 onSubmit={handleSubmit}
               >
                 <div className="flex flex-col sm:w-full md:w-2/4">
-                  {/* Checkbox */}
                   <h3 className="text-xl font-bold font-sans mb-2">
                     Hey! I’d like to get started with
                   </h3>
@@ -376,7 +378,6 @@ const Contact = () => {
                       );
                     })}
                   </div>
-                  {/* Select */}
                   <div className="flex flex-col w-full h-auto mt-10">
                     <h3 className="text-xl font-bold font-sans">
                       My backend stack:
@@ -537,7 +538,7 @@ const Contact = () => {
                   >
                     {error.email}
                   </span>
-                    {/* <div>
+                     <div>
                       <input
                         type="text"
                         className={
@@ -558,7 +559,7 @@ const Contact = () => {
                       >
                         {error.lastName}
                       </span>
-                    </div> */}
+                    </div> 
                   </div>
 
                   <input
@@ -586,14 +587,14 @@ const Contact = () => {
                     {error.website}
                   </span>
 
-                  {/* <textarea
+                 <textarea
                     className="h-32 form-control-textarea mt-4"
                     placeholder="Message"
                     onChange={(e) => setMessage(e.target.value)}
                     value={message}
-                  /> */}
+                  />
 
-                  {/* <div className="flex flex-col w-full justify-end items-end">
+                   <div className="flex flex-col w-full justify-end items-end">
                     <div className="w-28 h-16 relative bottom-16 border-t border-l border-r border-black"></div>
                     <div className="w-28 h-16 relative bottom-32 border-b border-r z-50 border-white"></div>
                     <button
@@ -602,7 +603,7 @@ const Contact = () => {
                     >
                       {isLoading === true ? "Loading" : "Submit"}
                     </button>
-                  </div> */}
+                  </div> 
                   <div className="h-40">
                     <button
                       type="submit"
@@ -637,7 +638,7 @@ const Contact = () => {
             </div>
           </div>
         </div>
-        {/*
+        
       <div className="w-full flex bg-black text-white py-20">
         <div className="container flex flex-col mx-auto">
           <div className="flex flex-row justify-start">
@@ -648,9 +649,10 @@ const Contact = () => {
           </div>
         </div>
       </div>
-      */}
+      
       </div>
     </div>
   );
 };
 export default Contact;
+*/
