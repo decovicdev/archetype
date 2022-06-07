@@ -3,7 +3,8 @@ import { useRouter } from "next/router";
 import { useEffect } from "react";
 import { hotjar } from "react-hotjar";
 import { ChakraProvider } from "@chakra-ui/provider";
-import { LightMode } from "@chakra-ui/color-mode";
+
+import theme from "constants/theme";
 
 function Application({ Component, pageProps }) {
   const router = useRouter();
@@ -23,8 +24,7 @@ function Application({ Component, pageProps }) {
   }, [router.events]);
 
   return (
-    <ChakraProvider>
-      <LightMode />
+    <ChakraProvider theme={theme}>
       <Component {...pageProps} />
     </ChakraProvider>
   );

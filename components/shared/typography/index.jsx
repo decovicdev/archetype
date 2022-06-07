@@ -1,3 +1,4 @@
+import { forwardRef } from "react";
 import classNames from "utils/classnames";
 
 const LargeHeading = ({ className, ...rest }) => {
@@ -27,9 +28,10 @@ const SubHeading = ({ className, ...rest }) => {
   );
 };
 
-const Body = ({ className, ...rest }) => {
+const Body = forwardRef(({ className, ...rest }, ref) => {
   return (
     <p
+      ref={ref}
       className={classNames(
         "text-xs md:text-base lg:text-xl font-light",
         className
@@ -37,7 +39,7 @@ const Body = ({ className, ...rest }) => {
       {...rest}
     />
   );
-};
+});
 
 const SubTitle = ({ className, ...rest }) => {
   return (

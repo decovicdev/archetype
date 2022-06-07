@@ -1,22 +1,43 @@
 import { MenuText } from "../typography";
 
 const links = [
-  "Main",
-  "Benefits",
-  "Features",
-  "Blog",
-  "FAQ",
-  "Pricing",
-  "Testimonials",
+  {
+    name: "Main",
+    href: "#main",
+  },
+  {
+    name: "Benefits",
+    href: "#benefits",
+  },
+  {
+    name: "Features",
+    href: "#features",
+  },
+  {
+    name: "Blog",
+    href: "#blog",
+  },
+  {
+    name: "FAQ",
+    href: "#faq",
+  },
+  {
+    name: "Pricing",
+    href: "#pricing",
+  },
+  {
+    name: "Testimonials",
+    href: "#testimonials",
+  },
 ];
 
-const Nav = () => {
+const Nav = ({ onClose }) => {
   return (
     <nav className="flex flex-col lg:flex-row gap-6 md:gap-10 w-full  px-2">
-      {links.map((link, index) => {
+      {links.map(({ name, href }, index) => {
         return (
-          <a href="#" key={index}>
-            <MenuText>{link}</MenuText>
+          <a href={href} key={index} onClick={onClose}>
+            <MenuText>{name}</MenuText>
           </a>
         );
       })}

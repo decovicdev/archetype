@@ -1,3 +1,6 @@
+import { Fragment, useState } from "react";
+import { ArrowNarrowRightIcon } from "@heroicons/react/solid";
+
 import { Button, ButtonOutline } from "@components/shared/button";
 import Container from "@components/shared/container";
 import { HDivider } from "@components/shared/divider";
@@ -6,20 +9,19 @@ import {
   Body,
   Heading,
   LargeHeading,
-  SubHeading,
   SubTitle,
 } from "@components/shared/typography";
 import { articles } from "data/mock";
-import { Fragment } from "react";
+import { ArrowLeft } from "@components/icons";
 
 const Blog = () => {
   return (
-    <Container className="mt-40">
+    <Container id="blog" className="mt-40">
       <LargeHeading>Archetype Blog</LargeHeading>
       <VStack className="mt-20 gap-6 md:flex-row">
         <VStack className="items-center">
           <img src="/images/article-1.png" />
-          <VStack className="max-w-[700px] gap-10 items-start -translate-y-1/4 md:-translate-y-2/4  xl:-translate-y-3/4">
+          <VStack className="max-w-[700px] gap-10 items-start -translate-y-1/4 md:-translate-y-1/4  lg:-translate-y-2/4">
             <SubTitle>May 3, 2022</SubTitle>
             <Heading>Lorem ipsum dolor sit amet, consectetur</Heading>
             <Body>
@@ -29,7 +31,12 @@ const Blog = () => {
               felis varius quis et. Curabitur in arcu duis euismod iaculis diam
               vitae scelerisque...
             </Body>
-            <ButtonOutline>Continue Reading</ButtonOutline>
+            <ButtonOutline
+              className="flex flex-row"
+              rightIcon={<ArrowNarrowRightIcon className="h-6 w-6" />}
+            >
+              Continue Reading
+            </ButtonOutline>
           </VStack>
         </VStack>
         <VStack className="gap-10">
@@ -49,9 +56,20 @@ const Blog = () => {
 
 const ArticleItem = (props) => {
   const { title, description } = props;
+  const [hovering, setHovering] = useState(false);
   return (
-    <HStack>
+    <HStack
+      className="justify-between gap-4 w-full cursor-pointer"
+      onMouseEnter={() => setHovering(true)}
+      onMouseLeave={() => setHovering(false)}
+    >
       <Heading>{title}</Heading>
+      <div>
+        <ArrowLeft
+          className="w-10 h-10 md:h-14 md:w-14 lg:w-24 lg:h-24"
+          stroke={!hovering ? "url(#paint0_linear_1)" : "url(#paint0_linear_2)"}
+        />
+      </div>
     </HStack>
   );
 };

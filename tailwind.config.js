@@ -63,7 +63,9 @@ module.exports = {
     },
     backgroundImage: {
       noisy: 'url("../public/images/noisy-bg.png")',
-      cta: "url('/images/cta-bg.png')",
+      cta: "url('/images/cta.png')",
+      "cta-xl": "url('/images/cta-xl.png')",
+      "cta-2xl": "url('/images/cta-2xl.png')",
       "faded-line":
         "radial-gradient(50.1% 8025.76% at 50.1% 0%, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0) 100%)",
     },

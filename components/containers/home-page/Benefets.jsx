@@ -6,8 +6,8 @@ import { benefits } from "data/mock";
 
 const Benefits = () => {
   return (
-    <Container>
-      <VStack className="gap-14 md:gap-20  xl:gap-28 mt-40">
+    <Container id="benefits">
+      <VStack className="gap-14 md:gap-20  xl:gap-28 mt-20 md:mt-40">
         <LargeHeading className="max-w-5xl self-end">
           Generate revenue from APIs in minutes.
         </LargeHeading>

@@ -12,7 +12,7 @@ import { pricingList } from "data/mock";
 
 const Pricing = () => {
   return (
-    <Container>
+    <Container id="pricing">
       <VStack className="mt-40">
         <LargeHeading className="w-[210px] md:w-[500px] lg:w-[1000px] lg:self-end">
           Fire prices to fit your needs
@@ -24,11 +24,11 @@ const Pricing = () => {
             return (
               <VStack
                 key={index}
-                className={`w-full md:w-[262px] md:h-[476px] lg:h-full  lg:w-[30%] 
-                xl:w-[518px] xl:h-[560px] gap-6 md:gap-8 xl:gap-10 shadow-card bg-noisy-lighten ${
+                className={`w-full md:w-[262px] md:h-[476px] lg:w-[30%] 
+                xl:w-[518px] lg:h-[560px] gap-6 md:gap-8 xl:gap-10 shadow-card bg-noisy-lighten ${
                   bestOffer && "lg:bg-noisy-primary"
                 }
-                ${middleOffer && "md:scale-110 md:bg-[#1e1e1e] z-10"}
+                ${middleOffer && "md:scale-110 md:bg-dark-blended z-10"}
                  rounded-2xl p-6 md:p-8 lg:p-10 
                  lg:bg-noisy-lighten
                  lg:scale-100  
@@ -53,11 +53,11 @@ const Pricing = () => {
                 <ul className="grid gap-2">
                   {pricing.features.map((feature, index) => {
                     return (
-                      <Body>
-                        <li className="list-disc list-inside " key={index}>
-                          {feature}
-                        </li>
-                      </Body>
+                      // </Body>
+                      // <Body>
+                      <li className="list-disc list-inside " key={index}>
+                        {feature}
+                      </li>
                     );
                   })}
                 </ul>

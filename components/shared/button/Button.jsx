@@ -15,7 +15,7 @@ const Button = ({ className, children, size = "m", ...rest }) => {
       {...rest}
     >
       {small ? (
-        <p className="text-base">{children}</p>
+        <p className="text-base whitespace-nowrap">{children}</p>
       ) : (
         <ButtonText>{children}</ButtonText>
       )}

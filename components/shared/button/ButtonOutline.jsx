@@ -1,13 +1,19 @@
 import classNames from "utils/classnames";
 import { ButtonText } from "../typography";
 
-const ButtonOutline = ({ className, children, size = "m", ...rest }) => {
+const ButtonOutline = ({
+  className,
+  children,
+  size = "m",
+  rightIcon,
+  ...rest
+}) => {
   const small = size === "s";
 
   return (
     <button
       className={classNames(
-        `rounded-lg h-max border-2 border-white hover:border-primary hover:bg-primary transition
+        `flex items-center gap-2 rounded-lg h-max border-2 border-white hover:border-primary hover:bg-primary transition
         ${small ? "px-4 py-[6px]" : " px-8 py-[6px]"}
         `,
         className
@@ -19,6 +25,7 @@ const ButtonOutline = ({ className, children, size = "m", ...rest }) => {
       ) : (
         <ButtonText>{children}</ButtonText>
       )}
+      {rightIcon}
     </button>
   );
 };

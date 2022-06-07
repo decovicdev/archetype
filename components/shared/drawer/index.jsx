@@ -8,45 +8,54 @@ import {
   DrawerCloseButton,
 } from "@chakra-ui/modal";
 import { useDisclosure } from "@chakra-ui/hooks";
-import { MenuIcon, PhoneIcon } from "@heroicons/react/solid";
-import { MailIcon } from "@heroicons/react/outline";
+import { MenuIcon } from "@heroicons/react/solid";
+
 import Nav from "../header/Nav";
 import { HStack, VStack } from "../stack";
-import { Body } from "../typography";
+import Contact from "../contact";
+import EarlyAccessForm from "../EarlyAccessForm";
+import { ButtonOutline } from "../button";
 
 const Drawer = () => {
   const { isOpen, onClose, onOpen } = useDisclosure();
 
   return (
     <>
+      <style>
+        {`
+        ::-webkit-scrollbar-thumb {
+          background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        ::-webkit-scrollbar-track {
+          background-color: #f5f5f5;
+        }
+      `}
+      </style>
       <button onClick={onOpen}>
         <MenuIcon className="h-6 w-6 text-white" />
       </button>
-      <_Drawer isOpen={isOpen} placement="right" onClose={onClose}>
+      <_Drawer
+        isOpen={isOpen}
+        size="full"
+        placement="right"
+        onClose={onClose}
+        trapFocus={false}
+      >
         <DrawerOverlay />
-        <DrawerContent className="bg-primary pt-20 md:pt-32 p-10">
+        <DrawerContent className="!bg-primary pt-20 md:pt-28 p-10 overflow-y-auto">
           <DrawerCloseButton className="absolute top-0 right-0 m-8" />
           <DrawerHeader className=""></DrawerHeader>
           <DrawerBody className="">
-            <Nav />
+            <Nav onClose={onClose} />
           </DrawerBody>
-          <DrawerFooter className="mt-20">
+          <DrawerFooter className="mt-20 flex flex-col gap-10 !items-stretch">
+            <VStack className="md:flex-row justify-between gap-10 ">
+              <EarlyAccessForm />
+              <ButtonOutline size="s">Get Started</ButtonOutline>
+            </VStack>
             <HStack className="flex-1 gap-6 justify-between items-center ">
-              <VStack className="gap-4">
-                <HStack className="gap-3 items-center">
-                  <PhoneIcon className="h-6 w-6 text-gray-400" />
-                  <Body>+12 034 567 89 01</Body>
-                </HStack>
-                <HStack className="gap-3 items-center">
-                  <MailIcon className="h-6 w-6 text-gray-400" />
-                  <Body>info@archetype.com</Body>
-                </HStack>
-              </VStack>
-              <VStack className="items-center gap-4 md:flex-row ">
-                <img src="/images/twitter.png" alt="twitter" />
-                <img src="/images/facebook.png" alt="facebook" />
-                <img src="/images/linkedin.png" alt="linkedin" />
-              </VStack>
+              <Contact />
             </HStack>
           </DrawerFooter>
         </DrawerContent>

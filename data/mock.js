@@ -101,4 +101,49 @@ const articles = [
   },
 ];
 
-export { benefits, pricingList, features, articles };
+const faqs = [
+  {
+    question: "Lorem ipsum dolor sit amet, consectetur adipiscing elit?",
+    answer:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pulvinar enim enim malesuada habitant. Risus massa tempus in mattis quisque in dis nisi, placerat. Nunc, varius risus neque, amet feugiat felis varius quis et. Curabitur in arcu duis euismod iaculis diam vitae scelerisque... ",
+  },
+  {
+    question: "Curabitur in arcu duis euismod iaculis diam vitae scelerisque?",
+    answer:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pulvinar enim enim malesuada habitant. Risus massa tempus in mattis quisque in dis nisi, placerat. Nunc, varius risus neque, amet feugiat felis varius quis et. Curabitur in arcu duis euismod iaculis diam vitae scelerisque... ",
+  },
+  {
+    question:
+      "Pulvinar enim enim malesuada habitant. Risus massa tempus in mattis quisque in dis nisi, placerat. Nunc, varius risus neque, amet feugiat felis varius quis?",
+    answer:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pulvinar enim enim malesuada habitant. Risus massa tempus in mattis quisque in dis nisi, placerat. Nunc, varius risus neque, amet feugiat felis varius quis et. Curabitur in arcu duis euismod iaculis diam vitae scelerisque... ",
+  },
+  {
+    question: "Curabitur in arcu duis euismod iaculis diam vitae scelerisque?",
+    answer:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pulvinar enim enim malesuada habitant. Risus massa tempus in mattis quisque in dis nisi, placerat. Nunc, varius risus neque, amet feugiat felis varius quis et. Curabitur in arcu duis euismod iaculis diam vitae scelerisque... ",
+  },
+];
+
+const testimonials = [
+  {
+    name: "Customer Name",
+    message:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pulvinar enim enim malesuada habitant. Risus massa tempus in mattis quisque in dis nisi, placerat. ",
+    image: "/images/testimonial-1.png",
+  },
+  {
+    name: "Customer Name",
+    message:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pulvinar enim enim malesuada habitant. Risus massa tempus in mattis quisque in dis nisi, placerat. ",
+    image: "/images/testimonial-1.png",
+  },
+  {
+    name: "Customer Name",
+    message:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pulvinar enim enim malesuada habitant. Risus massa tempus in mattis quisque in dis nisi, placerat. ",
+    image: "/images/testimonial-1.png",
+  },
+];
+
+export { benefits, pricingList, features, articles, faqs, testimonials };
