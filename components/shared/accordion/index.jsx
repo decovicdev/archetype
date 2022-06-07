@@ -28,7 +28,7 @@ const Accordion = (props) => {
 
   return (
     <HStack
-      className="justify-between gap-6 items-start"
+      className="justify-between gap-6 items-start w-full"
       onClick={toggle}
       onMouseEnter={() => setHovering(true)}
       onMouseLeave={() => setHovering(false)}
