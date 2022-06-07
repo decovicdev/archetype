@@ -88,12 +88,10 @@
       ),
       #151515;
     background-blend-mode: screen, normal, normal;
-    box-shadow: 0px 0px 94px #151515;
     backdrop-filter: blur(34px);
   }
-
-  .border-stroke {
-    /* border: 1px solid;
+  /* .border-stroke {
+    border: 1px solid;
 
     border-image-source: radial-gradient(
         124.24% 124.24% at 3.38% 200.71%,
@@ -104,6 +102,6 @@
         711.4% 312.3% at 104.64% -29.02%,
         #ffffff 0%,
         rgba(255, 255, 255, 0) 96.41%
-      ); */
-  }
+      );
+  } */
 }

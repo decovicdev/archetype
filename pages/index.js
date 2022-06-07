@@ -5,7 +5,7 @@ import HomePage from "@components/containers/home-page";
 
 export default function Home() {
   return (
-    <div className="">
+    <>
       <Head>
         <title>Archetype</title>
         <meta
@@ -93,10 +93,9 @@ export default function Home() {
           />
         </noscript>
       </Head>
-
       <Layout>
         <HomePage />
       </Layout>
-    </div>
+    </>
   );
 }

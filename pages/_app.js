@@ -1,10 +1,11 @@
-import "@styles/globals.css";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
 import { hotjar } from "react-hotjar";
 import { ChakraProvider } from "@chakra-ui/provider";
 
 import theme from "constants/theme";
+
+import "../styles/globals.css";
 
 function Application({ Component, pageProps }) {
   const router = useRouter();
