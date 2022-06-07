@@ -8,9 +8,9 @@ const ArrowUp = (props) => {
     >
       <path
         d="M76.0002 40.2158L48.0002 12.2158M48.0002 12.2158L20.0002 40.2158M48.0002 12.2158L48.0002 84.2158"
-        stroke-width="2"
-        stroke-linecap="square"
-        stroke-linejoin="round"
+        strokeWidth="2"
+        strokeLinecap="square"
+        strokeLinejoin="round"
       />
       <defs>
         <linearGradient
@@ -21,8 +21,8 @@ const ArrowUp = (props) => {
           y2="84.1332"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="white" />
-          <stop offset="1" stop-color="white" stop-opacity="0" />
+          <stop stopColor="white" />
+          <stop offset="1" stopColor="white" stopOpacity="0" />
         </linearGradient>
       </defs>
       <defs>
@@ -34,8 +34,8 @@ const ArrowUp = (props) => {
           y2="84.1332"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#FFA759" />
-          <stop offset="1" stop-color="#FFA759" stop-opacity="0" />
+          <stop stopColor="#FFA759" />
+          <stop offset="1" stopColor="#FFA759" stopOpacity="0" />
         </linearGradient>
       </defs>
     </svg>
