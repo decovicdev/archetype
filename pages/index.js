@@ -1,38 +1,12 @@
 import Head from "next/head";
 
-import Layout from "@components/shared/layout";
 import HomePage from "@components/containers/home-page";
 
 export default function Home() {
   return (
     <>
       <Head>
-        <title>Archetype</title>
-        <meta
-          name="twitter:card"
-          content="Updates, memes and all things APIs and programming from Archetype"
-          key="twcard"
-        />
-        <meta name="twitter:creator" content="GetArchetype" key="twhandle" />
-
-        <meta property="og:url" content="https://archetype.dev" key="ogurl" />
-        <meta property="og:site_name" content="Archetype" key="ogsitename" />
-        <meta
-          property="og:title"
-          content="Archetype - Billing Infrastructure for APIs"
-          key="ogtitle"
-        />
-        <meta
-          property="og:description"
-          content="We help companies monetize APIs and experiment with pricing models  by managing their billing infrastructure. Never worry about managing users' quotas and privileges."
-          key="ogdesc"
-        />
-
-        <link rel="icon" href="/favicon.ico" />
-        <meta
-          name="description"
-          content="We help companies monetize APIs and experiment with pricing models  by managing their billing infrastructure. Never worry about managing users' quotas and privileges."
-        />
+        <title>Archetype | Home</title>
         <script
           async
           src="https://www.googletagmanager.com/gtag/js?id=G-8PE8JSX9VB"
@@ -88,14 +62,11 @@ export default function Home() {
           <img
             height="1"
             width="1"
-            src="https://www.facebook.com/tr?id=517709336394629&ev=PageView
-        &noscript=1"
+            src="https://www.facebook.com/tr?id=517709336394629&ev=PageView&noscript=1"
           />
         </noscript>
       </Head>
-      <Layout>
-        <HomePage />
-      </Layout>
+      <HomePage />
     </>
   );
 }

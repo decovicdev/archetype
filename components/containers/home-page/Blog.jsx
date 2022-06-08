@@ -1,5 +1,7 @@
 import { Fragment, useState } from "react";
 import { ArrowNarrowRightIcon } from "@heroicons/react/solid";
+import { useRouter } from "next/router";
+import Link from "next/link";
 
 import { Button, ButtonOutline } from "@components/shared/button";
 import Container from "@components/shared/container";
@@ -14,9 +16,10 @@ import {
 import { articles } from "data/mock";
 import { ArrowLeft } from "@components/icons";
 
-const Blog = () => {
+const Blog = ({ showBlogsPageLink = false }) => {
+  const router = useRouter();
   return (
-    <Container id="blog" className="mt-40">
+    <Container id="blog" className="">
       <LargeHeading>Archetype Blog</LargeHeading>
       <VStack className="mt-20 gap-6 md:flex-row">
         <VStack className="items-center">
@@ -47,7 +50,11 @@ const Blog = () => {
               {index < articles.length - 1 && <HDivider />}
             </Fragment>
           ))}
-          <Button>View all articles</Button>
+          {showBlogsPageLink && (
+            <Link href="/blogs">
+              <Button>View all articles</Button>
+            </Link>
+          )}
         </VStack>
       </VStack>
     </Container>

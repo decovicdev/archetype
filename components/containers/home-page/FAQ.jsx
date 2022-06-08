@@ -8,7 +8,7 @@ import { Fragment } from "react";
 
 const FAQ = (props) => {
   return (
-    <Container id="faq" className="mt-40">
+    <Container id="faq" className="">
       <HStack className="justify-between items items-start gap-6">
         <img src="/images/faq-xl.png" className="hidden lg:block" />
         <VStack className="gap-6 md:gap-10 xl:gap-12">

@@ -13,7 +13,7 @@ import { pricingList } from "data/mock";
 const Pricing = () => {
   return (
     <Container id="pricing">
-      <VStack className="mt-40">
+      <VStack className="">
         <LargeHeading className="w-[210px] md:w-[500px] lg:w-[1000px] lg:self-end">
           Fire prices to fit your needs
         </LargeHeading>

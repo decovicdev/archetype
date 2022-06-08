@@ -14,7 +14,7 @@ import "swiper/css";
 
 const Testimonials = () => {
   return (
-    <Container id="testimonials" className="my-40">
+    <Container id="testimonials" className="">
       <VStack className="lg:flex-row items-center justify-between gap-10">
         <VStack className="gap-10">
           <LargeHeading>Testimonials</LargeHeading>

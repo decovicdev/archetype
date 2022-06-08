@@ -5,7 +5,7 @@ import FeaturesMobile from "./FeaturesMobile";
 
 const Features = () => {
   return (
-    <div id="features" className="mt-40">
+    <div id="features" className="">
       <Container>
         <LargeHeading>Features</LargeHeading>
         <FeaturesDesktop />

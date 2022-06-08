@@ -21,7 +21,7 @@ const EarlyAccessForm = ({ light = false }) => {
           onClick={onOpen}
           size="s"
           className={`rounded-lg md:rounded-bl-none md:rounded-tl-none ${
-            light && "bg-dark-100 hover:bg-primary !text-white"
+            light && "bg-dark-100 hover:!bg-primary !text-white"
           } `}
         >
           Request Early Access

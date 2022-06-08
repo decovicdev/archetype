@@ -38,7 +38,7 @@ const links = [
 
 const Footer = () => {
   return (
-    <div className="bg-noisy-lighten">
+    <div className="bg-noisy-lighten overflow-hidden">
       <Container>
         <VStack className="py-20 justify-between lg:flex-row gap-10 lg:items-center">
           <HStack className="md:w-full lg:w-max">

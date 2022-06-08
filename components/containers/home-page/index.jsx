@@ -9,12 +9,12 @@ import Testimonials from "./testimonials";
 
 const HomePage = () => {
   return (
-    <div>
+    <div className="space-y-20 md:space-y-32 lg:space-y-40 mb-20 md:32 lg:mb-40">
       <Hero />
       <Benefits />
       <Features />
       <Pricing />
-      <Blog />
+      <Blog showBlogsPageLink />
       <CTA />
       <FAQ />
       <Testimonials />

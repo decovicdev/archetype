@@ -4,6 +4,7 @@ import { hotjar } from "react-hotjar";
 import { ChakraProvider } from "@chakra-ui/provider";
 
 import theme from "constants/theme";
+import Layout from "@components/shared/layout";
 
 import "../styles/globals.css";
 
@@ -11,9 +12,9 @@ function Application({ Component, pageProps }) {
   const router = useRouter();
 
   const handleRouteChange = (url) => {
-    window.gtag("config", "G-8PE8JSX9VB", {
-      page_path: url,
-    });
+    // window.gtag("config", "G-8PE8JSX9VB", {
+    //   page_path: url,
+    // });
   };
 
   useEffect(() => {
@@ -26,7 +27,9 @@ function Application({ Component, pageProps }) {
 
   return (
     <ChakraProvider theme={theme}>
-      <Component {...pageProps} />
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
     </ChakraProvider>
   );
 }
