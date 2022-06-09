@@ -49,7 +49,7 @@ const Drawer = () => {
           <DrawerBody className="">
             <Nav onClose={onClose} />
           </DrawerBody>
-          <DrawerFooter className="mt-20 flex flex-col gap-10 !items-stretch">
+          <DrawerFooter className="mt-20  flex-col gap-10 !items-stretch !hidden md:flex">
             <VStack className="md:flex-row justify-between gap-10 ">
               <EarlyAccessForm />
               <ButtonOutline size="s">Get Started</ButtonOutline>

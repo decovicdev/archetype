@@ -1,6 +1,6 @@
 import { useRouter } from "next/router";
 import { useEffect } from "react";
-import { hotjar } from "react-hotjar";
+// import { hotjar } from "react-hotjar";
 import { ChakraProvider } from "@chakra-ui/provider";
 
 import theme from "constants/theme";
@@ -19,7 +19,7 @@ function Application({ Component, pageProps }) {
 
   useEffect(() => {
     router.events.on("routeChangeComplete", handleRouteChange);
-    hotjar.initialize(2839791, 6);
+    // hotjar.initialize(2839791, 6);
     return () => {
       router.events.off("routeChangeComplete", handleRouteChange);
     };

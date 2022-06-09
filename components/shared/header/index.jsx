@@ -5,16 +5,6 @@ import Drawer from "../drawer";
 import { MenuText } from "../typography";
 import Nav from "./Nav";
 
-const links = [
-  "Main",
-  "Benefits",
-  "Features",
-  "Blog",
-  "FAQ",
-  "Pricing",
-  "Testimonials",
-];
-
 const Header = () => {
   return (
     <header>
@@ -32,7 +22,9 @@ const Header = () => {
           </div>
           <div className="hidden lg:flex gap-4">
             <Button size="s">Sign Up</Button>
-            <ButtonOutline size="s">Get Started</ButtonOutline>
+            <Link href="#main">
+              <ButtonOutline size="s">Get Started</ButtonOutline>
+            </Link>
           </div>
 
           <div className="block lg:hidden">

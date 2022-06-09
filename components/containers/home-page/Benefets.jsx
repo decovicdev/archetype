@@ -1,8 +1,9 @@
 import { Button } from "@components/shared/button";
 import Container from "@components/shared/container";
-import { VStack, HStack } from "@components/shared/stack";
+import { VStack } from "@components/shared/stack";
 import { Body, Heading, LargeHeading } from "@components/shared/typography";
 import { benefits } from "data/mock";
+import Link from "next/link";
 
 const Benefits = () => {
   return (
@@ -33,7 +34,9 @@ const Benefits = () => {
                 <Body className=" whitespace-pre-line">
                   {benefit.description}
                 </Body>
-                <Button>Get Started</Button>
+                <Link href="#main">
+                  <Button>Get Started</Button>
+                </Link>
               </VStack>
             </VStack>
           );

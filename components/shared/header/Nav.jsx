@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { MenuText } from "../typography";
 
 const links = [
@@ -36,9 +37,11 @@ const Nav = ({ onClose }) => {
     <nav className="flex flex-col lg:flex-row gap-6 md:gap-10 w-full  px-2">
       {links.map(({ name, href }, index) => {
         return (
-          <a href={href} key={index} onClick={onClose}>
-            <MenuText>{name}</MenuText>
-          </a>
+          <Link href={href} key={index} onClick={onClose} passHref>
+            <a>
+              <MenuText>{name}</MenuText>
+            </a>
+          </Link>
         );
       })}
     </nav>

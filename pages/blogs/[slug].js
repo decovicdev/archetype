@@ -1,7 +1,7 @@
 import Head from "next/head";
 
-import articles from "../../data/articles.json";
 import BlogPage from "@components/containers/blog-page";
+import { getArticle, getArticles } from "utils/articles";
 
 const Blog = (props) => {
   return (
@@ -15,11 +15,8 @@ const Blog = (props) => {
 };
 
 export const getStaticPaths = async () => {
-  const paths = articles.map((article) => ({
-    params: {
-      id: article.id.toString(),
-    },
-  }));
+  const articles = await getArticles();
+  const paths = articles.map((article) => ({ params: { slug: article.slug } }));
 
   return {
     paths,
@@ -28,16 +25,21 @@ export const getStaticPaths = async () => {
 };
 
 export const getStaticProps = async ({ params }) => {
-  const id = params.id;
-  const article = articles.find((article) => article.id === parseInt(id));
+  const { slug } = params;
 
-  const latestArticles = articles;
+  const latestArticles = (await getArticles())
+    .sort((a, b) => {
+      return new Date(b.date) - new Date(a.date);
+    })
+    .slice(0, 10);
+
+  const article = await getArticle(slug);
 
   return {
     props: {
       article,
       latestArticles,
-      id,
+      slug,
     },
     revalidate: 60 * 60,
   };

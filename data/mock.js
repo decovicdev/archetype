@@ -146,4 +146,27 @@ const testimonials = [
   },
 ];
 
-export { benefits, pricingList, features, articles, faqs, testimonials };
+const comments = [
+  {
+    name: "Donna Troy",
+    message:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce dignissim ut laoreet morbi lectus vivamus.",
+    date: "2022-01-01",
+  },
+  {
+    name: "Doug Van",
+    message:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ullamcorper consectetur nibh luctus nunc, ultricies dictumst consequat cras. Leo convallis feugiat auctor volutpat. Varius dapibus tellus vel sit. Faucibus gravida nunc sodales fermentum sollicitudin consectetur eu sit.",
+    date: "2022-06-09",
+  },
+];
+
+export {
+  benefits,
+  pricingList,
+  features,
+  articles,
+  faqs,
+  testimonials,
+  comments,
+};

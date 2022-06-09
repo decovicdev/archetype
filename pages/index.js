@@ -1,13 +1,14 @@
 import Head from "next/head";
 
 import HomePage from "@components/containers/home-page";
+import { getArticles } from "utils/articles";
 
-export default function Home() {
+export default function Home({ articles }) {
   return (
     <>
       <Head>
         <title>Archetype | Home</title>
-        <script
+        {/* <script
           async
           src="https://www.googletagmanager.com/gtag/js?id=G-8PE8JSX9VB"
         />
@@ -64,9 +65,19 @@ export default function Home() {
             width="1"
             src="https://www.facebook.com/tr?id=517709336394629&ev=PageView&noscript=1"
           />
-        </noscript>
+        </noscript> */}
       </Head>
-      <HomePage />
+      <HomePage articles={articles} />
     </>
   );
 }
+
+export const getStaticProps = async () => {
+  const articles = (await getArticles()).slice(0, 4);
+
+  return {
+    props: {
+      articles,
+    },
+  };
+};

@@ -12,10 +12,14 @@
     "@emotion/react": "^11.9.0",
     "@emotion/styled": "^11.8.1",
     "@heroicons/react": "^1.0.6",
+    "@tailwindcss/typography": "^0.5.2",
     "archetype-pricing": "0.0.16",
+    "dayjs": "^1.11.3",
+    "formik": "^2.2.9",
     "framer-motion": "^6.3.10",
     "fs": "0.0.1-security",
     "gray-matter": "^4.0.3",
+    "markdown-to-jsx": "^7.1.7",
     "mdx-bundler": "^9.0.1",
     "next": "^12.1.6",
     "next-mdx-remote": "^4.0.3",
@@ -25,7 +29,8 @@
     "react-hotjar": "^5.0.0",
     "react-router-dom": "^6.3.0",
     "simple-react-form": "^3.0.12",
-    "swiper": "^8.2.2"
+    "swiper": "^8.2.2",
+    "yup": "^0.32.11"
   },
   "devDependencies": {
     "@netlify/plugin-nextjs": "^4.7.1",

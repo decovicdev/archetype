@@ -5,9 +5,20 @@ const Social = ({ vertical = false }) => {
     <VStack
       className={`items-center gap-4 md:flex-row  ${vertical && "!flex-col"} `}
     >
-      <img src="/images/twitter.png" alt="twitter" />
-      <img src="/images/facebook.png" alt="facebook" />
-      <img src="/images/linkedin.png" alt="linkedin" />
+      <a
+        href="https://twitter.com/getarchetype"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img src="/images/twitter.png" alt="twitter" />
+      </a>
+      <a
+        href="https://www.linkedin.com/company/getarchetype"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img src="/images/linkedin.png" alt="linkedin" />
+      </a>
     </VStack>
   );
 };

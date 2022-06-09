@@ -1,7 +1,7 @@
 import Head from "next/head";
 
-import articles from "../../data/articles.json";
 import BlogsPage from "@components/containers/blogs-page";
+import { getArticles } from "utils/articles";
 
 const Blogs = ({ articles }) => {
   return (
@@ -15,11 +15,14 @@ const Blogs = ({ articles }) => {
 };
 
 export const getStaticProps = async () => {
+  const articles = (await getArticles()).sort((a, b) => {
+    return new Date(b.date) - new Date(a.date);
+  });
+
   return {
     props: {
       articles,
     },
-    revalidate: 60 * 60,
   };
 };
 

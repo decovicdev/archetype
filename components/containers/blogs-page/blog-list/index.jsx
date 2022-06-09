@@ -10,7 +10,7 @@ const BlogList = (props) => {
       <Heading className="mb-20">All Articles</Heading>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 ">
         {articles?.map((article) => (
-          <BlogItem key={article.id} article={article} />
+          <BlogItem key={article.slug} article={article} />
         ))}
       </div>
     </Container>

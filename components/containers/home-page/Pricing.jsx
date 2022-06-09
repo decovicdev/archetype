@@ -9,6 +9,7 @@ import {
   SubHeading,
 } from "@components/shared/typography";
 import { pricingList } from "data/mock";
+import Link from "next/link";
 
 const Pricing = () => {
   return (
@@ -61,7 +62,9 @@ const Pricing = () => {
                     );
                   })}
                 </ul>
-                <Button size="s">Get Started</Button>
+                <Link href="#main">
+                  <Button size="s">Get Started</Button>
+                </Link>
               </VStack>
             );
           })}

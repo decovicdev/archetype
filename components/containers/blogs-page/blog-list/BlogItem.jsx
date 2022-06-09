@@ -21,8 +21,8 @@ const BlogItem = (props) => {
       <VStack className="gap-6 max-w-[min(90%,437px)] mx-auto -translate-y-10">
         <SubTitle>{article.date}</SubTitle>
         <SubHeading>{article.title}</SubHeading>
-        <Body>{article.description}</Body>
-        <Link href={`/blogs/${article.id}`}>
+        <Body>{article.excerpt}</Body>
+        <Link href={`/blogs/${article.slug}`}>
           <ButtonOutline
             className="mt-10"
             rightIcon={<ArrowNarrowRightIcon className="h-6 w-6" />}
