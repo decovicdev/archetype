@@ -15,15 +15,17 @@ const EarlyAccessForm = ({ light = false }) => {
   const { isOpen, onClose, onOpen } = useDisclosure();
 
   const onSubmit = (values, { setSubmitting, resetForm }) => {
-    fetch("https://api.archetype.dev/contact", {
+    fetch("https://api.archetype.dev/v1/contact", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(values),
+      body: JSON.stringify({
+        ...values,
+        signup_intent: "newsletter",
+      }),
     })
       .then((res) => {
-        console.log(res);
         if (res.status === 200) {
           resetForm();
           onOpen();

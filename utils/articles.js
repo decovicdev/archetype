@@ -13,11 +13,12 @@ const getArticles = async () => {
 };
 
 const getArticle = async (slug) => {
-  const files = await fs.readdirSync(path.join(process.cwd(), "posts"));
-  const file = files.find((file) => file.includes(slug));
-  const { data, content } = matter(
-    fs.readFileSync(path.join(process.cwd(), "posts", file), "utf8")
+  const file = await fs.readFileSync(
+    path.join(process.cwd(), "posts", `${slug}.md`),
+    "utf8"
   );
+
+  const { data, content } = matter(file);
   return {
     ...data,
     content,

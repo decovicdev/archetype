@@ -1,4 +1,5 @@
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper";
 
 import Container from "@components/shared/container";
 import {
@@ -11,11 +12,12 @@ import { VStack } from "@components/shared/stack";
 import { testimonials } from "data/mock";
 
 import "swiper/css";
+//`${isActive ? "w-[653px] h-[568px]" : "z-0"} w-[518px] mx-auto h-[454px] overflow-hidden rounded-3xl shadow-card bg-dark-blended p-16 transition-all duration-300`;
 
 const Testimonials = () => {
   return (
     <Container id="testimonials" className="">
-      <VStack className="lg:flex-row items-center justify-between gap-10">
+      <VStack className="lg:flex-row lg:items-center justify-between gap-10">
         <VStack className="gap-10">
           <LargeHeading>Testimonials</LargeHeading>
           <Body className="max-w-[500px]">
@@ -26,22 +28,35 @@ const Testimonials = () => {
             scelerisque...
           </Body>
         </VStack>
-        <div>
+        <div className="w-full">
           {/* <Swiper
             slidesPerView={3}
-            direction="vertical"
             centeredSlides
-            className="h-[888px] w-max p-4 flex flex-col items-center "
+            className="h-auto w-[688px] "
             loop={true}
+            // modules={[Autoplay]}
+            // autoplay={true}
           >
             {testimonials.map((testimonial, index) => {
               return (
-                <SwiperSlide key={index} className="w-max h-max">
+                <SwiperSlide
+                  key={index}
+                  // style={{
+                  //   width: "363px",
+                  //   height: "341px",
+                  //   background: "orange",
+                  // }}
+                  style={{
+                    height: "auto",
+                    width: "auto",
+                  }}
+                >
                   {({ isActive }) => (
-                    <VStack
-                      className={`
-                      ${isActive ? "w-[653px] h-[568px]" : "z-0"}
-                      w-[518px] mx-auto h-[454px] overflow-hidden rounded-3xl shadow-card bg-dark-blended p-16 transition-all duration-300`}
+                    <div
+                      //   className={`w-[364px] h-[341px] relative rounded-3xl overflow-hidden bg-dark-blended shadow-card p-16 transition
+                      // ${isActive ? " z-20  " : " scale-100 z-0 "}
+                      // `}
+                      className="w-[364px] h-[341px]"
                     >
                       <img src={testimonial.image} alt={testimonial.name} />
                       <SubTitle className="mt-4 mb-10">
@@ -50,9 +65,9 @@ const Testimonials = () => {
                       <SubHeading
                         className={`${isActive ? "opacity-100" : "opacity-20"}`}
                       >
-                        {testimonial.message}
+                         {testimonial.message} 
                       </SubHeading>
-                    </VStack>
+                    </div>
                   )}
                 </SwiperSlide>
               );

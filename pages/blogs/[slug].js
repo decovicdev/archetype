@@ -41,7 +41,6 @@ export const getStaticProps = async ({ params }) => {
       latestArticles,
       slug,
     },
-    revalidate: 60 * 60,
   };
 };
 
