@@ -7,21 +7,7 @@ export default function Document() {
         <meta property="og:url" content="https://archetype.dev" key="ogurl" />
         <meta name="twitter:creator" content="GetArchetype" key="twhandle" />
         <meta property="og:site_name" content="Archetype" key="ogsitename" />
-        <meta
-          name="twitter:card"
-          content="Updates, memes and all things APIs and programming from Archetype"
-          key="twcard"
-        />
-        <meta
-          property="og:title"
-          content="Archetype - Billing Infrastructure for APIs"
-          key="ogtitle"
-        />
-        <meta
-          property="og:description"
-          content="We help companies monetize APIs and experiment with pricing models  by managing their billing infrastructure. Never worry about managing users' quotas and privileges."
-          key="ogdesc"
-        />
+
         <link
           rel="apple-touch-icon"
           sizes="180x180"

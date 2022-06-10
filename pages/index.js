@@ -8,6 +8,21 @@ export default function Home({ articles }) {
     <>
       <Head>
         <title>Archetype | Home</title>
+        <meta
+          name="twitter:card"
+          content="Updates, memes and all things APIs and programming from Archetype"
+          key="twcard"
+        />
+        <meta
+          property="og:title"
+          content="Archetype - Billing Infrastructure for APIs"
+          key="ogtitle"
+        />
+        <meta
+          property="og:description"
+          content="We help companies monetize APIs and experiment with pricing models  by managing their billing infrastructure. Never worry about managing users' quotas and privileges."
+          key="ogdesc"
+        />
         {/* <script
           async
           src="https://www.googletagmanager.com/gtag/js?id=G-8PE8JSX9VB"
