@@ -7,7 +7,7 @@ date: May 25, 2020
 excerpt: Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit facilis asperiores porro quaerat doloribus, eveniet dolore. Adipisci tempora aut inventore optio animi., tempore temporibus quo laudantium.
 ---
 
-# Why API Marketplaces Suck
+# How to use search engine optimization to drive sales
 
 API marketplaces have been on the rise as a way for companies to find and use APIs. However, there are many reasons why API marketplaces don’t work. One of the main reasons is that it is difficult for API vendors to work with API marketplaces. API vendors need to spend a lot of time and energy marketing their API, and they often do not see much return on investment because the marketplace takes most of the traffic. Finally, it can be difficult for API vendors to standout in a sea of mediocre APIs since API marketplaces are often over-saturated with APIs, making it difficult for quality API vendors to get their API discovered.
 

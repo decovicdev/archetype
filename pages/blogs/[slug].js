@@ -7,7 +7,8 @@ const Blog = (props) => {
   return (
     <>
       <Head>
-        <title>Archetype | Blog </title>
+        <title>Archetype | {props.article.title} </title>
+        <meta name="description" content={props.article.excerpt} />
       </Head>
       <BlogPage {...props} />
     </>

@@ -19,6 +19,7 @@ const getArticle = async (slug) => {
   );
 
   const { data, content } = matter(file);
+
   return {
     ...data,
     content,

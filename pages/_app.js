@@ -7,6 +7,7 @@ import theme from "constants/theme";
 import Layout from "@components/shared/layout";
 
 import "../styles/globals.css";
+import Head from "next/head";
 
 function Application({ Component, pageProps }) {
   const router = useRouter();
@@ -26,11 +27,16 @@ function Application({ Component, pageProps }) {
   }, [router.events]);
 
   return (
-    <ChakraProvider theme={theme}>
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
-    </ChakraProvider>
+    <>
+      <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </Head>
+      <ChakraProvider theme={theme}>
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      </ChakraProvider>
+    </>
   );
 }
 
