@@ -43,6 +43,8 @@ const EarlyAccessForm = ({ light = false }) => {
         initialValues={initialValues}
         validationSchema={earlyAccessSchema}
         onSubmit={onSubmit}
+        validateOnBlur={false}
+        validateOnChange={false}
       >
         {({ errors }) => (
           <Form noValidate>

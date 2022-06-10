@@ -9,6 +9,20 @@ const Blog = (props) => {
       <Head>
         <title>Archetype | {props.article.title} </title>
         <meta name="description" content={props.article.excerpt} />
+        <meta name="twitter:card" content={props.article.title} key="twcard" />
+        <meta property="og:title" content={props.article.title} key="ogtitle" />
+        <meta
+          property="og:description"
+          content={props.article.excerpt}
+          key="ogdesc"
+        />
+        <meta property="og:url" content={props.article.url} key="ogurl" />
+        <meta property="og:image" content={props.article.image} key="ogimage" />
+        <meta
+          name="twitter:image"
+          content={props.article.image}
+          key="twimage"
+        />
       </Head>
       <BlogPage {...props} />
     </>

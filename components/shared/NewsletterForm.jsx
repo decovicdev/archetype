@@ -47,6 +47,8 @@ const NewsletterForm = () => {
         initialValues={initialValues}
         validationSchema={earlyAccessSchema}
         onSubmit={onSubmit}
+        validateOnBlur={false}
+        validateOnChange={false}
       >
         {({ errors }) => (
           <Form noValidate className="w-full">

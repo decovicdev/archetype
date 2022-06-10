@@ -4,14 +4,14 @@ export default function Document() {
   return (
     <Html>
       <Head>
+        <meta property="og:url" content="https://archetype.dev" key="ogurl" />
+        <meta name="twitter:creator" content="GetArchetype" key="twhandle" />
+        <meta property="og:site_name" content="Archetype" key="ogsitename" />
         <meta
           name="twitter:card"
           content="Updates, memes and all things APIs and programming from Archetype"
           key="twcard"
         />
-        <meta name="twitter:creator" content="GetArchetype" key="twhandle" />
-        <meta property="og:url" content="https://archetype.dev" key="ogurl" />
-        <meta property="og:site_name" content="Archetype" key="ogsitename" />
         <meta
           property="og:title"
           content="Archetype - Billing Infrastructure for APIs"
