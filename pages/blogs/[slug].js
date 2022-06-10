@@ -16,11 +16,14 @@ const Blog = (props) => {
           content={props.article.excerpt}
           key="ogdesc"
         />
-        <meta property="og:url" content={props.article.url} key="ogurl" />
-        <meta property="og:image" content={props.article.image} key="ogimage" />
+        <meta
+          property="og:image"
+          content={props.article.imageUrl}
+          key="ogimage"
+        />
         <meta
           name="twitter:image"
-          content={props.article.image}
+          content={props.article.imageUrl}
           key="twimage"
         />
       </Head>
