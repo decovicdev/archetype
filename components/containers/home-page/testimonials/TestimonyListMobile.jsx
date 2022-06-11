@@ -41,7 +41,7 @@ const TestimonyListMobile = ({ testimonies }) => {
       {testimonies.map((testimonial, index) => {
         return (
           <SwiperSlide
-            index={index}
+            key={index}
             style={{
               width: "auto",
               height: "auto",

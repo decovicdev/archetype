@@ -32,17 +32,17 @@ const Blog = (props) => {
   );
 };
 
-// export const getStaticPaths = async () => {
-//   const articles = await getArticles();
-//   const paths = articles.map((article) => ({ params: { slug: article.slug } }));
+export const getStaticPaths = async () => {
+  const articles = await getArticles();
+  const paths = articles.map((article) => ({ params: { slug: article.slug } }));
 
-//   return {
-//     paths,
-//     fallback: false,
-//   };
-// };
+  return {
+    paths,
+    fallback: false,
+  };
+};
 
-export const getServerSideProps = async ({ params }) => {
+export const getStaticProps = async ({ params }) => {
   const { slug } = params;
 
   const latestArticles = (await getArticles())
