@@ -5,15 +5,12 @@ import { earlyAccessSchema } from "validation";
 import { Button } from "./button";
 import { HStack, VStack } from "./stack";
 import { Body, SubTitle } from "./typography";
-import { useToast } from "@chakra-ui/toast";
 
 const initialValues = {
   email: "",
 };
 
 const NewsletterForm = () => {
-  const toast = useToast();
-
   const onSubmit = (values, { setSubmitting, resetForm }) => {
     fetch("https://api.archetype.dev/v1/contact", {
       method: "POST",

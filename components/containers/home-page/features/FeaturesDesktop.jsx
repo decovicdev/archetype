@@ -1,16 +1,11 @@
 import { HDivider } from "@components/shared/divider";
 import { HStack, VStack } from "@components/shared/stack";
 import { features } from "data/mock";
-
-const {
-  LargeHeading,
-  SubHeading,
-  Body,
-} = require("@components/shared/typography");
+import { SubHeading, Body } from "@components/shared/typography";
 
 const FeaturesDesktop = () => {
   return (
-    <HStack className="mt-20 gap-6 hidden lg:flex">
+    <HStack className="mt-20 gap-6 hidden lg:flex overflow-x-auto">
       {features.map((feature, index) => (
         <FeatureItem key={index} {...feature} index={index} />
       ))}
@@ -23,10 +18,10 @@ const FeatureItem = (props) => {
   const isBestOffer = index === 0;
   return (
     <VStack
-      className={`w-[517px] shadow-card items-center gap-6 p-10
+      className={`w-[517px] shadow-card items-center gap-6 p-10 flex-1
       rounded-3xl ${isBestOffer ? "bg-noisy-primary" : "bg-noisy-lighten"}`}
     >
-      <img src={image} className="my-12" />
+      <img src={image} className="my-12 h-10" />
       <HDivider />
       <SubHeading>Setup</SubHeading>
       <HDivider />
@@ -34,15 +29,17 @@ const FeatureItem = (props) => {
       <HDivider />
       <SubHeading>Tariff plans</SubHeading>
       <HDivider />
-      <Body>{tariffPlans}</Body>
+      <Body className="h-[84px] overflow-hidden">{tariffPlans}</Body>
       <HDivider />
-      <SubHeading>Custom billable metrics</SubHeading>
+      <SubHeading className="h-9 overflow-hidden">
+        Custom billable metrics
+      </SubHeading>
       <HDivider />
-      <Body>{billableMetrics}</Body>
+      <Body className="h-[56px] overflow-hidden">{billableMetrics}</Body>
       <HDivider />
       <SubHeading>Cost</SubHeading>
       <HDivider />
-      <Body className="self-start mb-8">{cost}</Body>
+      <Body className="self-start mb-8 whitespace-pre">{cost}</Body>
     </VStack>
   );
 };

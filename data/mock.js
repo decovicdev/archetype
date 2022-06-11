@@ -125,21 +125,27 @@ const faqs = [
   },
 ];
 
-const testimonials = [
+const testimonies = [
   {
-    name: "Customer Name",
+    name: "John Doe",
     message:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pulvinar enim enim malesuada habitant. Risus massa tempus in mattis quisque in dis nisi, placerat. ",
     image: "/images/testimonial-1.png",
   },
   {
-    name: "Customer Name",
+    name: "David Smith",
     message:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pulvinar enim enim malesuada habitant. Risus massa tempus in mattis quisque in dis nisi, placerat. ",
     image: "/images/testimonial-1.png",
   },
   {
-    name: "Customer Name",
+    name: "Emma Doe",
+    message:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pulvinar enim enim malesuada habitant. Risus massa tempus in mattis quisque in dis nisi, placerat. ",
+    image: "/images/testimonial-1.png",
+  },
+  {
+    name: "Rose Doe",
     message:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pulvinar enim enim malesuada habitant. Risus massa tempus in mattis quisque in dis nisi, placerat. ",
     image: "/images/testimonial-1.png",
@@ -167,6 +173,6 @@ export {
   features,
   articles,
   faqs,
-  testimonials,
+  testimonies,
   comments,
 };

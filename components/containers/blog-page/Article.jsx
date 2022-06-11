@@ -5,7 +5,6 @@ import Container from "@components/shared/container";
 import {
   Body,
   Heading,
-  LargeHeading,
   SubHeading,
   SubTitle,
 } from "@components/shared/typography";
@@ -37,9 +36,8 @@ const Article = (props) => {
               options={{
                 wrapper: Wrapper,
                 overrides: {
-                  h1: LargeHeading,
-                  h2: Heading,
-                  h3: SubHeading,
+                  h1: Heading,
+                  h2: SubHeading,
                   p: Body,
                 },
               }}
