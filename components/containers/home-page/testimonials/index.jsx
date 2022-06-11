@@ -4,7 +4,7 @@ import { testimonies } from "data/mock";
 
 import TestimonyListTablet from "./TestimonyListTablet";
 import TestimonyListMobile from "./TestimonyListMobile";
-import TestimonyListDesktop from "./DesktopTestimonyList";
+import TestimonyListDesktop from "./TestimonyListDesktop";
 
 const Testimonials = () => {
   return (

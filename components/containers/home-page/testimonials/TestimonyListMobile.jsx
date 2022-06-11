@@ -18,7 +18,10 @@ const TestimonyListMobile = ({ testimonies }) => {
       className="w-auto h-auto"
       loop={true}
       modules={[Autoplay]}
-      autoplay
+      autoplay={{
+        delay: 2500,
+        disableOnInteraction: false,
+      }}
       autoHeight
     >
       <span slot="container-start" className="">

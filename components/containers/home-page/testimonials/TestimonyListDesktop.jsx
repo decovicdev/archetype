@@ -32,7 +32,10 @@ const TestimonyListDesktop = ({ testimonies }) => {
         className="w-auto h-[888px]"
         loop={true}
         modules={[Autoplay]}
-        autoplay
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
       >
         {testimonies.map((testimonial, index) => {
           return (
