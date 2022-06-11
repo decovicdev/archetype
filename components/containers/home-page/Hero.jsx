@@ -11,7 +11,7 @@ const Hero = () => {
         <VStack className="w-[242px]  md:w-[420px] gap-6 md:gap-6 xl:gap-10 -translate-y-1/4">
           <LargeHeading>Effortless Usage-based billing for APIs</LargeHeading>
           <Body className="">
-          Archetype helps API companies launch, iterate and scale their businesses with flexible and easy-to-use infrastructure that works at any size and stage.
+          Archetype helps API companies launch, iterate and scale their businesses with flexible and developer-first infrastructure that works at any size and stage.
           </Body>
           <EarlyAccessForm />
         </VStack>

@@ -13,11 +13,11 @@ const HomePage = ({ articles }) => {
       <Hero />
       <Benefits />
       <Features />
-      <Pricing />
-      <Blog articles={articles} showBlogsPageLink />
-      <CTA />
+      {/*<Pricing />*/}
       <FAQ />
-      <Testimonials />
+      <CTA />
+      <Blog articles={articles} showBlogsPageLink />
+      {/*<Testimonials />*/}
     </div>
   );
 };

@@ -1,27 +1,31 @@
 const benefits = [
   {
-    title: "Integrate with our SDKs",
-    description: `Archetype integrates painlessly with your existing tech stack and enables no-code adjustments to pricing, bundles, and packaging.
+    title: "Innovate Instantly",
+    description: `Create and offer any combination of metered or subscription based plans to your customers and deploy in seconds.
     
-    Never worry about managing billing, invoicing, API keys, quotas, or permissions.
+    Create custom pricing plans and structures with specific rate limits, permissions and adjust them on the fly. No engineering resources required.
     
     Save your engineers months of setup and maintenance so they can focus on delivering amazing products.`,
     image: "/images/benefit-1.png",
   },
   {
     title: "Easily Create Complex Billing Models",
-    description: `Use the dashboard to create subscriptions, adjust prices and gate access to premium endpoints. No redeployments required.
+    description: `Create products that leverage per seat, GPU, storage or any other billable metric you can think of.
 
-    Adjust quotas, metered limits and more without rearchitecting billing or rewriting code.
+    Modify quotas, metered limits and more without rearchitecting billing or rewriting code.
 
-    Switch between subscription or usage-based models in seconds.`,
+    Get insights into what's working in real-time and optimize your pricing.
+    
+    `,
     image: "/images/benefit-2.png",
   },
   {
-    title: "Automatically Optimize Pricing Models",
-    description: `Leverage our insights into usage, conversion, retention and cohort segmentation to improve your product and pricing.
+    title: "Fully self serve",
+    description: `API Key generation and auth are handled by us. We manage all the infrastructure around creating, modifying and assigning plans and API Keys.
     
-    Experiment with pricing models with our dynamic pricing system.`,
+    Get real-time invoices automatically formatted and delivered to your customers.
+    
+    Fully loaded customer portals available for your customers to get insights into their usage, access to their invoices and modify their subscription settings.`,
     image: "/images/benefit-3.png",
   },
 ];
@@ -103,25 +107,25 @@ const articles = [
 
 const faqs = [
   {
-    question: "Lorem ipsum dolor sit amet, consectetur adipiscing elit?",
+    question: "Why use Archetype? ",
     answer:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pulvinar enim enim malesuada habitant. Risus massa tempus in mattis quisque in dis nisi, placerat. Nunc, varius risus neque, amet feugiat felis varius quis et. Curabitur in arcu duis euismod iaculis diam vitae scelerisque... ",
+      "Our core theses revolve around reliability, speed and ease-of-use for you and your engineers. Implementing Stripe has been the biggest challenges for most companies and we want to empower them to deploy, adjust complex bespoke plans in seconds. We also don't use API gateways so you can actually be super flexible about whatever gateway service you decide to use.",
   },
   {
-    question: "Curabitur in arcu duis euismod iaculis diam vitae scelerisque?",
+    question: "What languages do you support?",
     answer:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pulvinar enim enim malesuada habitant. Risus massa tempus in mattis quisque in dis nisi, placerat. Nunc, varius risus neque, amet feugiat felis varius quis et. Curabitur in arcu duis euismod iaculis diam vitae scelerisque... ",
+      "We support Python, Javascript, Go and PHP SDKs at the moment. We're always building support for more so if you have an urgent SDK requirement feel free to email us: hello@archetype.dev",
   },
   {
     question:
-      "Pulvinar enim enim malesuada habitant. Risus massa tempus in mattis quisque in dis nisi, placerat. Nunc, varius risus neque, amet feugiat felis varius quis?",
+      "How will you help us optimize our revenue?",
     answer:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pulvinar enim enim malesuada habitant. Risus massa tempus in mattis quisque in dis nisi, placerat. Nunc, varius risus neque, amet feugiat felis varius quis et. Curabitur in arcu duis euismod iaculis diam vitae scelerisque... ",
+      "We'll collate all insights from usage stats and cohort segmentation to figure out areas where you can improve and adjust pricing-- and we'll do this in realtime. We'll also support price experimentation for plans that go your non-enterprise customers.",
   },
   {
-    question: "Curabitur in arcu duis euismod iaculis diam vitae scelerisque?",
+    question: "How easy is it to integrate Archetype into our stack?",
     answer:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pulvinar enim enim malesuada habitant. Risus massa tempus in mattis quisque in dis nisi, placerat. Nunc, varius risus neque, amet feugiat felis varius quis et. Curabitur in arcu duis euismod iaculis diam vitae scelerisque... ",
+      "It should take 15 minutes to fully integrate Archetype into your backend. We also have videos, docs, step-by-step guides and samples available to answer any questions! The team is also readily available to help you through a hands on approach.",
   },
 ];
 
