@@ -3,8 +3,8 @@ import { MenuText } from "../typography";
 
 const links = [
   {
-    name: "Main",
-    href: "#main",
+    name: "Documentation",
+    href: "https://docs.archetype.dev",
   },
   {
     name: "Benefits",
