@@ -9,10 +9,9 @@ const Hero = () => {
     <Container id="main" className="mt-0 lg:mt-14 overflow-hidden relative">
       <HStack className="lg:items-end w-full justify-between  flex-col-reverse lg:flex-row">
         <VStack className="w-[242px]  md:w-[420px] gap-6 md:gap-6 xl:gap-10 -translate-y-1/4">
-          <LargeHeading>Monetize your API</LargeHeading>
+          <LargeHeading>Effortless Usage-based billing for APIs</LargeHeading>
           <Body className="">
-            With a one-time integration, save your engineers months of having to
-            build billing, quota or permission infrastructure.
+          Archetype helps API companies launch, iterate and scale their businesses with flexible and easy-to-use infrastructure that works at any size and stage.
           </Body>
           <EarlyAccessForm />
         </VStack>
