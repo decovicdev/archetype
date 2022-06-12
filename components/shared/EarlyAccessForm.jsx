@@ -15,7 +15,7 @@ const EarlyAccessForm = ({ light = false }) => {
   const { isOpen, onClose, onOpen } = useDisclosure();
 
   const onSubmit = (values, { setSubmitting, resetForm }) => {
-    fetch("https://staging-xbh6rhecwq-uc.a.run.app/v1/contact", {
+    fetch("https://api.archetype.dev/v1/contact", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
