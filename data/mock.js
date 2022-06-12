@@ -95,7 +95,7 @@ const features = [
     instantPriceDeploy: "Limited",
     automatedInvoicing: "Limited",
     realtimeAnalytics: "Limited",
-    authorization: "Unavaialable",
+    authorization: "Unavailable",
     apiKeyManagement: "Unavailable",
     endpointPricing: "Unavailable"
   },
