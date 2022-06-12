@@ -25,7 +25,7 @@ export default function Home({ articles }) {
         />
         <link rel="preload" as="image" href="/images/hero.png" />
 
-        {/* <script
+       <script
           async
           src="https://www.googletagmanager.com/gtag/js?id=G-8PE8JSX9VB"
         />
@@ -82,7 +82,7 @@ export default function Home({ articles }) {
             width="1"
             src="https://www.facebook.com/tr?id=517709336394629&ev=PageView&noscript=1"
           />
-        </noscript> */}
+        </noscript>
       </Head>
       <HomePage articles={articles} />
     </>
