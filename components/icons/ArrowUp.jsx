@@ -3,7 +3,7 @@ const ArrowUp = (props) => {
     <svg
       viewBox="0 0 96 96"
       fill="none"
-      stroke="url(#paint0_linear_569_4042)"
+      stroke="url(#paint0_linear_1)"
       {...props}
     >
       <path

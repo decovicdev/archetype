@@ -1,5 +1,6 @@
 import { Swiper, SwiperSlide, useSwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper";
+import { useState } from "react";
 
 import { HStack, VStack } from "@components/shared/stack";
 import {
@@ -13,8 +14,10 @@ import SwiperNav from "./SwiperNav";
 import "swiper/css";
 
 const TestimonyListDesktop = ({ testimonies }) => {
+  const [swiper, setSwiper] = useState(null);
+
   return (
-    <HStack className="items-center ">
+    <HStack className="items-center justify-between gap-10 w-full">
       <VStack className="gap-10">
         <LargeHeading>Testimonials</LargeHeading>
         <Body className="max-w-[500px]">
@@ -25,32 +28,40 @@ const TestimonyListDesktop = ({ testimonies }) => {
           scelerisque...
         </Body>
       </VStack>
-      <Swiper
-        slidesPerView={2}
-        direction="vertical"
-        centeredSlides
-        className="w-auto h-[888px]"
-        loop={true}
-        modules={[Autoplay]}
-        autoplay={{
-          delay: 2500,
-          disableOnInteraction: false,
-        }}
-      >
-        {testimonies.map((testimonial, index) => {
-          return (
-            <SwiperSlide
-              key={index}
-              style={{
-                width: "auto",
-                height: "auto",
-              }}
-            >
-              <TestimonyItem testimonial={testimonial} key={index} />
-            </SwiperSlide>
-          );
-        })}
-      </Swiper>
+      <HStack className="items-center gap-8">
+        <Swiper
+          slidesPerView={2}
+          direction="vertical"
+          centeredSlides
+          className=" h-[888px] m-0 gap-0 "
+          loop={true}
+          onBeforeInit={(swiper) => {
+            setSwiper(swiper);
+          }}
+          modules={[Autoplay]}
+          autoplay={{
+            delay: 2500,
+            disableOnInteraction: false,
+          }}
+        >
+          {testimonies.map((testimonial, index) => {
+            return (
+              <SwiperSlide
+                key={index}
+                style={{
+                  width: "auto",
+                  height: "auto",
+                }}
+              >
+                <TestimonyItem testimonial={testimonial} key={index} />
+              </SwiperSlide>
+            );
+          })}
+        </Swiper>
+        <div>
+          <SwiperNav s={swiper} vertical />
+        </div>
+      </HStack>
     </HStack>
   );
 };
@@ -61,7 +72,7 @@ const TestimonyItem = (props) => {
 
   return (
     <div
-      className={`my-10 -translate-y-28 rounded-3xl w-[653px] h-[568px] [box-shadow:_0px_0px_54px_30px_#151515] overflow-hidden bg-dark-blended p-16 transition
+      className={`-translate-y-28 rounded-3xl w-[653px] h-[568px] [box-shadow:_0px_0px_54px_30px_#151515] overflow-hidden bg-dark-blended p-16 transition
       ${isActive ? "scale-100 z-20 relative" : "scale-75 z-0"}
       `}
     >

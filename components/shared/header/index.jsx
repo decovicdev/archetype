@@ -1,15 +1,15 @@
 import Link from "next/link";
+
 import { Button, ButtonOutline } from "../button";
 import Container from "../container";
 import Drawer from "../drawer";
-import { MenuText } from "../typography";
 import Nav from "./Nav";
 
 const Header = () => {
   return (
-    <header>
+    <header className="top-0 sticky z-20 bg-noisy bg-dark-100 ">
       <Container>
-        <div className="flex items-center pt-6 md:pt-8 lg:pt-10 w-full justify-between px-2">
+        <div className="flex items-center py-6 md:py-8 lg:py-10 w-full justify-between px-2">
           <Link href="/" passHref>
             <a>
               <img
@@ -23,9 +23,8 @@ const Header = () => {
             <Nav />
           </div>
           <div className="hidden lg:flex gap-4">
-            <Button size="s">Sign Up</Button>
             <Link href="/#main">
-              <ButtonOutline size="s">Get Started</ButtonOutline>
+              <ButtonOutline size="s">Get Early Access</ButtonOutline>
             </Link>
           </div>
 

@@ -1,4 +1,5 @@
 import { useSwiperSlide, SwiperSlide, Swiper } from "swiper/react";
+import { Autoplay } from "swiper";
 
 import {
   SubTitle,
@@ -6,9 +7,8 @@ import {
   LargeHeading,
   Body,
 } from "@components/shared/typography";
-import { HStack, VStack } from "@components/shared/stack";
+import { VStack } from "@components/shared/stack";
 import SwiperNav from "./SwiperNav";
-import { Autoplay } from "swiper";
 
 const TestimonyListMobile = ({ testimonies }) => {
   return (
@@ -22,6 +22,7 @@ const TestimonyListMobile = ({ testimonies }) => {
         delay: 2500,
         disableOnInteraction: false,
       }}
+      spaceBetween={20}
       autoHeight
     >
       <span slot="container-start" className="">
@@ -64,8 +65,7 @@ const TestimonyItem = (props) => {
 
   return (
     <div
-      className={`rounded-lg h-[278px]  [box-shadow:_0px_0px_54px_30px_#151515] bg-dark-blended p-6 transition
-    `}
+      className={`rounded-lg h-[278px] [box-shadow:_0px_0px_54px_30px_#151515] bg-dark-blended p-6`}
     >
       <img src={testimonial.image} alt={testimonial.name} className="h-6" />
       <SubTitle className="mt-4 mb-10">{testimonial.name}</SubTitle>
