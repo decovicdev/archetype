@@ -26,6 +26,7 @@ const Hero = () => {
             alt="hero"
             width={768}
             height={768}
+            priority
           />
         </div>
       </HStack>
