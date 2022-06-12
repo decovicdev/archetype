@@ -7,8 +7,8 @@ import { Body, ButtonText } from "../typography";
 
 const links = [
   {
-    name: "Main",
-    href: "#main",
+    name: "Documentation",
+    href: "https://docs.archetype.dev",
   },
   {
     name: "Benefits",
@@ -20,16 +20,16 @@ const links = [
   },
   {
     name: "Blog",
-    href: "#blog",
+    href: "/blogs",
   },
   {
     name: "FAQ",
     href: "#faq",
   },
-  {
+  /*{
     name: "Pricing",
     href: "#pricing",
-  },
+  },*/
   {
     name: "Testimonials",
     href: "#testimonials",
