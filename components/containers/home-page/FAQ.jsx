@@ -11,7 +11,7 @@ const FAQ = (props) => {
   return (
     <Container id="faq" className="">
       <HStack className="justify-between items items-start gap-6 w-full">
-        <img src="/images/faq-xl.png" className="hidden lg:block" />
+        <img src="/images/faq-xl.png" className="hidden lg:block" alt="FAQ" />
         <VStack className="gap-6 md:gap-10 xl:gap-12 w-full">
           <VStack className="md:flex-row md:items-end justify-between">
             <VStack className="gap-10">
@@ -22,12 +22,14 @@ const FAQ = (props) => {
             </VStack>
             <img src="/images/faq.png" className="lg:hidden" />
           </VStack>
-          {faqs.map((faq, index) => (
-            <Fragment key={index}>
-              <Accordion {...faq} />
-              {index < faqs.length - 1 && <HDivider />}
-            </Fragment>
-          ))}
+          <VStack className="gap-6 md:gap-10 xl:gap-12 w-full">
+            {faqs.map((faq, index) => (
+              <Fragment key={index}>
+                <Accordion {...faq} />
+                {index < faqs.length - 1 && <HDivider />}
+              </Fragment>
+            ))}
+          </VStack>
         </VStack>
       </HStack>
     </Container>

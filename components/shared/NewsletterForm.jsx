@@ -53,7 +53,6 @@ const NewsletterForm = () => {
               <Field
                 name="email"
                 type="email"
-                id="email"
                 placeholder="Write your Email"
                 className={`w-full flex-1
       bg-[rgba(255,255,255,0.08)] rounded-lg rounded-br-none rounded-tr-none py-2 pl-4 `}

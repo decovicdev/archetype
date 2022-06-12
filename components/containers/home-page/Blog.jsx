@@ -24,6 +24,7 @@ const Blog = ({ showBlogsPageLink = false, articles }) => {
           <Image
             width={979}
             height={482}
+            alt={articles[0].title}
             objectFit="cover"
             src={articles[0].imageUrl}
           />

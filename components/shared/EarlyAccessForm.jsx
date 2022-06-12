@@ -52,7 +52,6 @@ const EarlyAccessForm = ({ light = false }) => {
               <Field
                 name="email"
                 type="email"
-                id="email"
                 placeholder="Your Email"
                 className={`w-[272px] md:w-max ${
                   light

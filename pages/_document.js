@@ -2,7 +2,7 @@ import { Html, Head, Main, NextScript } from "next/document";
 
 export default function Document() {
   return (
-    <Html>
+    <Html lang="eng">
       <Head>
         <meta property="og:url" content="https://archetype.dev" key="ogurl" />
         <meta name="twitter:creator" content="GetArchetype" key="twhandle" />

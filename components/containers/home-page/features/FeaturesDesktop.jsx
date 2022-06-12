@@ -21,7 +21,7 @@ const FeatureItem = (props) => {
       className={`w-[517px] shadow-card items-center gap-6 p-10 flex-1
       rounded-3xl ${isBestOffer ? "bg-noisy-primary" : "bg-noisy-lighten"}`}
     >
-      <img src={image} className="my-12 h-10" />
+      <img src={image} className="my-12 h-10 object-cover" alt="Feature" />
       <HDivider />
       <SubHeading>Setup</SubHeading>
       <HDivider />

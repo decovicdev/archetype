@@ -12,7 +12,7 @@ const FeaturesMobile = () => {
         <SubTitle>Features</SubTitle>
         {features.map((feature, index) => (
           <VStack className="gap-6" key={index}>
-            <img src={feature.image} className="h-6" />
+            <img src={feature.image} className="h-6" alt="Feature" />
             <HDivider />
           </VStack>
         ))}
