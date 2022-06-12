@@ -46,10 +46,7 @@ const Footer = () => {
             <VStack className="gap-10">
               <img src="/images/logo.png" alt="Archetype" loading="lazy" />
               <Body className="w-[272px] md:w-[415px] lg:w-[653px]">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Pulvinar enim enim malesuada habitant. Risus massa tempus in
-                mattis quisque in dis nisi, placerat. Nunc, varius risus neque,
-                amet feugiat felis varius quis et.
+
               </Body>
               <EarlyAccessForm />
             </VStack>

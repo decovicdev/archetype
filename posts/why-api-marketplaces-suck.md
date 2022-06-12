@@ -3,8 +3,8 @@ title: Why API Marketplaces Suck
 slug: why-api-marketplaces-suck
 imageUrl: /images/article-1.png
 readingTime": 6 min
-date: Mar 16, 2020
-excerpt: Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto accusantium praesentium eius, ut atque fuga culpa, similique sequi cum eos quis dolorum.
+date: Feb 26, 2022
+excerpt: API marketplaces have been on the rise as a way for companies to find and use APIs. However, there are many reasons why API marketplaces don’t work.
 ---
 
 # Why API Marketplaces Suck

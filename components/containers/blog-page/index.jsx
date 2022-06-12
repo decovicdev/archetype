@@ -10,7 +10,7 @@ const BlogPage = (props) => {
   return (
     <div className="space-y-10 md:space-y-16 lg:space-y-20 my-20 md:my-32 lg:my-40">
       <Article slug={slug} article={article} />
-      <Comment comments={comments} />
+      {/*<Comment comments={comments} />*/}
       <LatestBlogList latestArticles={latestArticles} />
       <CTA />
     </div>
