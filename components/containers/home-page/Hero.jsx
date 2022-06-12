@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 import Social from "@components/shared/contact/Social";
 import Container from "@components/shared/container";
 import EarlyAccessForm from "@components/shared/EarlyAccessForm";
@@ -17,11 +19,15 @@ const Hero = () => {
           </Body>
           <EarlyAccessForm />
         </VStack>
-        <img
-          src="/images/hero.png"
-          alt="hero"
-          className="w-[288px] md:w-[632px] object-contain lg:w-[786px] self-end  -mr-16 md:-mr-24 lg:mr-0"
-        />
+        <div className="w-[288px] md:w-[632px] object-contain lg:w-[786px] self-end -mr-16 md:-mr-24 lg:mr-0">
+          <Image
+            loading="eager"
+            src="/images/hero.png"
+            alt="hero"
+            width={768}
+            height={768}
+          />
+        </div>
       </HStack>
       <div className="hidden md:block absolute right-10 bottom-20">
         <Social vertical />

@@ -43,7 +43,7 @@ const Footer = () => {
         <VStack className="py-20 justify-between lg:flex-row gap-10 lg:items-center">
           <HStack className="md:w-full lg:w-max">
             <VStack className="gap-10">
-              <img src="/images/logo.png" alt="Archetype" />
+              <img src="/images/logo.png" alt="Archetype" loading="lazy" />
               <Body className="w-[272px] md:w-[415px] lg:w-[653px]">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 Pulvinar enim enim malesuada habitant. Risus massa tempus in

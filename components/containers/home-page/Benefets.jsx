@@ -3,6 +3,7 @@ import Container from "@components/shared/container";
 import { VStack } from "@components/shared/stack";
 import { Body, Heading, LargeHeading } from "@components/shared/typography";
 import { benefits } from "data/mock";
+import Image from "next/image";
 import Link from "next/link";
 
 const Benefits = () => {
@@ -22,11 +23,15 @@ const Benefits = () => {
                 isEven ? "md:flex-row-reverse" : "md:flex-row"
               }`}
             >
-              <img
-                src={benefit.image}
-                alt={benefit.title}
-                className="w-[280px] md:w-[332px] lg:w-[640px]"
-              />
+              <div className="w-[280px] md:w-[332px] lg:w-[640px]">
+                <Image
+                  src={benefit.image}
+                  alt={benefit.title}
+                  className=""
+                  height={600}
+                  width={600}
+                />
+              </div>
               <VStack className=" md:w-[280px] lg:w-[440px] gap-6 md:gap-8 lg:gap-10">
                 <Heading className="sm:w-[240px] md:w-full">
                   {benefit.title}
