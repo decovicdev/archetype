@@ -9,17 +9,16 @@ import { HStack } from "../stack";
 const Layout = ({ children }) => {
   return (
     <div className="min-h-screen bg-dark-100 bg-noisy">
-      <HStack className="bg-[#00000049] justify-center py-4 text-gray-200 gap-2">
-        <Body>🎉 Hey there, We're hiring! </Body>
-        <SubTitle>
-          <a
-            href="https://jobs.archetype.dev/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn More
-          </a>
-        </SubTitle>
+      <HStack className="bg-[#00000049] justify-center py-4 text-gray-200 ">
+        <a
+          href="https://jobs.archetype.dev/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex gap-2"
+        >
+          <Body>🎉 Hey there, We're hiring! </Body>
+          <SubTitle>Learn More</SubTitle>
+        </a>
       </HStack>
       <Header />
       <main>{children}</main>
