@@ -7,7 +7,6 @@ export default function Document() {
         <meta property="og:url" content="https://archetype.dev" key="ogurl" />
         <meta name="twitter:creator" content="GetArchetype" key="twhandle" />
         <meta property="og:site_name" content="Archetype" key="ogsitename" />
-        <meta name="robots" content="index, follow" />
         <link
           rel="apple-touch-icon"
           sizes="180x180"

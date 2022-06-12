@@ -20,7 +20,7 @@ const FAQ = (props) => {
                 We have collected frequently asked questions in this section.
               </SubTitle>
             </VStack>
-            <img src="/images/faq.png" className="lg:hidden" />
+            <img src="/images/faq.png" className="lg:hidden" alt="FAQ" />
           </VStack>
           <VStack className="gap-6 md:gap-10 xl:gap-12 w-full">
             {faqs.map((faq, index) => (

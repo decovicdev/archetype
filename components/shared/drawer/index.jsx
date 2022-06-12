@@ -32,7 +32,7 @@ const Drawer = () => {
         }
       `}
       </style>
-      <button onClick={onOpen}>
+      <button onClick={onOpen} aria-label="Open drawer">
         <MenuIcon className="h-6 w-6 text-white" />
       </button>
       <_Drawer
