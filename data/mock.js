@@ -59,15 +59,22 @@ const pricingList = [
 const features = [
   {
     setup:
-      "On Archetype, it can take minutes to integrate and immediately start charging customers based on rate limits, quotas, plans, permissions and more. Analytics into your revenue are updated by minute.",
+      "15 minutes",
     tariffPlans:
       "We allow you to version different plans and have a dashboard that provides clear insight into what products and pricing strategies work",
     billableMetrics:
       "We let you build custom billable metrics like by CPU, GPU or # of NFT mints.",
     cost: "10 minutes 7% MTR",
     image: "/images/logo.png",
+    customerPortal: "Archetype allows your customers to view usage metrics and manage their subscriptions, api keys and invoices.",
+    instantPriceDeploy: "Instantly deploy custom plans and send them to customers in seconds with payment links.",
+    automatedInvoicing: "Automatically send invoices to your customers with full scope of their usage by metric",
+    realtimeAnalytics: "Realtime insights into usage based systems",
+    authorization: "Managed authorization for your APIs and the ability to adjust permissions on the fly.",
+    apiKeyManagement: "Assign and reset any number of API keys for each customer.",
+    endpointPricing: "Offer unique pricing and rate limits for each endpoint and each method."
   },
-  {
+  /*{
     setup:
       "RapidAPI is similarly easy to setup but has piss poor analytics, rate limits don't work  and you can't customize rate limits by tier or user.",
     tariffPlans:
@@ -75,31 +82,38 @@ const features = [
     billableMetrics: "Unavailable",
     cost: "20% MTR",
     image: "/images/rapid-api.png",
-  },
+  },*/
   {
     setup:
-      "With Stripe it takes multiple engineers 1+ months to build monetization for your APIs and you still have to build a ton of systems to manage rate limits, update permissions and quotas. non-technical stakeholders have to annoy engineers to do this. Stripe analytics is super surface level and only focused on overall revenue and doesn't break things down cleanly.",
+      "1+ months & constant maintenannce",
     tariffPlans:
       "Stripe has a dashboard with incomplete UX and unclear systems around what's happening.",
     billableMetrics: "Unavailable",
     cost: "Months of engineering time and resources",
     image: "/images/stripe.png",
+    customerPortal: "Unavailable",
+    instantPriceDeploy: "Limited",
+    automatedInvoicing: "Limited",
+    realtimeAnalytics: "Limited",
+    authorization: "Unavaialable",
+    apiKeyManagement: "Unavailable",
+    endpointPricing: "Unavailable"
   },
 ];
 
 const articles = [
   {
-    title: "Sit amet, consectetur",
+    title: "Article 1",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pulvinar enim enim malesuada habitant. Risus massa tempus in mattis quisque in dis nisi, placerat. Nunc, varius risus neque, amet feugiat felis varius quis et. Curabitur in arcu duis euismod iaculis diam vitae scelerisque... ",
   },
   {
-    title: "Curabitur in arcu duis euismod",
+    title: "Article 2",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pulvinar enim enim malesuada habitant. Risus massa tempus in mattis quisque in dis nisi, placerat. Nunc, varius risus neque, amet feugiat felis varius quis et. Curabitur in arcu duis euismod iaculis diam vitae scelerisque... ",
   },
   {
-    title: "Pulvinar enim enim malesuada",
+    title: "Article 3",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pulvinar enim enim malesuada habitant. Risus massa tempus in mattis quisque in dis nisi, placerat. Nunc, varius risus neque, amet feugiat felis varius quis et. Curabitur in arcu duis euismod iaculis diam vitae scelerisque... ",
   },

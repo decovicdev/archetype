@@ -14,7 +14,7 @@ const FeaturesDesktop = () => {
 };
 
 const FeatureItem = (props) => {
-  const { image, setup, tariffPlans, billableMetrics, cost, index } = props;
+  const { image, setup, tariffPlans, billableMetrics, cost, index, endpointPricing, apiKeyManagement, authorization, customerPortal, realtimeAnalytics, instantPriceDeploy, automatedInvoicing } = props;
   const isBestOffer = index === 0;
   return (
     <VStack
@@ -32,9 +32,9 @@ const FeatureItem = (props) => {
       <HDivider />
       <Body className="flex-1">{setup}</Body>
       <HDivider />
-      <SubHeading>Tariff plans</SubHeading>
+      <SubHeading>Endpoint Specific Pricing</SubHeading>
       <HDivider />
-      <Body className="h-[84px] overflow-hidden">{tariffPlans}</Body>
+      <Body className="h-[84px] overflow-hidden">{endpointPricing}</Body>
       <HDivider />
       <SubHeading className="h-9 overflow-hidden">
         Custom billable metrics
@@ -42,9 +42,30 @@ const FeatureItem = (props) => {
       <HDivider />
       <Body className="h-[56px] overflow-hidden">{billableMetrics}</Body>
       <HDivider />
-      <SubHeading>Cost</SubHeading>
+      <SubHeading>API Key management</SubHeading>
       <HDivider />
-      <Body className="self-start mb-8 whitespace-pre">{cost}</Body>
+      <Body className="h-[84px] overflow-hidden">{apiKeyManagement}</Body>
+      <HDivider />
+      <SubHeading>Authorization</SubHeading>
+      <HDivider />
+      <Body className="h-[84px] overflow-hidden">{authorization}</Body>
+      <HDivider />
+      <SubHeading>Real-time usage analytics</SubHeading>
+      <HDivider />
+      <Body className="h-[84px] overflow-hidden">{realtimeAnalytics}</Body>
+      <HDivider />
+      <SubHeading>Instant Custom Pricing Deployments</SubHeading>
+      <HDivider />
+      <Body className="h-[84px] overflow-hidden">{instantPriceDeploy}</Body>
+      <HDivider />
+      <SubHeading>Usage Based Customer Portal</SubHeading>
+      <HDivider />
+      <Body className="h-[84px] overflow-hidden">{customerPortal}</Body>
+      <HDivider />
+      <SubHeading>Automated Usage Based Invoicing</SubHeading>
+      <HDivider />
+      <Body className="h-[84px] overflow-hidden">{automatedInvoicing}</Body>
+      <HDivider />
     </VStack>
   );
 };

@@ -12,11 +12,11 @@ const links = [
   },
   {
     name: "Benefits",
-    href: "#benefits",
+    href: "/#benefits",
   },
   {
     name: "Features",
-    href: "#features",
+    href: "/#features",
   },
   {
     name: "Blog",
@@ -24,16 +24,17 @@ const links = [
   },
   {
     name: "FAQ",
-    href: "#faq",
+    href: "/#faq",
   },
   /*{
     name: "Pricing",
     href: "#pricing",
-  },*/
+  },
   {
     name: "Testimonials",
-    href: "#testimonials",
+    href: "/#testimonials",
   },
+  */
 ];
 
 const Footer = () => {

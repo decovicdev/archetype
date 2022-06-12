@@ -25,11 +25,12 @@ const links = [
   /*{
     name: "Pricing",
     href: "#pricing",
-  },*/
+  },
   {
     name: "Testimonials",
     href: "/#testimonials",
   },
+  */
 ];
 
 const Nav = ({ onClose }) => {
