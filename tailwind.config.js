@@ -54,14 +54,22 @@ module.exports = {
         down: "down 0.5s",
       },
       colors: {
-        "regal-blue": "#0021c5",
+        primary: "#7500CF",
+        secondary: "#FFA759",
+        dark: {
+          100: "#151515",
+        },
       },
     },
     backgroundImage: {
-      "icon-arrow-down": "url('../public/icon-arrow-down.png')",
-      fullscreencover: "url('../public/fullpagecover copy.webp')",
+      noisy: 'url("/images/noisy-bg.png")',
+      cta: 'url("../public/images/cta.png")',
+      "cta-xl": 'url("../public/images/cta-xl.png")',
+      "cta-2xl": 'url("../public/images/cta-2xl.png")',
+      "faded-line":
+        "radial-gradient(50.1% 8025.76% at 50.1% 0%, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0) 100%)",
     },
   },
 
-  plugins: [],
+  plugins: [require("@tailwindcss/typography")],
 };
