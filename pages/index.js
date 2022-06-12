@@ -23,6 +23,8 @@ export default function Home({ articles }) {
           content="We help companies monetize APIs and experiment with pricing models  by managing their billing infrastructure. Never worry about managing users' quotas and privileges."
           key="ogdesc"
         />
+        <link rel="preload" as="image" href="/images/hero.png" />
+
         {/* <script
           async
           src="https://www.googletagmanager.com/gtag/js?id=G-8PE8JSX9VB"
