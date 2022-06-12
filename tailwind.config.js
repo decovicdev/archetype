@@ -62,7 +62,7 @@ module.exports = {
       },
     },
     backgroundImage: {
-      noisy: 'url("../public/images/noisy-bg.png")',
+      noisy: 'url("/images/noisy-bg.png")',
       cta: 'url("../public/images/cta.png")',
       "cta-xl": 'url("../public/images/cta-xl.png")',
       "cta-2xl": 'url("../public/images/cta-2xl.png")',

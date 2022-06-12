@@ -7,6 +7,7 @@ export default function Document() {
         <meta property="og:url" content="https://archetype.dev" key="ogurl" />
         <meta name="twitter:creator" content="GetArchetype" key="twhandle" />
         <meta property="og:site_name" content="Archetype" key="ogsitename" />
+        <link rel="preload" as="image" href="/images/noisy-bg.png" />
         <link
           rel="apple-touch-icon"
           sizes="180x180"
