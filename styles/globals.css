@@ -33,9 +33,9 @@
       sans-serif;
     color: white;
   }
-  html {
+  /* html {
     scroll-behavior: smooth;
-  }
+  } */
   ::-webkit-scrollbar {
     @apply w-2 h-2;
   }
