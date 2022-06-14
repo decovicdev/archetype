@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Script from "next/script";
 
 import HomePage from "@components/containers/home-page";
 import { getArticles } from "utils/articles";
@@ -25,11 +26,19 @@ export default function Home({ articles }) {
         />
         <link rel="preload" as="image" href="/images/hero.png" />
 
-       <script
+        <noscript>
+          <img
+            height="1"
+            width="1"
+            src={`https://www.facebook.com/tr?id=517709336394629&ev=PageView&noscript=1`}
+          />
+        </noscript>
+        <Script
           async
           src="https://www.googletagmanager.com/gtag/js?id=G-8PE8JSX9VB"
         />
-        <script
+        <Script
+          strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: `
             (function (d, u, h, s) {
@@ -43,7 +52,8 @@ export default function Home({ articles }) {
           }}
         />
 
-        <script
+        <Script
+          strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: `
               window.dataLayer = window.dataLayer || [];
@@ -53,7 +63,8 @@ export default function Home({ articles }) {
             `,
           }}
         />
-        <script
+        <Script
+          strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: `
               !function(f,b,e,v,n,t,s)
@@ -69,20 +80,13 @@ export default function Home({ articles }) {
               `,
           }}
         />
-        <script
+        <Script
+          strategy="afterInteractive"
           type="text/javascript"
           id="hs-script-loader"
           async
-          defer
           src="//js.hs-scripts.com/21918475.js"
-        ></script>
-        <noscript>
-          <img
-            height="1"
-            width="1"
-            src="https://www.facebook.com/tr?id=517709336394629&ev=PageView&noscript=1"
-          />
-        </noscript>
+        />
       </Head>
       <HomePage articles={articles} />
     </>
