@@ -4,7 +4,10 @@ import classNames from "utils/classnames";
 const LargeHeading = ({ className, ...rest }) => {
   return (
     <h1
-      className={classNames("text-4xl md:text-6xl lg:text-8xl", className)}
+      className={classNames(
+        "text-4xl md:text-6xl lg:text-7xl xl:text-8xl",
+        className
+      )}
       {...rest}
     />
   );

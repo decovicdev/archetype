@@ -45,9 +45,7 @@ const Footer = () => {
           <HStack className="md:w-full lg:w-max">
             <VStack className="gap-10">
               <img src="/images/logo.png" alt="Archetype" loading="lazy" />
-              <Body className="w-[272px] md:w-[415px] lg:w-[653px]">
-
-              </Body>
+              <Body className="max-w-[272px] md:max-w-[415px] lg:max-w-[653px]"></Body>
               <EarlyAccessForm />
             </VStack>
             <div className="hidden md:flex lg:hidden justify-end w-full">
