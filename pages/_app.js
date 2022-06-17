@@ -46,7 +46,7 @@ function Application({ Component, pageProps }) {
           />
         </noscript>
         <Script
-          async
+          strategy="afterInteractive"
           src="https://www.googletagmanager.com/gtag/js?id=G-8PE8JSX9VB"
         />
         <Script
@@ -65,6 +65,7 @@ function Application({ Component, pageProps }) {
 
         <Script
           strategy="afterInteractive"
+          id="google-analytics"
           dangerouslySetInnerHTML={{
             __html: `
               window.dataLayer = window.dataLayer || [];
