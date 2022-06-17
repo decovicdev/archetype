@@ -45,13 +45,13 @@ function Application({ Component, pageProps }) {
             src={`https://www.facebook.com/tr?id=517709336394629&ev=PageView&noscript=1`}
           />
         </noscript>
-        <Script
-          strategy="afterInteractive"
-          src="https://www.googletagmanager.com/gtag/js?id=G-8PE8JSX9VB"
-        />
-        <Script
-          dangerouslySetInnerHTML={{
-            __html: `
+      </Head>
+      <Script
+        strategy="afterInteractive"
+        src="https://www.googletagmanager.com/gtag/js?id=G-8PE8JSX9VB"
+      />
+      <Script strategy="afterInteractive">
+        {`
             (function (d, u, h, s) {
               h = d.getElementsByTagName('head')[0];
               s = d.createElement('script');
@@ -59,25 +59,18 @@ function Application({ Component, pageProps }) {
               s.src = u + new Date().getTime();
               h.appendChild(s);
             })(document, 'https://grow.clearbitjs.com/api/pixel.js?k=pk_07b44a2a83c0b1b5bfdaba9623a8756c&v=');
-            `,
-          }}
-        />
-
-        <Script
-          strategy="afterInteractive"
-          id="google-analytics"
-          dangerouslySetInnerHTML={{
-            __html: `
+            `}
+      </Script>
+      <Script strategy="afterInteractive" id="google-analytics">
+        {`
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
               gtag('config', 'G-8PE8JSX9VB', { page_path: window.location.pathname });
-            `,
-          }}
-        />
-        <Script
-          dangerouslySetInnerHTML={{
-            __html: `
+            `}
+      </Script>
+      <Script strategy="afterInteractive">
+        {`
               !function(f,b,e,v,n,t,s)
               {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
               n.callMethod.apply(n,arguments):n.queue.push(arguments)};
@@ -88,17 +81,14 @@ function Application({ Component, pageProps }) {
               'https://connect.facebook.net/en_US/fbevents.js');
               fbq('init', '517709336394629'); 
               fbq('track', 'PageView');
-              `,
-          }}
-        />
-        <Script
-          type="text/javascript"
-          id="hs-script-loader"
-          async
-          defer
-          src="//js.hs-scripts.com/21918475.js"
-        />
-      </Head>
+              `}
+      </Script>
+      <Script
+        type="text/javascript"
+        id="hs-script-loader"
+        strategy="afterInteractive"
+        src="//js.hs-scripts.com/21918475.js"
+      />
       <ChakraProvider theme={theme}>
         <Layout>
           <Component {...pageProps} />
