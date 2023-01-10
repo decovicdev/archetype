@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 import { Button } from "@components/shared/button";
 import Container from "@components/shared/container";
 import { HDivider } from "@components/shared/divider";
@@ -9,7 +11,6 @@ import {
   SubHeading,
 } from "@components/shared/typography";
 import { pricingList } from "data/mock";
-import Link from "next/link";
 
 const Pricing = () => {
   return (
@@ -54,15 +55,13 @@ const Pricing = () => {
                 <ul className="grid gap-2">
                   {pricing.features.map((feature, index) => {
                     return (
-                      // </Body>
-                      // <Body>
                       <li className="list-disc list-inside " key={index}>
                         {feature}
                       </li>
                     );
                   })}
                 </ul>
-                <Link href="#main">
+                <Link href="#main" className="mt-auto">
                   <Button size="s">Get Started</Button>
                 </Link>
               </VStack>

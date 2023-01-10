@@ -58,23 +58,28 @@ const pricingList = [
 
 const features = [
   {
-    setup:
-      "15 minutes",
+    setup: "15 minutes",
     tariffPlans:
       "We allow you to version different plans and have a dashboard that provides clear insight into what products and pricing strategies work",
     billableMetrics:
       "We let you build custom billable metrics like by CPU, GPU or # of NFT mints.",
     cost: "10 minutes 7% MTR",
     image: "/images/logo.png",
-    customerPortal: "Archetype allows your customers to view usage metrics and manage their subscriptions, api keys and invoices.",
-    instantPriceDeploy: "Instantly deploy custom plans and send them to customers in seconds with payment links.",
-    automatedInvoicing: "Automatically send invoices to your customers with full scope of their usage by metric",
+    customerPortal:
+      "Archetype allows your customers to view usage metrics and manage their subscriptions, api keys and invoices.",
+    instantPriceDeploy:
+      "Instantly deploy custom plans and send them to customers in seconds with payment links.",
+    automatedInvoicing:
+      "Automatically send invoices to your customers with full scope of their usage by metric",
     realtimeAnalytics: "Realtime insights into usage based systems",
-    authorization: "Managed authorization for your APIs and the ability to adjust permissions on the fly.",
-    apiKeyManagement: "Assign and reset any number of API keys for each customer.",
-    endpointPricing: "Offer unique pricing and rate limits for each endpoint and each method."
+    authorization:
+      "Managed authorization for your APIs and the ability to adjust permissions on the fly.",
+    apiKeyManagement:
+      "Assign and reset any number of API keys for each customer.",
+    endpointPricing:
+      "Offer unique pricing and rate limits for each endpoint and each method.",
   },
-  /*{
+  {
     setup:
       "RapidAPI is similarly easy to setup but has piss poor analytics, rate limits don't work  and you can't customize rate limits by tier or user.",
     tariffPlans:
@@ -82,10 +87,9 @@ const features = [
     billableMetrics: "Unavailable",
     cost: "20% MTR",
     image: "/images/rapid-api.png",
-  },*/
+  },
   {
-    setup:
-      "1+ months & constant maintenannce",
+    setup: "1+ months & constant maintenannce",
     tariffPlans:
       "Stripe has a dashboard with incomplete UX and unclear systems around what's happening.",
     billableMetrics: "Unavailable",
@@ -97,7 +101,7 @@ const features = [
     realtimeAnalytics: "Limited",
     authorization: "Unavailable",
     apiKeyManagement: "Unavailable",
-    endpointPricing: "Unavailable"
+    endpointPricing: "Unavailable",
   },
 ];
 
@@ -131,8 +135,7 @@ const faqs = [
       "We support Python, Javascript, Go and PHP SDKs at the moment. We're always building support for more so if you have an urgent SDK requirement feel free to email us: hello@archetype.dev",
   },
   {
-    question:
-      "How will you help us optimize our revenue?",
+    question: "How will you help us optimize our revenue?",
     answer:
       "We'll collate all insights from usage stats and cohort segmentation to figure out areas where you can improve and adjust pricing-- and we'll do this in realtime. We'll also support price experimentation for plans that go your non-enterprise customers.",
   },
